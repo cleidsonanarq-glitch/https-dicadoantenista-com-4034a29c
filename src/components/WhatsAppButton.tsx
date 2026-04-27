@@ -1,6 +1,12 @@
 import { MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { triggerWebhook } from "@/lib/webhook";
+import { trackEvent } from "@/lib/tracking";
+import {
+  WHATSAPP_PHONE,
+  WHATSAPP_DEFAULT_MESSAGE,
+  buildWhatsAppUrl,
+} from "@/lib/whatsapp";
 
 interface WhatsAppButtonProps {
   variant?: "primary" | "ghost" | "compact";
@@ -11,20 +17,18 @@ interface WhatsAppButtonProps {
   source?: string;
 }
 
-const PHONE = "5511999999999"; // placeholder — substituir pelo WhatsApp real
-
 const WhatsAppButton = ({
   variant = "primary",
-  label = "Falar com especialista agora",
+  label = "Falar no WhatsApp agora",
   className,
-  message = "Olá! Minha TV está travando e quero ajuda da Digital Net.",
+  message = WHATSAPP_DEFAULT_MESSAGE,
   source = "cta-primary",
 }: WhatsAppButtonProps) => {
-  const href = `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`;
+  const href = buildWhatsAppUrl(message);
 
   const handleClick = () => {
-    // Dispara o webhook do n8n em paralelo (não bloqueia o redirecionamento)
-    void triggerWebhook({ source, message, phone: PHONE });
+    trackEvent("click_whatsapp", { source });
+    void triggerWebhook({ source, message, phone: WHATSAPP_PHONE });
   };
 
   if (variant === "compact") {
