@@ -25,7 +25,7 @@ const FinalCTA = () => {
             </p>
 
             <div className="mt-8 flex justify-center">
-              <WhatsAppButton label="Quero falar com especialista" />
+              <WhatsAppButton label="Quero falar com especialista" source="final-cta" />
             </div>
 
             <div className="mt-10 grid gap-6 border-t border-border/60 pt-8 sm:grid-cols-3">

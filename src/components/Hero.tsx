@@ -31,7 +31,7 @@ const Hero = () => {
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:gap-4 lg:items-start">
-            <WhatsAppButton label="Falar com especialista agora" />
+            <WhatsAppButton label="Falar com especialista agora" source="hero" />
             <span className="text-xs uppercase tracking-wider text-muted-foreground">
               Sem fila • Resposta em minutos
             </span>
