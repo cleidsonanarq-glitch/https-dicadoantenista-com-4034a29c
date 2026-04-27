@@ -13,7 +13,7 @@ const Header = () => {
             Digital<span className="text-primary">Net</span>
           </span>
         </a>
-        <WhatsAppButton variant="compact" label="WhatsApp" />
+        <WhatsAppButton variant="compact" label="WhatsApp" source="header" />
       </div>
     </header>
   );
