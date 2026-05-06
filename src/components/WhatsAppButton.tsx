@@ -72,7 +72,7 @@ const WhatsAppButton = ({
       rel="noopener noreferrer"
       onClick={handleClick}
       className={cn(
-        "group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-gradient-cta px-8 py-4 text-base font-bold text-primary-foreground shadow-glow transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_25px_70px_-15px_hsl(var(--primary)/0.7)] sm:text-lg",
+        "group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-gradient-cta px-8 py-4 font-bold text-primary-foreground shadow-glow transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_25px_70px_-15px_hsl(var(--primary)/0.7)] sm:text-lg text-xs",
         className,
       )}
     >
