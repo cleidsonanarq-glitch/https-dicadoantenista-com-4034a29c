@@ -1,4 +1,4 @@
-// Webhook do n8n para auto atendimento da Digital Net
+// Webhook do n8n para auto atendimento da Dica do Antenista
 export const N8N_WEBHOOK_URL =
   "https://cleidsonteixeira.app.n8n.cloud/webhook-test/webvoice";
 

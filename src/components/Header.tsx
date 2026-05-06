@@ -10,7 +10,7 @@ const Header = () => {
             <Tv className="h-5 w-5 text-primary-foreground" strokeWidth={2.4} />
           </div>
           <span className="font-display text-lg font-bold tracking-tight">
-            Digital<span className="text-primary">Net</span>
+            Dica do <span className="text-primary">Antenista</span>
           </span>
         </a>
         <WhatsAppButton variant="compact" label="WhatsApp" source="header" />

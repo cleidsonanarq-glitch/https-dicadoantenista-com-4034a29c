@@ -1,4 +1,4 @@
-// Configuração central do WhatsApp da Digital Net
+// Configuração central do WhatsApp da Dica do Antenista
 export const WHATSAPP_PHONE = "5571999729281";
 export const WHATSAPP_DEFAULT_MESSAGE =
   "Olá, vim pela landing page e quero suporte";
