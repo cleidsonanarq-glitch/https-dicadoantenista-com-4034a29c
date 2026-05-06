@@ -30,9 +30,9 @@ const Hero = () => {
             O erro está na configuração — e a <span className="font-semibold text-primary">Dica do Antenista</span> resolve isso pra você em minutos.
           </p>
 
-          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:gap-4 lg:items-start">
+          <div className="mt-8 flex flex-col items-center gap-3 lg:items-start">
             <WhatsAppButton label="Falar com especialista agora" source="hero" />
-            <span className="text-xs uppercase tracking-wider text-muted-foreground">
+            <span className="text-center text-xs uppercase tracking-wider text-muted-foreground lg:text-left">
               Sem fila • Resposta em minutos
             </span>
           </div>
