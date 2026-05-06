@@ -27,12 +27,12 @@ const Hero = () => {
 
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground sm:text-xl">
             <span className="font-semibold text-foreground">90% das TVs que travam não têm problema no aparelho.</span>{" "}
-            O erro está na configuração — e a <span className="font-semibold text-primary">Digital Net</span> resolve isso pra você em minutos.
+            O erro está na configuração — e a <span className="font-semibold text-primary">Dica do Antenista</span> resolve isso pra você em minutos.
           </p>
 
-          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:gap-4 lg:items-start">
+          <div className="mt-8 flex flex-col items-center gap-3 lg:items-start">
             <WhatsAppButton label="Falar com especialista agora" source="hero" />
-            <span className="text-xs uppercase tracking-wider text-muted-foreground">
+            <span className="text-center text-xs uppercase tracking-wider text-muted-foreground lg:text-left">
               Sem fila • Resposta em minutos
             </span>
           </div>
@@ -55,7 +55,7 @@ const Hero = () => {
           <div className="relative overflow-hidden rounded-3xl border border-border shadow-card-soft">
             <img
               src={heroTV}
-              alt="Smart TV reproduzindo conteúdo em alta qualidade após ajustes da Digital Net"
+              alt="Smart TV reproduzindo conteúdo em alta qualidade após ajustes da Dica do Antenista"
               width={1280}
               height={1280}
               className="h-full w-full object-cover"

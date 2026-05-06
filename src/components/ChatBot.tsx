@@ -37,7 +37,7 @@ const ChatBot = () => {
     const payload = {
       nome: nome.trim().slice(0, 120),
       problema: problema.trim().slice(0, 1000),
-      origem: "landing_page_digital_net",
+      origem: "landing_page_dica_do_antenista",
     };
 
     try {
@@ -92,7 +92,7 @@ const ChatBot = () => {
                   <Bot className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-sm font-bold leading-tight">Atendimento Digital Net</p>
+                  <p className="text-sm font-bold leading-tight">Atendimento Dica do Antenista</p>
                   <p className="text-[11px] opacity-90">Online agora • responde rápido</p>
                 </div>
               </div>

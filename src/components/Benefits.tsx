@@ -31,7 +31,7 @@ const Benefits = () => {
       <div className="container relative">
         <div className="mx-auto mb-14 max-w-3xl text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-            O que a Digital Net faz por você
+            O que a Dica do Antenista faz por você
           </span>
           <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
             A gente ajusta tudo.{" "}

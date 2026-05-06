@@ -4,17 +4,17 @@ const testimonials = [
   {
     quote: "Minha TV travava todo dia… agora está perfeita. Atendimento muito rápido pelo WhatsApp.",
     author: "Carla M.",
-    role: "Cliente Digital Net",
+    role: "Cliente Dica do Antenista",
   },
   {
     quote: "Pensei que ia precisar comprar uma TV nova. Em 15 minutos resolveram tudo remotamente.",
     author: "Rodrigo S.",
-    role: "Cliente Digital Net",
+    role: "Cliente Dica do Antenista",
   },
   {
     quote: "A imagem ficou outra. Sem travamento nenhum nos jogos e nas séries. Recomendo demais.",
     author: "Patrícia L.",
-    role: "Cliente Digital Net",
+    role: "Cliente Dica do Antenista",
   },
 ];
 
