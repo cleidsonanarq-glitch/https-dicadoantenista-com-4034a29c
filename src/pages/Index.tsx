@@ -5,6 +5,7 @@ import Benefits from "@/components/Benefits";
 import HowItWorks from "@/components/HowItWorks";
 import Testimonials from "@/components/Testimonials";
 import FinalCTA from "@/components/FinalCTA";
+import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ChatBot from "@/components/ChatBot";
@@ -19,6 +20,7 @@ const Index = () => {
         <Benefits />
         <HowItWorks />
         <Testimonials />
+        <FAQ />
         <FinalCTA />
       </main>
       <Footer />
