@@ -30,7 +30,7 @@ const FloatingWhatsApp = () => {
     >
       <span className="relative flex h-9 w-9 items-center justify-center rounded-full bg-white/15">
         <span className="absolute inset-0 animate-ping rounded-full bg-white/30" />
-        <MessageCircle className="relative h-5 w-5" strokeWidth={2.4} />
+        <MessageCircle className="relative w-5 h-[19px]" strokeWidth={2.4} />
       </span>
       <span className="hidden text-sm font-bold sm:inline">Fale conosco</span>
     </a>

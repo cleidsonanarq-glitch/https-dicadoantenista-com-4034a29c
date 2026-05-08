@@ -80,7 +80,7 @@ const WhatsAppButton = ({
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75"></span>
         <span className="relative inline-flex h-3 w-3 rounded-full bg-white"></span>
       </span>
-      <MessageCircle className="h-5 w-5" strokeWidth={2.5} />
+      <MessageCircle className="w-5 h-[19px]" strokeWidth={2.5} />
       {label}
       <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
     </a>
