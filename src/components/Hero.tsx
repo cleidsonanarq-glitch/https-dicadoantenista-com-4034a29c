@@ -17,7 +17,7 @@ const Hero = () => {
             Suporte rápido • Direto no WhatsApp
           </div>
 
-          <h1 className="font-display text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl xl:text-7xl">
+          <h1 className="font-display text-3xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
             Pare de sofrer com{" "}
             <span className="relative inline-block">
               <span className="text-gradient-accent animate-glitch inline-block">TV travando</span>
@@ -25,7 +25,7 @@ const Hero = () => {
             </span>
           </h1>
 
-          <p className="mt-6 text-lg leading-relaxed text-muted-foreground sm:text-xl">
+          <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:mt-6 sm:text-xl">
             <span className="font-semibold text-foreground">90% das TVs que travam não têm problema no aparelho.</span>{" "}
             O erro está na configuração — e a <span className="font-semibold text-primary">Dica do Antenista</span> resolve isso pra você em minutos.
           </p>
@@ -38,13 +38,13 @@ const Hero = () => {
           </div>
 
           {/* Mini trust strip */}
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground lg:justify-start">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-muted-foreground sm:gap-x-8 lg:justify-start">
             <div className="flex items-center gap-2">
-              <span className="text-2xl font-bold text-foreground font-sans">+5 mil</span> clientes atendidos
+              <span className="text-xl font-bold text-foreground font-sans sm:text-2xl">+5 mil</span> clientes atendidos
             </div>
             <div className="hidden h-4 w-px bg-border sm:block" />
             <div className="flex items-center gap-2">
-              <span className="text-2xl font-bold text-foreground font-sans">⭐ 4.9/5.0</span> avaliação média
+              <span className="text-xl font-bold text-foreground font-sans sm:text-2xl">⭐ 4.9/5.0</span> avaliação média
             </div>
           </div>
         </div>
