@@ -40,11 +40,11 @@ const Hero = () => {
           {/* Mini trust strip */}
           <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground lg:justify-start">
             <div className="flex items-center gap-2">
-              <span className="text-2xl font-bold text-foreground">+5 mil</span> clientes atendidos
+              <span className="text-2xl font-bold text-foreground font-sans">+5 mil</span> clientes atendidos
             </div>
             <div className="hidden h-4 w-px bg-border sm:block" />
             <div className="flex items-center gap-2">
-              <span className="text-2xl font-bold text-foreground">⭐ 4.9</span> avaliação média
+              <span className="text-2xl font-bold text-foreground font-sans">⭐ 4.9/5.0</span> avaliação média
             </div>
           </div>
         </div>
