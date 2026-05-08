@@ -11,8 +11,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    
-    
+    <!-- ============================================================ -->
+    <!-- TRACKING — substitua os IDs abaixo pelos seus reais          -->
+    <!-- META_PIXEL_ID  -> ID do Meta Pixel (ex: 1234567890)          -->
+    <!-- GOOGLE_ADS_ID  -> ex: AW-1234567890                          -->
+    <!-- GADS_CONV_LABEL-> label de conversão (ex: AbC-D_efGhIj1234)  -->
+    <!-- ============================================================ -->
+
+    <!-- Meta Pixel -->
+    <script>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', 'META_PIXEL_ID');
+      fbq('track', 'PageView');
+    </script>
+
+    <!-- Google Ads / GA -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GOOGLE_ADS_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GOOGLE_ADS_ID');
+      window.GADS_CONVERSION_ID = 'GOOGLE_ADS_ID/GADS_CONV_LABEL';
+    </script>
+
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b753fdf9-2b28-4ffd-915f-09227bbaf227/id-preview-a68b2298--8e9d21e8-13b7-4850-be9c-39a4f31f235f.lovable.app-1777258398669.png">
 
