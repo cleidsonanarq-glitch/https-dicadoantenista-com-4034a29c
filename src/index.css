@@ -73,8 +73,12 @@
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', system-ui, sans-serif;
     background: var(--gradient-hero);
-    background-attachment: fixed;
+    /* background-attachment: fixed is expensive on mobile — use scroll */
+    background-attachment: scroll;
+    text-rendering: optimizeSpeed;
   }
+
+  img { content-visibility: auto; }
 
   h1, h2, h3, h4 {
     font-family: 'Sora', 'Inter', sans-serif;
@@ -87,7 +91,6 @@
     background: var(--gradient-card);
     border: 1px solid hsl(var(--border));
     box-shadow: var(--shadow-card);
-    backdrop-filter: blur(8px);
   }
 
   .pulse-dot {
