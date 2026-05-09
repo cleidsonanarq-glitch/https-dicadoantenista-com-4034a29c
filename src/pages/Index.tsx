@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 
@@ -16,6 +16,23 @@ const ChatBot = lazy(() => import("@/components/ChatBot"));
 const SectionFallback = () => <div aria-hidden className="min-h-[280px]" />;
 
 const Index = () => {
+  // Defer non-critical floating widgets until the browser is idle,
+  // so they don't compete with LCP / first interaction.
+  const [showWidgets, setShowWidgets] = useState(false);
+
+  useEffect(() => {
+    const w = window as Window & {
+      requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
+    };
+    const trigger = () => setShowWidgets(true);
+    if (typeof w.requestIdleCallback === "function") {
+      w.requestIdleCallback(trigger, { timeout: 2500 });
+    } else {
+      const id = window.setTimeout(trigger, 1800);
+      return () => window.clearTimeout(id);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -32,8 +49,12 @@ const Index = () => {
       </main>
       <Suspense fallback={null}>
         <Footer />
-        <FloatingWhatsApp />
-        <ChatBot />
+        {showWidgets && (
+          <>
+            <FloatingWhatsApp />
+            <ChatBot />
+          </>
+        )}
       </Suspense>
     </div>
   );
