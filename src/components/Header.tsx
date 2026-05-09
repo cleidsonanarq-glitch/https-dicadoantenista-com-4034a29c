@@ -3,7 +3,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-50 border-b border-border/40 bg-background/85 backdrop-blur-md supports-[backdrop-filter]:bg-background/70">
+    <header className="sticky top-0 z-50 border-b border-border/40 bg-background/95">
       <div className="container flex h-16 items-center justify-between">
         <a href="/" className="flex items-center gap-2.5">
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-cta shadow-glow">

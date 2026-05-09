@@ -18,16 +18,35 @@
     <link rel="dns-prefetch" href="https://connect.facebook.net" />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
-    <!-- Fonts: only the weights actually used -->
+    <!-- Preload hero image (LCP) -->
+    <link
+      rel="preload"
+      as="image"
+      href="/src/assets/hero-tv-720.webp"
+      fetchpriority="high"
+      media="(max-width: 640px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/src/assets/hero-tv.webp"
+      fetchpriority="high"
+      media="(min-width: 641px)"
+    />
+
+    <!-- Fonts: non-blocking load (swap-in once ready) -->
     <link
       rel="preload"
       as="style"
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@800&family=Inter:wght@400;600;700&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;600;700&display=swap"
-    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@800&family=Inter:wght@400;600;700&display=swap"
+      />
+    </noscript>
 
     <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website" />
@@ -71,29 +90,36 @@
       ]
     }
     </script>
-
-    <!-- Tracking — substitua os IDs reais -->
-    <script>
-      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-      document,'script','https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', 'META_PIXEL_ID');
-      fbq('track', 'PageView');
-    </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GOOGLE_ADS_ID"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'GOOGLE_ADS_ID');
-      window.GADS_CONVERSION_ID = 'GOOGLE_ADS_ID/GADS_CONV_LABEL';
-    </script>
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Tracking — carregado após o load para não bloquear FCP/LCP -->
+    <script>
+      window.addEventListener('load', function () {
+        // Meta Pixel
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'META_PIXEL_ID');
+        fbq('track', 'PageView');
+
+        // Google Ads
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=GOOGLE_ADS_ID';
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'GOOGLE_ADS_ID');
+        window.GADS_CONVERSION_ID = 'GOOGLE_ADS_ID/GADS_CONV_LABEL';
+      });
+    </script>
   </body>
 </html>

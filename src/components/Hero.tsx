@@ -6,10 +6,10 @@ import { Tv, Zap } from "lucide-react";
 const Hero = () => {
   return (
     <section className="relative overflow-hidden pt-10 pb-16 sm:pt-16 sm:pb-24">
-      {/* Decorative blobs — lighter blur on mobile to save GPU */}
+      {/* Decorative blobs — desktop only to save mobile GPU/paint */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-32 -left-32 h-72 w-72 rounded-full bg-primary/15 blur-3xl sm:h-96 sm:w-96"
+        className="pointer-events-none absolute -top-32 -left-32 hidden h-96 w-96 rounded-full bg-primary/15 blur-3xl sm:block"
       />
       <div
         aria-hidden
@@ -60,7 +60,7 @@ const Hero = () => {
         <div className="relative mx-auto w-full max-w-xl">
           <div
             aria-hidden
-            className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-primary/20 via-transparent to-accent/20 blur-2xl"
+            className="absolute -inset-4 hidden rounded-[2.5rem] bg-gradient-to-br from-primary/20 via-transparent to-accent/20 blur-2xl sm:block"
           />
           <div className="relative overflow-hidden rounded-3xl border border-border shadow-card-soft">
             <picture>
