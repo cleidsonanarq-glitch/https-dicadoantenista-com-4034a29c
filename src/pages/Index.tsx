@@ -1,14 +1,19 @@
+import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Problems from "@/components/Problems";
-import Benefits from "@/components/Benefits";
-import HowItWorks from "@/components/HowItWorks";
-import Testimonials from "@/components/Testimonials";
-import FinalCTA from "@/components/FinalCTA";
-import FAQ from "@/components/FAQ";
-import Footer from "@/components/Footer";
-import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import ChatBot from "@/components/ChatBot";
+
+// Below-the-fold: loaded lazily to improve LCP/TTI on mobile
+const Problems = lazy(() => import("@/components/Problems"));
+const Benefits = lazy(() => import("@/components/Benefits"));
+const HowItWorks = lazy(() => import("@/components/HowItWorks"));
+const Testimonials = lazy(() => import("@/components/Testimonials"));
+const FinalCTA = lazy(() => import("@/components/FinalCTA"));
+const FAQ = lazy(() => import("@/components/FAQ"));
+const Footer = lazy(() => import("@/components/Footer"));
+const FloatingWhatsApp = lazy(() => import("@/components/FloatingWhatsApp"));
+const ChatBot = lazy(() => import("@/components/ChatBot"));
+
+const SectionFallback = () => <div aria-hidden className="min-h-[280px]" />;
 
 const Index = () => {
   return (
@@ -16,16 +21,20 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <Problems />
-        <Benefits />
-        <HowItWorks />
-        <Testimonials />
-        <FAQ />
-        <FinalCTA />
+        <Suspense fallback={<SectionFallback />}>
+          <Problems />
+          <Benefits />
+          <HowItWorks />
+          <Testimonials />
+          <FAQ />
+          <FinalCTA />
+        </Suspense>
       </main>
-      <Footer />
-      <FloatingWhatsApp />
-      <ChatBot />
+      <Suspense fallback={null}>
+        <Footer />
+        <FloatingWhatsApp />
+        <ChatBot />
+      </Suspense>
     </div>
   );
 };
