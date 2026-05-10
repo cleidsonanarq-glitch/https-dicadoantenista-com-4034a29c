@@ -3,14 +3,16 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Problems from "@/components/Problems";
 import Benefits from "@/components/Benefits";
-import HowItWorks from "@/components/HowItWorks";
-import Testimonials from "@/components/Testimonials";
-import FAQ from "@/components/FAQ";
-import FinalCTA from "@/components/FinalCTA";
-import Footer from "@/components/Footer";
+import LazyOnVisible from "@/components/LazyOnVisible";
 
-// Only floating widgets stay deferred — they are fixed/positioned and
-// don't influence document flow, so they can't cause CLS.
+// Below-the-fold sections — split into separate chunks, mounted on scroll.
+const HowItWorks = lazy(() => import("@/components/HowItWorks"));
+const Testimonials = lazy(() => import("@/components/Testimonials"));
+const FAQ = lazy(() => import("@/components/FAQ"));
+const FinalCTA = lazy(() => import("@/components/FinalCTA"));
+const Footer = lazy(() => import("@/components/Footer"));
+
+// Floating widgets — fixed position, no CLS impact, mounted on idle.
 const FloatingWhatsApp = lazy(() => import("@/components/FloatingWhatsApp"));
 const ChatBot = lazy(() => import("@/components/ChatBot"));
 
@@ -37,12 +39,22 @@ const Index = () => {
         <Hero />
         <Problems />
         <Benefits />
-        <HowItWorks />
-        <Testimonials />
-        <FAQ />
-        <FinalCTA />
+        <LazyOnVisible minHeight={600}>
+          <HowItWorks />
+        </LazyOnVisible>
+        <LazyOnVisible minHeight={600}>
+          <Testimonials />
+        </LazyOnVisible>
+        <LazyOnVisible minHeight={500}>
+          <FAQ />
+        </LazyOnVisible>
+        <LazyOnVisible minHeight={400}>
+          <FinalCTA />
+        </LazyOnVisible>
       </main>
-      <Footer />
+      <LazyOnVisible minHeight={200}>
+        <Footer />
+      </LazyOnVisible>
       {showWidgets && (
         <Suspense fallback={null}>
           <FloatingWhatsApp />

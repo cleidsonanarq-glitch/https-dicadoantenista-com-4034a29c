@@ -33,7 +33,7 @@ const Hero = () => {
           </h1>
 
           <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:mt-6 sm:text-xl">
-            <span className="font-semibold text-foreground">90% das TVs que travam não têm defeito.</span>{" "}
+            <span className="font-semibold text-foreground">99% das TVs que travam não têm defeito.</span>{" "}
             O erro está na configuração — e a <span className="font-semibold text-primary">Dica do Antenista</span> resolve em minutos pelo WhatsApp.
           </p>
 
