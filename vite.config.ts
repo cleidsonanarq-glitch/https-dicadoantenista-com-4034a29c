@@ -17,6 +17,26 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
-    dedupe: ["react", "react-dom", "react/jsx-runtime", "react/jsx-dev-runtime", "@tanstack/react-query", "@tanstack/query-core"],
+    dedupe: ["react", "react-dom", "react/jsx-runtime", "react/jsx-dev-runtime"],
+  },
+  build: {
+    target: "es2020",
+    cssCodeSplit: true,
+    modulePreload: { polyfill: false },
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (!id.includes("node_modules")) return;
+          if (id.includes("react-router")) return "router";
+          if (id.includes("lucide-react")) return "icons";
+          if (
+            id.includes("react-dom") ||
+            id.includes("/react/") ||
+            id.includes("scheduler")
+          )
+            return "react";
+        },
+      },
+    },
   },
 }));
