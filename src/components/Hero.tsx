@@ -62,7 +62,10 @@ const Hero = () => {
             aria-hidden
             className="absolute -inset-4 hidden rounded-[2.5rem] bg-gradient-to-br from-primary/20 via-transparent to-accent/20 blur-2xl sm:block"
           />
-          <div className="relative overflow-hidden rounded-3xl border border-border shadow-card-soft">
+          <div
+            className="relative overflow-hidden rounded-3xl border border-border shadow-card-soft"
+            style={{ aspectRatio: "1 / 1" }}
+          >
             <picture>
               <source media="(max-width: 640px)" srcSet={heroTVMobile} type="image/webp" />
               <img
@@ -72,7 +75,7 @@ const Hero = () => {
                 height={1280}
                 fetchPriority="high"
                 decoding="async"
-                className="h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover"
               />
             </picture>
             {/* Floating status card */}

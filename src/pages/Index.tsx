@@ -1,23 +1,20 @@
 import { lazy, Suspense, useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Problems from "@/components/Problems";
+import Benefits from "@/components/Benefits";
+import HowItWorks from "@/components/HowItWorks";
+import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
+import FinalCTA from "@/components/FinalCTA";
+import Footer from "@/components/Footer";
 
-// Below-the-fold: loaded lazily to improve LCP/TTI on mobile
-const Problems = lazy(() => import("@/components/Problems"));
-const Benefits = lazy(() => import("@/components/Benefits"));
-const HowItWorks = lazy(() => import("@/components/HowItWorks"));
-const Testimonials = lazy(() => import("@/components/Testimonials"));
-const FinalCTA = lazy(() => import("@/components/FinalCTA"));
-const FAQ = lazy(() => import("@/components/FAQ"));
-const Footer = lazy(() => import("@/components/Footer"));
+// Only floating widgets stay deferred — they are fixed/positioned and
+// don't influence document flow, so they can't cause CLS.
 const FloatingWhatsApp = lazy(() => import("@/components/FloatingWhatsApp"));
 const ChatBot = lazy(() => import("@/components/ChatBot"));
 
-const SectionFallback = () => <div aria-hidden className="min-h-[280px]" />;
-
 const Index = () => {
-  // Defer non-critical floating widgets until the browser is idle,
-  // so they don't compete with LCP / first interaction.
   const [showWidgets, setShowWidgets] = useState(false);
 
   useEffect(() => {
@@ -38,24 +35,20 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <Suspense fallback={<SectionFallback />}>
-          <Problems />
-          <Benefits />
-          <HowItWorks />
-          <Testimonials />
-          <FAQ />
-          <FinalCTA />
-        </Suspense>
+        <Problems />
+        <Benefits />
+        <HowItWorks />
+        <Testimonials />
+        <FAQ />
+        <FinalCTA />
       </main>
-      <Suspense fallback={null}>
-        <Footer />
-        {showWidgets && (
-          <>
-            <FloatingWhatsApp />
-            <ChatBot />
-          </>
-        )}
-      </Suspense>
+      <Footer />
+      {showWidgets && (
+        <Suspense fallback={null}>
+          <FloatingWhatsApp />
+          <ChatBot />
+        </Suspense>
+      )}
     </div>
   );
 };
