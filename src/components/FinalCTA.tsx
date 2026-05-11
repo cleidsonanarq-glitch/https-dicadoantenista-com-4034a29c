@@ -13,26 +13,26 @@ const FinalCTA = () => {
           <div className="relative text-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-primary/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
               <span className="h-2 w-2 animate-pulse rounded-full bg-primary" />
-              Atendendo agora
+              Atendimento online agora
             </span>
 
             <h2 className="mt-5 font-display text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
-              Nunca mais sofra com{" "}
-              <span className="text-gradient-accent">travamentos</span>.
+              Pronto para um streaming{" "}
+              <span className="text-gradient-accent">estável e em HD</span>?
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
-              Clique no botão, descreva seu problema e veja sua TV voltar a funcionar como nova hoje mesmo.
+              Fale com o suporte no WhatsApp. Configuração rápida, app leve e compatibilidade com Smart TV, TV Box e celular.
             </p>
 
             <div className="mt-8 flex justify-center">
-              <WhatsAppButton label="Quero falar com especialista" source="final-cta" />
+              <WhatsAppButton label="Fale com o suporte agora" source="final-cta" />
             </div>
 
             <div className="mt-10 grid gap-6 border-t border-border/60 pt-8 sm:grid-cols-3">
               {[
-                { icon: Clock, label: "Resposta em minutos" },
-                { icon: Users, label: "+5.000 clientes atendidos" },
-                { icon: ShieldCheck, label: "Sem complicação, sem custo surpresa" },
+                { icon: Clock, label: "Resposta em poucos minutos" },
+                { icon: Users, label: "+5 mil clientes ativos" },
+                { icon: ShieldCheck, label: "Configuração simples e segura" },
               ].map((item) => {
                 const Icon = item.icon;
                 return (
