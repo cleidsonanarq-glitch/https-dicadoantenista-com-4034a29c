@@ -8,24 +8,24 @@ import { HelpCircle } from "lucide-react";
 
 const faqs = [
   {
-    q: "Funciona em Smart TV?",
-    a: "Sim. Atendemos as principais marcas de Smart TV do mercado e ajustamos a configuração ideal para cada modelo.",
+    q: "Funciona em qualquer Smart TV?",
+    a: "Sim. Compatível com as principais marcas: Samsung, LG, TCL, Philco, AOC, Roku TV e outras Smart TVs com acesso à internet.",
   },
   {
-    q: "Funciona no celular?",
-    a: "Sim, é totalmente compatível com celulares Android e iPhone, além de tablets.",
+    q: "Funciona em TV Box e celular?",
+    a: "Sim. Compatível com TV Box Android, celulares Android, iPhone, tablets e também no computador.",
   },
   {
-    q: "Precisa instalar algo?",
-    a: "Na maioria dos casos não. Quando necessário, nosso especialista guia você passo a passo pelo WhatsApp.",
+    q: "O aplicativo é leve?",
+    a: "Sim. App otimizado para abrir rápido, ocupar pouca memória e rodar estável mesmo em conexões medianas.",
   },
   {
-    q: "O suporte ajuda na instalação?",
-    a: "Sim! Oferecemos suporte humano via WhatsApp do início ao fim, sem deixar você na mão.",
+    q: "A configuração é difícil?",
+    a: "Não. Configuração simples e guiada pelo WhatsApp. Em poucos minutos você já está assistindo.",
   },
   {
-    q: "Como recebo acesso?",
-    a: "Após a confirmação, o acesso é liberado em poucos minutos diretamente no WhatsApp do nosso atendimento.",
+    q: "Tem suporte caso eu precise de ajuda?",
+    a: "Sim. Suporte humano direto no WhatsApp, com resposta rápida sempre que você precisar.",
   },
 ];
 
@@ -39,10 +39,10 @@ const FAQ = () => {
             Perguntas frequentes
           </div>
           <h2 className="font-display text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
-            Tire suas <span className="text-gradient-accent">dúvidas</span>
+            Perguntas <span className="text-gradient-accent">frequentes</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base text-muted-foreground">
-            Respostas rápidas para o que você precisa saber antes de começar.
+            Tudo o que você precisa saber sobre compatibilidade, app e suporte.
           </p>
         </div>
 

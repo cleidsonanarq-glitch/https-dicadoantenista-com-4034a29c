@@ -29,9 +29,9 @@ const HowItWorks = () => {
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
             Simples e rápido
           </span>
-          <h3 className="mt-3 font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
+          <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
             Comece a assistir em <span className="text-gradient-primary">3 passos</span>
-          </h3>
+          </h2>
         </div>
 
         <div className="relative grid gap-6 md:grid-cols-3">
