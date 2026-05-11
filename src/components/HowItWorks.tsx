@@ -4,20 +4,20 @@ const steps = [
   {
     n: "01",
     icon: MessageCircle,
-    title: "Você chama no WhatsApp",
-    desc: "Toca o botão e fala direto com um especialista. Sem robô, sem espera.",
+    title: "Fale no WhatsApp",
+    desc: "Toque no botão e fale direto com um especialista. Sem robô, sem espera.",
   },
   {
     n: "02",
     icon: Wrench,
-    title: "A gente ajusta tudo",
-    desc: "Diagnóstico rápido e ajustes feitos remotamente, com você acompanhando.",
+    title: "Configuração rápida",
+    desc: "Configuramos o app na sua Smart TV, TV Box ou celular em poucos minutos.",
   },
   {
     n: "03",
     icon: PartyPopper,
-    title: "TV funcionando perfeita",
-    desc: "Streaming fluído, imagem nítida e nada de travamento. Pronto pra maratonar.",
+    title: "Assista sem travamentos",
+    desc: "Streaming HD, estável e fluído em todos os seus dispositivos.",
   },
 ];
 
@@ -27,11 +27,11 @@ const HowItWorks = () => {
       <div className="container">
         <div className="mx-auto mb-14 max-w-3xl text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-            Simples assim
+            Simples e rápido
           </span>
-          <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
-            Em 3 passos sua TV <span className="text-gradient-primary">volta a funcionar</span>
-          </h2>
+          <h3 className="mt-3 font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
+            Comece a assistir em <span className="text-gradient-primary">3 passos</span>
+          </h3>
         </div>
 
         <div className="relative grid gap-6 md:grid-cols-3">

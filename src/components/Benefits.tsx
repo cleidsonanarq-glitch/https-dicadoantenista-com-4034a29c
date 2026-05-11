@@ -4,23 +4,23 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 const benefits = [
   {
     icon: Sparkles,
-    title: "Melhor desempenho",
-    desc: "Sua TV roda mais rápido e responde no toque, sem engasgar.",
+    title: "Aplicativo leve e rápido",
+    desc: "App otimizado para Smart TV e TV Box. Abre rápido, navega fluído e consome pouca memória.",
   },
   {
     icon: CheckCircle2,
-    title: "Menos travamentos",
-    desc: "Adeus filme pausando no meio. Streaming fluído de ponta a ponta.",
+    title: "Streaming estável em HD",
+    desc: "Transmissão contínua em alta qualidade, sem travamentos no meio do conteúdo.",
   },
   {
     icon: Settings2,
-    title: "Imagem ajustada",
-    desc: "Qualidade de imagem otimizada para o seu aparelho e conexão.",
+    title: "Compatível com vários dispositivos",
+    desc: "Funciona em Smart TV, TV Box, celular Android, iPhone, tablet e computador.",
   },
   {
     icon: Headphones,
-    title: "Suporte no WhatsApp",
-    desc: "Atendimento rápido, direto e sem fila de espera. Você fala, a gente resolve.",
+    title: "Suporte rápido no WhatsApp",
+    desc: "Atendimento humano direto, sem robô e sem fila. Você fala, a gente resolve.",
   },
 ];
 
@@ -31,11 +31,11 @@ const Benefits = () => {
       <div className="container relative">
         <div className="mx-auto mb-14 max-w-3xl text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-            O que a Dica do Antenista faz por você
+            Por que escolher a Dica do Antenista
           </span>
           <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
-            A gente ajusta tudo.{" "}
-            <span className="text-gradient-primary">Você só assiste.</span>
+            Entretenimento online{" "}
+            <span className="text-gradient-primary">sem complicação</span>
           </h2>
         </div>
 
@@ -65,7 +65,7 @@ const Benefits = () => {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <WhatsAppButton label="Quero ajustar minha TV agora" />
+          <WhatsAppButton label="Falar com o suporte agora" source="benefits" />
         </div>
       </div>
     </section>

@@ -1,10 +1,10 @@
 import { AlertTriangle, SignalLow, Loader2, Volume2 } from "lucide-react";
 
 const problems = [
-  { icon: AlertTriangle, label: "Trava no meio do filme" },
-  { icon: SignalLow, label: "Queda constante de sinal" },
-  { icon: Loader2, label: "Demora pra carregar" },
-  { icon: Volume2, label: "Imagem ou som ruim" },
+  { icon: AlertTriangle, label: "Streaming travando no meio" },
+  { icon: SignalLow, label: "Conexão instável e lenta" },
+  { icon: Loader2, label: "App pesado que demora a abrir" },
+  { icon: Volume2, label: "Imagem fora de qualidade HD" },
 ];
 
 const Problems = () => {
@@ -13,13 +13,13 @@ const Problems = () => {
       <div className="container">
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-            Reconhece esses sintomas?
+            Reconhece esses problemas?
           </span>
           <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
-            Sua TV está te <span className="text-gradient-accent">deixando na mão</span>?
+            Cansado de streaming <span className="text-gradient-accent">travado e instável</span>?
           </h2>
           <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-            Você não precisa trocar de aparelho. Na maioria dos casos, é só uma configuração mal feita.
+            A maioria dos problemas não é da sua TV — é do app ou da configuração. A gente resolve isso pra você.
           </p>
         </div>
 
