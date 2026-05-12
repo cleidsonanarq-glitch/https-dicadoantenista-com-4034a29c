@@ -174,7 +174,8 @@ const ChatBot = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => trackEvent("click_whatsapp", { source: "chatbot-success" })}
-                    className="mt-1 text-xs font-semibold text-primary underline-offset-2 hover:underline"
+                    className="mt-1 text-xs font-semibold text-primary underline-offset-2 hover:underline btn-whatsapp"
+                    id="btn-whatsapp"
                   >
                     Abrir WhatsApp agora
                   </a>
