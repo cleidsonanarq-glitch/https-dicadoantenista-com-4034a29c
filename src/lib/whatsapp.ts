@@ -4,5 +4,5 @@ export const WHATSAPP_DEFAULT_MESSAGE =
   "Olá, vim pela landing page e quero suporte";
 
 export function buildWhatsAppUrl(message: string = WHATSAPP_DEFAULT_MESSAGE) {
-  return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
+  return `https://api.whatsapp.com/send?phone=${WHATSAPP_PHONE}&text=${encodeURIComponent(message)}`;
 }
