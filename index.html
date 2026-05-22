@@ -33,21 +33,10 @@
     <link rel="dns-prefetch" href="https://connect.facebook.net" />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
-    <!-- Preload hero image (LCP) -->
-    <link
-      rel="preload"
-      as="image"
-      href="/src/assets/hero-tv-720.webp"
-      fetchpriority="high"
-      media="(max-width: 640px)"
-    />
-    <link
-      rel="preload"
-      as="image"
-      href="/src/assets/hero-tv.webp"
-      fetchpriority="high"
-      media="(min-width: 641px)"
-    />
+    <!-- LCP hero image: priorizada via fetchpriority="high" no <img>.
+         Preload manual removido: caminhos /src/assets/* não batem com os
+         hashes do bundle de produção, gerando 404 e atrasando o LCP. -->
+
 
     <!-- Fonts: non-blocking load (swap-in once ready) -->
     <link
