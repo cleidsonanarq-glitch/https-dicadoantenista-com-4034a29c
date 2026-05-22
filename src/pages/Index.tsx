@@ -14,7 +14,6 @@ const Footer = lazy(() => import("@/components/Footer"));
 
 // Floating widgets — fixed position, no CLS impact, mounted on idle.
 const FloatingWhatsApp = lazy(() => import("@/components/FloatingWhatsApp"));
-const ChatBot = lazy(() => import("@/components/ChatBot"));
 
 const Index = () => {
   const [showWidgets, setShowWidgets] = useState(false);
@@ -58,7 +57,6 @@ const Index = () => {
       {showWidgets && (
         <Suspense fallback={null}>
           <FloatingWhatsApp />
-          <ChatBot />
         </Suspense>
       )}
     </div>
