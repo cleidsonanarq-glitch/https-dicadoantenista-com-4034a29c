@@ -30,25 +30,25 @@
     <!-- Performance hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://connect.facebook.net" />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
     <!-- LCP hero image: priorizada via fetchpriority="high" no <img>.
          Preload manual removido: caminhos /src/assets/* não batem com os
          hashes do bundle de produção, gerando 404 e atrasando o LCP. -->
 
 
-    <!-- Fonts: non-blocking load (swap-in once ready) -->
+    <!-- Fonts: single request, non-blocking, font-display: swap -->
     <link
       rel="preload"
       as="style"
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@800&family=Inter:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <noscript>
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Sora:wght@800&family=Inter:wght@400;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
       />
     </noscript>
 
@@ -107,18 +107,8 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
 
-    <!-- Tracking adicional — carregado após o load para não bloquear FCP/LCP -->
-    <script>
-      window.addEventListener('load', function () {
-        // Meta Pixel (placeholder — substituir META_PIXEL_ID pelo ID real)
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-        document,'script','https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', 'META_PIXEL_ID');
-        fbq('track', 'PageView');
-      });
-    </script>
+    <!-- Tracking gerenciado exclusivamente via GTM (GTM-5KNZPFXK).
+         Pixel Meta deve ser configurado como tag no próprio GTM, evitando
+         carregamento manual no HTML (reduz JS no boot e melhora FCP/LCP). -->
   </body>
 </html>
