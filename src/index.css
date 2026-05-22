@@ -78,7 +78,9 @@
     text-rendering: optimizeSpeed;
   }
 
-  img { content-visibility: auto; }
+  /* Apenas imagens marcadas explicitamente como abaixo-da-dobra usam
+     content-visibility:auto. Aplicar globalmente atrasa a pintura do LCP. */
+  .cv-auto { content-visibility: auto; contain-intrinsic-size: 1px 600px; }
 
   h1, h2, h3, h4 {
     font-family: 'Sora', 'Inter', sans-serif;
