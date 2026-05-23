@@ -19,16 +19,23 @@ const Index = () => {
   const [showWidgets, setShowWidgets] = useState(false);
 
   useEffect(() => {
-    const w = window as Window & {
-      requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
+    let done = false;
+    const trigger = () => {
+      if (done) return;
+      done = true;
+      cleanup();
+      setShowWidgets(true);
     };
-    const trigger = () => setShowWidgets(true);
-    if (typeof w.requestIdleCallback === "function") {
-      w.requestIdleCallback(trigger, { timeout: 2500 });
-    } else {
-      const id = window.setTimeout(trigger, 1800);
-      return () => window.clearTimeout(id);
-    }
+    const events = ["scroll", "pointerdown", "touchstart", "keydown"] as const;
+    const opts: AddEventListenerOptions = { once: true, passive: true, capture: true };
+    events.forEach((e) => window.addEventListener(e, trigger, opts));
+    // Fallback: garante exibição mesmo sem interação, mas bem depois do LCP
+    const timeoutId = window.setTimeout(trigger, 4000);
+    const cleanup = () => {
+      window.clearTimeout(timeoutId);
+      events.forEach((e) => window.removeEventListener(e, trigger, opts));
+    };
+    return cleanup;
   }, []);
 
   return (
