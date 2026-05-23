@@ -1,5 +1,7 @@
-import heroTV from "@/assets/hero-tv.webp";
-import heroTVMobile from "@/assets/hero-tv-720.webp";
+// Hero images served from /public for stable URLs that match the preload in index.html
+const heroTV = "/img/hero-tv.webp";
+const heroTVMobile = "/img/hero-tv-720.webp";
+const heroTVMobileSmall = "/img/hero-tv-480.webp";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Tv, Zap } from "lucide-react";
 
