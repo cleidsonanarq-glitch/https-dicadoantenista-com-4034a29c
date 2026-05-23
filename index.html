@@ -33,9 +33,15 @@
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
-    <!-- LCP hero image: priorizada via fetchpriority="high" no <img>.
-         Preload manual removido: caminhos /src/assets/* não batem com os
-         hashes do bundle de produção, gerando 404 e atrasando o LCP. -->
+    <!-- LCP hero image preload — stable public path, responsive via imagesrcset -->
+    <link
+      rel="preload"
+      as="image"
+      href="/img/hero-tv.webp"
+      imagesrcset="/img/hero-tv-480.webp 480w, /img/hero-tv-720.webp 720w, /img/hero-tv.webp 1280w"
+      imagesizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, 50vw"
+      fetchpriority="high"
+    />
 
 
     <!-- Fonts: single request, non-blocking, font-display: swap -->
