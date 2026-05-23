@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => ({
     dedupe: ["react", "react-dom", "react/jsx-runtime", "react/jsx-dev-runtime"],
   },
   build: {
-    target: "es2020",
+    target: "es2022",
     cssCodeSplit: true,
     modulePreload: { polyfill: false },
     rollupOptions: {
