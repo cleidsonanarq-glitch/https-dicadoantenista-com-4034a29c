@@ -70,29 +70,19 @@ const Hero = () => {
             className="relative overflow-hidden rounded-3xl border border-border shadow-card-soft"
             style={{ aspectRatio: "1 / 1" }}
           >
-            <picture>
-              <source
-                media="(max-width: 480px)"
-                srcSet={`${heroTVMobileSmall} 480w`}
-                sizes="100vw"
-                type="image/webp"
-              />
-              <source
-                media="(max-width: 768px)"
-                srcSet={`${heroTVMobile} 720w`}
-                sizes="100vw"
-                type="image/webp"
-              />
-              <img
-                src={heroTV}
-                alt="Smart TV reproduzindo streaming HD com aplicativo leve da Dica do Antenista"
-                width={1280}
-                height={1280}
-                fetchPriority="high"
-                decoding="async"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-            </picture>
+            <img
+              src="/img/hero-tv-480.webp"
+              srcSet="/img/hero-tv-480.webp 480w, /img/hero-tv-720.webp 720w, /img/hero-tv.webp 1280w"
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, 50vw"
+              alt="Smart TV reproduzindo streaming HD com aplicativo leve da Dica do Antenista"
+              width={1280}
+              height={1280}
+              fetchPriority="high"
+              decoding="async"
+              loading="eager"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+
             {/* Floating status card */}
             <div className="absolute bottom-4 left-4 right-4 sm:left-6 sm:right-auto sm:max-w-xs">
               <div className="glass-card flex items-center gap-3 rounded-2xl p-4">
