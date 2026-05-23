@@ -71,7 +71,18 @@ const Hero = () => {
             style={{ aspectRatio: "1 / 1" }}
           >
             <picture>
-              <source media="(max-width: 640px)" srcSet={heroTVMobile} type="image/webp" />
+              <source
+                media="(max-width: 480px)"
+                srcSet={`${heroTVMobileSmall} 480w`}
+                sizes="100vw"
+                type="image/webp"
+              />
+              <source
+                media="(max-width: 768px)"
+                srcSet={`${heroTVMobile} 720w`}
+                sizes="100vw"
+                type="image/webp"
+              />
               <img
                 src={heroTV}
                 alt="Smart TV reproduzindo streaming HD com aplicativo leve da Dica do Antenista"
