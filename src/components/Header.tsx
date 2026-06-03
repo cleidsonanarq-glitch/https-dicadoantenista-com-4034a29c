@@ -1,5 +1,5 @@
 import WhatsAppButton from "@/components/WhatsAppButton";
-import logoAsset from "@/assets/logo-dica-antenista.png.asset.json";
+import logoUrl from "@/assets/logo-dica-antenista.png";
 
 const Header = () => {
   return (
