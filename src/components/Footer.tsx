@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MessageCircle, Clock, Calendar } from "lucide-react";
-import logoAsset from "@/assets/logo-dica-antenista.png.asset.json";
+import logoUrl from "@/assets/logo-dica-antenista.png";
 import {
   Dialog,
   DialogContent,
