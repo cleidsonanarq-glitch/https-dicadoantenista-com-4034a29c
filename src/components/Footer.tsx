@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Tv, MessageCircle, Clock, Calendar } from "lucide-react";
+import { MessageCircle, Clock, Calendar } from "lucide-react";
+import logoAsset from "@/assets/logo-dica-antenista.png.asset.json";
 import {
   Dialog,
   DialogContent,
@@ -18,13 +19,19 @@ const Footer = () => {
   return (
     <footer className="border-t border-border/60 py-10">
       <div className="container flex flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">
-        <div className="flex items-center gap-2.5">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-cta">
-            <Tv className="h-4 w-4 text-primary-foreground" />
-          </div>
-          <span className="font-display text-base font-bold">
-            Dica do <span className="text-primary">Antenista</span>
-          </span>
+        <div className="flex flex-col items-center gap-2 sm:items-start">
+          <img
+            src={logoAsset.url}
+            alt="Dica do Antenista - Suporte especializado para Smart TV, TV Box e aplicativos de streaming"
+            width="160"
+            height="50"
+            loading="lazy"
+            decoding="async"
+            className="h-12 w-auto object-contain"
+          />
+          <p className="text-xs text-muted-foreground max-w-[260px]">
+            Suporte de verdade, 24h por dia no seu WhatsApp.
+          </p>
         </div>
 
         <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
