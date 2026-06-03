@@ -8,43 +8,43 @@
 
 @layer base {
   :root {
-    --background: 220 30% 8%;
+    --background: 222 60% 7%;
     --foreground: 210 40% 98%;
 
-    --card: 220 28% 12%;
+    --card: 222 50% 11%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 220 28% 12%;
+    --popover: 222 50% 11%;
     --popover-foreground: 210 40% 98%;
 
-    /* WhatsApp green = primary action */
-    --primary: 142 70% 45%;
+    /* Brand green (logo) = primary action */
+    --primary: 123 65% 47%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 142 80% 55%;
+    --primary-glow: 123 70% 58%;
 
-    --secondary: 220 25% 16%;
+    --secondary: 222 45% 15%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 220 20% 18%;
-    --muted-foreground: 215 20% 70%;
+    --muted: 222 35% 17%;
+    --muted-foreground: 215 20% 72%;
 
-    /* Warm orange accent */
-    --accent: 22 95% 58%;
+    /* Brand blue accent */
+    --accent: 217 93% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 25% 20%;
-    --input: 220 25% 18%;
-    --ring: 142 70% 45%;
+    --border: 222 35% 20%;
+    --input: 222 35% 18%;
+    --ring: 123 65% 47%;
 
     --radius: 1rem;
 
     /* Brand specific */
-    --brand-deep: 220 60% 12%;
-    --brand-deeper: 222 70% 7%;
-    --brand-blue: 215 90% 55%;
+    --brand-deep: 222 86% 23%;
+    --brand-deeper: 222 86% 14%;
+    --brand-blue: 217 93% 50%;
 
     --gradient-hero: radial-gradient(ellipse at top, hsl(215 90% 25% / 0.6), transparent 60%),
                      linear-gradient(180deg, hsl(var(--brand-deeper)) 0%, hsl(var(--background)) 100%);
