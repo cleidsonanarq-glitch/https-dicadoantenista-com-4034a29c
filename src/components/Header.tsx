@@ -7,7 +7,7 @@ const Header = () => {
       <div className="container flex h-16 items-center justify-between gap-3 sm:h-20">
         <a href="/" className="flex items-center gap-2 shrink-0" aria-label="Dica do Antenista - Página inicial">
           <img
-            src={logoAsset.url}
+            src={logoUrl}
             alt="Dica do Antenista - Suporte especializado para Smart TV, TV Box e aplicativos de streaming"
             width="180"
             height="56"
