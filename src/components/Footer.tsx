@@ -21,7 +21,7 @@ const Footer = () => {
       <div className="container flex flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">
         <div className="flex flex-col items-center gap-2 sm:items-start">
           <img
-            src={logoAsset.url}
+            src={logoUrl}
             alt="Dica do Antenista - Suporte especializado para Smart TV, TV Box e aplicativos de streaming"
             width="160"
             height="50"
