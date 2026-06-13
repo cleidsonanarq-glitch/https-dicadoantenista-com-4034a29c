@@ -65,7 +65,7 @@ const Benefits = () => {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <WhatsAppButton label="Configurar meu IBO Player" source="benefits" />
+          <WhatsAppButton label="Quero configurar meu IBO Player pelo WhatsApp" source="benefits" />
         </div>
       </div>
     </section>
