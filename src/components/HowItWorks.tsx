@@ -17,7 +17,7 @@ const steps = [
     n: "03",
     icon: Settings2,
     title: "Receba orientação para configuração",
-    desc: "Te guiamos passo a passo na instalação e configuração do IBO Player no seu dispositivo.",
+    desc: "Te guiamos passo a passo na configuração do IBO Player no seu dispositivo.",
   },
   {
     n: "04",
