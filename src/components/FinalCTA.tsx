@@ -6,33 +6,32 @@ const FinalCTA = () => {
     <section className="relative py-20 sm:py-28">
       <div className="container">
         <div className="relative mx-auto max-w-5xl overflow-hidden rounded-[2rem] border border-primary/30 bg-gradient-card p-10 shadow-glow sm:p-14 lg:p-16">
-          {/* Decorative */}
           <div className="pointer-events-none absolute -top-32 -right-32 h-72 w-72 rounded-full bg-primary/30 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-32 -left-20 h-64 w-64 rounded-full bg-accent/20 blur-3xl" />
 
           <div className="relative text-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-primary/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
               <span className="h-2 w-2 animate-pulse rounded-full bg-primary" />
-              Atendimento online agora
+              Suporte online agora
             </span>
 
             <h2 className="mt-5 font-display text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
-              Pronto para um streaming{" "}
-              <span className="text-gradient-accent">estável e em HD</span>?
+              Pronto para configurar seu{" "}
+              <span className="text-gradient-accent">IBO Player?</span>
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
-              Fale com o suporte no WhatsApp. Configuração rápida, app leve e compatibilidade com Smart TV, TV Box e celular.
+              Fale com nosso suporte no WhatsApp. Orientação passo a passo para instalação e configuração na sua Smart TV, TV Box ou Android.
             </p>
 
             <div className="mt-8 flex justify-center">
-              <WhatsAppButton label="Fale com o suporte agora" source="final-cta" />
+              <WhatsAppButton label="Configurar meu IBO Player" source="final-cta" />
             </div>
 
             <div className="mt-10 grid gap-6 border-t border-border/60 pt-8 sm:grid-cols-3">
               {[
                 { icon: Clock, label: "Resposta em poucos minutos" },
-                { icon: Users, label: "+5 mil clientes ativos" },
-                { icon: ShieldCheck, label: "Configuração simples e segura" },
+                { icon: Users, label: "+5 mil clientes atendidos" },
+                { icon: ShieldCheck, label: "Suporte humano e seguro" },
               ].map((item) => {
                 const Icon = item.icon;
                 return (

@@ -18,23 +18,33 @@ const Footer = () => {
 
   return (
     <footer className="border-t border-border/60 py-10">
-      <div className="container flex flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">
-        <div className="flex flex-col items-center gap-2 sm:items-start">
+      <div className="container flex flex-col items-center gap-8 text-center md:flex-row md:items-start md:justify-between md:text-left">
+        <div className="flex max-w-sm flex-col items-center gap-3 md:items-start">
           <img
             src={logoUrl}
-            alt="Dica do Antenista - Suporte especializado para Smart TV, TV Box e aplicativos de streaming"
+            alt="Dica do Antenista - Suporte e configuração de IBO Player para Smart TV, TV Box e Android"
             width="160"
             height="50"
             loading="lazy"
             decoding="async"
             className="h-12 w-auto object-contain"
           />
-          <p className="text-xs text-muted-foreground max-w-[260px]">
+          <p className="text-sm font-semibold text-foreground">Dica do Antenista</p>
+          <p className="text-xs leading-relaxed text-muted-foreground">
+            Serviço de suporte e configuração de aplicativos para Smart TVs e dispositivos compatíveis.
+          </p>
+          <p className="text-xs text-muted-foreground">
+            Responsável: <span className="text-foreground">Cleidson Ferreira Teixeira</span>
+          </p>
+          <p className="text-xs text-muted-foreground">
             Suporte de verdade, 24h por dia no seu WhatsApp.
           </p>
         </div>
 
-        <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+        <nav className="flex flex-col items-center gap-2 text-sm md:items-start">
+          <span className="mb-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+            Institucional
+          </span>
           <button
             onClick={() => setOpen("privacy")}
             className="text-muted-foreground transition-colors hover:text-primary"
@@ -55,7 +65,7 @@ const Footer = () => {
           </button>
         </nav>
 
-        <p className="text-xs text-muted-foreground">
+        <p className="text-xs text-muted-foreground md:self-end">
           © {new Date().getFullYear()} Dica do Antenista.
         </p>
       </div>
@@ -77,8 +87,8 @@ const Footer = () => {
           <DialogHeader>
             <DialogTitle>Termos de Uso</DialogTitle>
             <DialogDescription className="pt-2 text-sm leading-relaxed text-muted-foreground">
-              Serviço destinado para entretenimento digital e suporte técnico ao
-              cliente.
+              Serviço destinado à orientação técnica para instalação e
+              configuração de aplicativos em Smart TVs e dispositivos compatíveis.
             </DialogDescription>
           </DialogHeader>
         </DialogContent>
@@ -95,7 +105,7 @@ const Footer = () => {
           <ul className="mt-2 space-y-3 text-sm">
             <li className="flex items-center gap-3">
               <MessageCircle className="h-4 w-4 text-primary" />
-              <span>WhatsApp: <strong>+55 88 99123-4567</strong></span>
+              <span>WhatsApp: <strong>+55 71 99972-9281</strong></span>
             </li>
             <li className="flex items-center gap-3">
               <Calendar className="h-4 w-4 text-primary" />

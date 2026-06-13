@@ -1,10 +1,10 @@
-import { AlertTriangle, SignalLow, Loader2, Volume2 } from "lucide-react";
+import { AlertTriangle, HelpCircle, Loader2, Settings2 } from "lucide-react";
 
 const problems = [
-  { icon: AlertTriangle, label: "Streaming travando no meio" },
-  { icon: SignalLow, label: "Conexão instável e lenta" },
-  { icon: Loader2, label: "App pesado que demora a abrir" },
-  { icon: Volume2, label: "Imagem fora de qualidade HD" },
+  { icon: HelpCircle, label: "Não sabe como instalar o IBO Player" },
+  { icon: Settings2, label: "Dificuldade para configurar o aplicativo" },
+  { icon: AlertTriangle, label: "Erro de ativação ou tela em branco" },
+  { icon: Loader2, label: "Sem suporte para a sua Smart TV" },
 ];
 
 const Problems = () => {
@@ -13,13 +13,13 @@ const Problems = () => {
       <div className="container">
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-            Reconhece esses problemas?
+            Precisa de ajuda?
           </span>
           <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
-            Cansado de streaming <span className="text-gradient-accent">travado e instável</span>?
+            Dificuldade para <span className="text-gradient-accent">configurar o IBO Player</span>?
           </h2>
           <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-            A maioria dos problemas não é da sua TV — é do app ou da configuração. A gente resolve isso pra você.
+            Nossa equipe te orienta passo a passo, do início ao fim, direto pelo WhatsApp.
           </p>
         </div>
 
