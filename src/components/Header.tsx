@@ -8,7 +8,7 @@ const Header = () => {
         <a href="/" className="flex items-center gap-2 shrink-0" aria-label="Dica do Antenista - Página inicial">
           <img
             src={logoUrl}
-            alt="Dica do Antenista - Suporte especializado para Smart TV, TV Box e aplicativos de streaming"
+            alt="Dica do Antenista - Suporte para configuração de aplicativos em Smart TV"
             width="180"
             height="56"
             fetchPriority="high"
