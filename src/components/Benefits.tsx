@@ -34,8 +34,8 @@ const Benefits = () => {
             Suporte especializado em IBO Player
           </span>
           <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
-            Por que escolher{" "}
-            <span className="text-gradient-primary">nosso suporte?</span>
+            Por que escolher nosso suporte para{" "}
+            <span className="text-gradient-primary">IBO Player?</span>
           </h2>
         </div>
 
