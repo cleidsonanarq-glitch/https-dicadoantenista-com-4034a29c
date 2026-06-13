@@ -9,18 +9,18 @@ const benefits = [
   },
   {
     icon: Settings2,
-    title: "Ajuda para configurar o aplicativo",
-    desc: "Configuração completa do app na sua TV ou dispositivo, sem complicação técnica.",
+    title: "Configuração personalizada",
+    desc: "Configuração feita de acordo com o seu dispositivo, sem complicação técnica.",
   },
   {
     icon: Tv,
-    title: "Suporte para Smart TV Samsung, LG, Android TV e TV Box",
+    title: "Compatível com Smart TV Samsung, LG, Android e TV Box",
     desc: "Atendemos os principais aparelhos do mercado com orientação especializada para cada modelo.",
   },
   {
     icon: MessageCircle,
-    title: "Atendimento pelo WhatsApp",
-    desc: "Suporte humano direto no WhatsApp, com resposta rápida e acompanhamento durante o processo.",
+    title: "Atendimento direto pelo WhatsApp",
+    desc: "Suporte humano com resposta rápida e acompanhamento durante todo o processo.",
   },
 ];
 
@@ -34,8 +34,8 @@ const Benefits = () => {
             Suporte especializado em IBO Player
           </span>
           <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
-            Por que escolher{" "}
-            <span className="text-gradient-primary">nosso suporte?</span>
+            Por que escolher nosso suporte para{" "}
+            <span className="text-gradient-primary">IBO Player?</span>
           </h2>
         </div>
 
@@ -65,7 +65,7 @@ const Benefits = () => {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <WhatsAppButton label="Configurar meu IBO Player" source="benefits" />
+          <WhatsAppButton label="Quero configurar meu IBO Player pelo WhatsApp" source="benefits" />
         </div>
       </div>
     </section>

@@ -17,7 +17,7 @@ const steps = [
     n: "03",
     icon: Settings2,
     title: "Receba orientação para configuração",
-    desc: "Te guiamos passo a passo na instalação e configuração do IBO Player no seu dispositivo.",
+    desc: "Te guiamos passo a passo na configuração do IBO Player no seu dispositivo.",
   },
   {
     n: "04",
@@ -36,7 +36,7 @@ const HowItWorks = () => {
             Como funciona
           </span>
           <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
-            Configure em <span className="text-gradient-primary">4 passos</span>
+            Configure seu IBO Player em <span className="text-gradient-primary">poucos passos</span>
           </h2>
         </div>
 

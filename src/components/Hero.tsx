@@ -27,26 +27,24 @@ const Hero = () => {
               <span className="text-gradient-accent inline-block">IBO Player</span>
               <span className="absolute -bottom-1 left-0 h-1 w-full rounded-full bg-gradient-accent opacity-60" />
             </span>{" "}
-            na sua Smart TV, TV Box ou Android
+            na sua Smart TV sem complicação
           </h1>
 
           <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:mt-6 sm:text-xl">
-            Suporte especializado para <span className="font-semibold text-foreground">instalação, configuração e ativação</span> do aplicativo. Atendimento rápido e humano pelo <span className="font-semibold text-primary">WhatsApp</span>.
+            Suporte especializado para <span className="font-semibold text-foreground">instalação, configuração e ativação</span> do aplicativo em Smart TV, TV Box e Android.
+          </p>
+
+          <p className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-foreground sm:text-base">
+            <MonitorSmartphone className="h-4 w-4 text-primary" />
+            Compatível com Samsung, LG, Android TV e TV Box
           </p>
 
           <div className="mt-7 flex flex-col items-center gap-3 lg:items-start">
-            <WhatsAppButton label="Configurar meu IBO Player" source="hero" />
-            <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-medium text-muted-foreground sm:text-sm lg:justify-start">
-              <li className="inline-flex items-center gap-1.5">
-                <MessageCircle className="h-3.5 w-3.5 text-primary" /> Atendimento pelo WhatsApp
-              </li>
-              <li className="inline-flex items-center gap-1.5">
-                <Wrench className="h-3.5 w-3.5 text-primary" /> Suporte passo a passo
-              </li>
-              <li className="inline-flex items-center gap-1.5">
-                <MonitorSmartphone className="h-3.5 w-3.5 text-primary" /> Smart TV, TV Box e Android
-              </li>
-            </ul>
+            <WhatsAppButton label="Quero configurar meu IBO Player pelo WhatsApp" source="hero" />
+            <p className="inline-flex flex-wrap items-center justify-center gap-1.5 text-xs font-medium text-muted-foreground sm:text-sm lg:justify-start">
+              <MessageCircle className="h-3.5 w-3.5 text-primary" />
+              Atendimento rápido • Orientação passo a passo • Suporte humano
+            </p>
           </div>
 
           <div className="mt-7 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-muted-foreground sm:gap-x-8 lg:justify-start">
