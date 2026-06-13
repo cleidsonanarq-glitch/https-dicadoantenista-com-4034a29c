@@ -2,19 +2,19 @@ import { Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Streaming na minha Smart TV ficou muito mais estável. Imagem em HD e zero travamento durante os jogos.",
+    quote: "Recebi ajuda para configurar minha Smart TV Samsung. Atendimento rápido e explicado.",
     author: "Carla M.",
-    role: "Cliente Smart TV",
+    role: "Cliente Smart TV Samsung",
   },
   {
-    quote: "Configuração rápida no TV Box e suporte excelente pelo WhatsApp. Recomendo para quem quer praticidade.",
+    quote: "Não sabia configurar o aplicativo, o suporte resolveu comigo pelo WhatsApp.",
     author: "Rodrigo S.",
     role: "Cliente TV Box",
   },
   {
-    quote: "Uso no celular e na TV ao mesmo tempo. App leve, abre rápido e funciona muito bem.",
+    quote: "Fácil, rápido e sem complicação.",
     author: "Patrícia L.",
-    role: "Cliente Multi-dispositivo",
+    role: "Cliente Android TV",
   },
 ];
 
@@ -24,10 +24,10 @@ const Testimonials = () => {
       <div className="container">
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-            Clientes que já assistem com a gente
+            Depoimentos
           </span>
           <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
-            Experiência <span className="text-gradient-accent">estável e prática</span>
+            Clientes que já <span className="text-gradient-accent">receberam suporte</span>
           </h2>
         </div>
 
