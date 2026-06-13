@@ -20,11 +20,11 @@ const FinalCTA = () => {
               <span className="text-gradient-accent">IBO Player?</span>
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
-              Fale com nosso suporte no WhatsApp. Orientação passo a passo para instalação e configuração na sua Smart TV, TV Box ou Android.
+              Fale com nosso suporte e receba orientação para instalar e configurar seu aplicativo.
             </p>
 
             <div className="mt-8 flex justify-center">
-              <WhatsAppButton label="Configurar meu IBO Player" source="final-cta" />
+              <WhatsAppButton label="Configurar meu IBO Player agora" source="final-cta" />
             </div>
 
             <div className="mt-10 grid gap-6 border-t border-border/60 pt-8 sm:grid-cols-3">
