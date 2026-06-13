@@ -9,18 +9,18 @@ const benefits = [
   },
   {
     icon: Settings2,
-    title: "Ajuda para configurar o aplicativo",
-    desc: "Configuração completa do app na sua TV ou dispositivo, sem complicação técnica.",
+    title: "Configuração personalizada",
+    desc: "Configuração feita de acordo com o seu dispositivo, sem complicação técnica.",
   },
   {
     icon: Tv,
-    title: "Suporte para Smart TV Samsung, LG, Android TV e TV Box",
+    title: "Compatível com Smart TV Samsung, LG, Android e TV Box",
     desc: "Atendemos os principais aparelhos do mercado com orientação especializada para cada modelo.",
   },
   {
     icon: MessageCircle,
-    title: "Atendimento pelo WhatsApp",
-    desc: "Suporte humano direto no WhatsApp, com resposta rápida e acompanhamento durante o processo.",
+    title: "Atendimento direto pelo WhatsApp",
+    desc: "Suporte humano com resposta rápida e acompanhamento durante todo o processo.",
   },
 ];
 
