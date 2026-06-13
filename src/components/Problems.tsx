@@ -1,10 +1,10 @@
 import { AlertTriangle, HelpCircle, Loader2, Settings2 } from "lucide-react";
 
 const problems = [
-  { icon: HelpCircle, label: "Não sabe como instalar o IBO Player" },
-  { icon: Settings2, label: "Dificuldade para configurar o aplicativo" },
-  { icon: AlertTriangle, label: "Erro de ativação ou tela em branco" },
-  { icon: Loader2, label: "Sem suporte para a sua Smart TV" },
+  { icon: HelpCircle, title: "Não sabe instalar o aplicativo?", desc: "Receba orientação para instalar o IBO Player corretamente." },
+  { icon: Settings2, title: "Dificuldade para configurar?", desc: "Ajudamos você durante todo o processo de configuração." },
+  { icon: AlertTriangle, title: "Erro ou tela em branco?", desc: "Orientação para identificar e resolver problemas comuns." },
+  { icon: Loader2, title: "Não tem suporte?", desc: "Fale com uma pessoa e receba ajuda pelo WhatsApp." },
 ];
 
 const Problems = () => {
