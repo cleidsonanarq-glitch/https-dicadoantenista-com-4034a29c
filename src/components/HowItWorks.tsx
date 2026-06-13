@@ -36,7 +36,7 @@ const HowItWorks = () => {
             Como funciona
           </span>
           <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
-            Configure em <span className="text-gradient-primary">4 passos</span>
+            Configure seu IBO Player em <span className="text-gradient-primary">poucos passos</span>
           </h2>
         </div>
 
