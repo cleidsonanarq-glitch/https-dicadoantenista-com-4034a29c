@@ -16,10 +16,10 @@ const Problems = () => {
             Precisa de ajuda?
           </span>
           <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
-            Dificuldade para <span className="text-gradient-accent">configurar o IBO Player</span>?
+            Não consegue configurar o <span className="text-gradient-accent">IBO Player</span> sozinho?
           </h2>
           <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-            Nossa equipe te orienta passo a passo, do início ao fim, direto pelo WhatsApp.
+            Nossa equipe ajuda você passo a passo, desde a instalação até a configuração correta do aplicativo no seu dispositivo.
           </p>
         </div>
 
@@ -28,16 +28,21 @@ const Problems = () => {
             const Icon = p.icon;
             return (
               <div
-                key={p.label}
-                className="glass-card group relative flex items-center gap-4 rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 hover:border-accent/50"
+                key={p.title}
+                className="glass-card group relative flex flex-col gap-3 rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 hover:border-accent/50"
                 style={{ animationDelay: `${i * 80}ms` }}
               >
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent/15 text-accent transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
                   <Icon className="h-6 w-6" />
                 </div>
-                <p className="text-sm font-semibold leading-tight text-foreground sm:text-base">
-                  {p.label}
-                </p>
+                <div>
+                  <h3 className="text-base font-semibold leading-tight text-foreground sm:text-lg">
+                    {p.title}
+                  </h3>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                    {p.desc}
+                  </p>
+                </div>
               </div>
             );
           })}
