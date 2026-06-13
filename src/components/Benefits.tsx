@@ -1,26 +1,26 @@
-import { CheckCircle2, Headphones, Settings2, Sparkles } from "lucide-react";
+import { Wrench, Settings2, Tv, MessageCircle } from "lucide-react";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const benefits = [
   {
-    icon: Sparkles,
-    title: "Aplicativo leve e rápido",
-    desc: "App otimizado para Smart TV e TV Box. Abre rápido, navega fluído e consome pouca memória.",
-  },
-  {
-    icon: CheckCircle2,
-    title: "Streaming estável em HD",
-    desc: "Transmissão contínua em alta qualidade, sem travamentos no meio do conteúdo.",
+    icon: Wrench,
+    title: "Instalação guiada",
+    desc: "Te orientamos passo a passo na instalação do IBO Player no seu aparelho, do início ao fim.",
   },
   {
     icon: Settings2,
-    title: "Compatível com vários dispositivos",
-    desc: "Funciona em Smart TV, TV Box, celular Android, iPhone, tablet e computador.",
+    title: "Ajuda para configurar o aplicativo",
+    desc: "Configuração completa do app na sua TV ou dispositivo, sem complicação técnica.",
   },
   {
-    icon: Headphones,
-    title: "Suporte rápido no WhatsApp",
-    desc: "Atendimento humano direto, sem robô e sem fila. Você fala, a gente resolve.",
+    icon: Tv,
+    title: "Suporte para Smart TV Samsung, LG, Android TV e TV Box",
+    desc: "Atendemos os principais aparelhos do mercado com orientação especializada para cada modelo.",
+  },
+  {
+    icon: MessageCircle,
+    title: "Atendimento pelo WhatsApp",
+    desc: "Suporte humano direto no WhatsApp, com resposta rápida e acompanhamento durante o processo.",
   },
 ];
 
@@ -31,11 +31,11 @@ const Benefits = () => {
       <div className="container relative">
         <div className="mx-auto mb-14 max-w-3xl text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-            Por que escolher a Dica do Antenista
+            Suporte especializado em IBO Player
           </span>
           <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
-            Entretenimento online{" "}
-            <span className="text-gradient-primary">sem complicação</span>
+            Por que escolher{" "}
+            <span className="text-gradient-primary">nosso suporte?</span>
           </h2>
         </div>
 
@@ -65,7 +65,7 @@ const Benefits = () => {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <WhatsAppButton label="Falar com o suporte agora" source="benefits" />
+          <WhatsAppButton label="Configurar meu IBO Player" source="benefits" />
         </div>
       </div>
     </section>

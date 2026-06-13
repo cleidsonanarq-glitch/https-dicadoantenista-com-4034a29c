@@ -8,24 +8,24 @@ import { HelpCircle } from "lucide-react";
 
 const faqs = [
   {
-    q: "Funciona em qualquer Smart TV?",
-    a: "Sim. Compatível com as principais marcas: Samsung, LG, TCL, Philco, AOC, Roku TV e outras Smart TVs com acesso à internet.",
+    q: "O IBO Player funciona em quais aparelhos?",
+    a: "O IBO Player é compatível com Smart TVs Samsung (Tizen), LG (webOS), Android TV, TV Box Android e dispositivos Android em geral. Nossa equipe verifica seu modelo antes da configuração.",
   },
   {
-    q: "Funciona em TV Box e celular?",
-    a: "Sim. Compatível com TV Box Android, celulares Android, iPhone, tablets e também no computador.",
+    q: "Vocês ajudam na instalação?",
+    a: "Sim. Oferecemos suporte completo para instalação do aplicativo, com orientação passo a passo direto pelo WhatsApp até o app estar pronto para uso.",
   },
   {
-    q: "O aplicativo é leve?",
-    a: "Sim. App otimizado para abrir rápido, ocupar pouca memória e rodar estável mesmo em conexões medianas.",
+    q: "Como faço para configurar na minha TV?",
+    a: "Basta entrar em contato pelo WhatsApp e informar seu aparelho. Nosso especialista te orienta na instalação e configuração do IBO Player de forma simples e rápida.",
+  },
+  {
+    q: "Como recebo suporte?",
+    a: "Todo o atendimento é feito pelo WhatsApp, com resposta humana em poucos minutos. Acompanhamos você durante todo o processo de configuração.",
   },
   {
     q: "A configuração é difícil?",
-    a: "Não. Configuração simples e guiada pelo WhatsApp. Em poucos minutos você já está assistindo.",
-  },
-  {
-    q: "Tem suporte caso eu precise de ajuda?",
-    a: "Sim. Suporte humano direto no WhatsApp, com resposta rápida sempre que você precisar.",
+    a: "Não. Você não precisa entender de tecnologia — nosso suporte humano orienta cada etapa pelo WhatsApp, de forma simples e tranquila.",
   },
 ];
 
@@ -42,7 +42,7 @@ const FAQ = () => {
             Perguntas <span className="text-gradient-accent">frequentes</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base text-muted-foreground">
-            Tudo o que você precisa saber sobre compatibilidade, app e suporte.
+            Tire suas dúvidas sobre instalação, configuração e suporte do IBO Player.
           </p>
         </div>
 
