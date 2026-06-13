@@ -8,16 +8,20 @@ import { HelpCircle } from "lucide-react";
 
 const faqs = [
   {
+    q: "O IBO Player funciona em Smart TV Samsung?",
+    a: "Sim. Nossa equipe orienta a configuração em aparelhos compatíveis.",
+  },
+  {
+    q: "Vocês ajudam na configuração?",
+    a: "Sim. O suporte é feito pelo WhatsApp com orientação passo a passo.",
+  },
+  {
+    q: "Funciona em TV Box?",
+    a: "Sim, em dispositivos compatíveis com o aplicativo.",
+  },
+  {
     q: "O IBO Player funciona em quais aparelhos?",
     a: "O IBO Player é compatível com Smart TVs Samsung (Tizen), LG (webOS), Android TV, TV Box Android e dispositivos Android em geral. Nossa equipe verifica seu modelo antes da configuração.",
-  },
-  {
-    q: "Vocês ajudam na instalação?",
-    a: "Sim. Oferecemos suporte completo para instalação do aplicativo, com orientação passo a passo direto pelo WhatsApp até o app estar pronto para uso.",
-  },
-  {
-    q: "Como faço para configurar na minha TV?",
-    a: "Basta entrar em contato pelo WhatsApp e informar seu aparelho. Nosso especialista te orienta na instalação e configuração do IBO Player de forma simples e rápida.",
   },
   {
     q: "Como recebo suporte?",
