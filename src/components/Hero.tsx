@@ -40,7 +40,7 @@ const Hero = () => {
           </p>
 
           <div className="mt-7 flex flex-col items-center gap-3 lg:items-start">
-            <WhatsAppButton label="Quero configurar meu IBO Player pelo WhatsApp" source="hero" />
+            <WhatsAppButton label="Falar com um Especialista" source="hero" />
             <p className="inline-flex flex-wrap items-center justify-center gap-1.5 text-xs font-medium text-muted-foreground sm:text-sm lg:justify-start">
               <MessageCircle className="h-3.5 w-3.5 text-primary" />
               Atendimento rápido • Orientação passo a passo • Suporte humano

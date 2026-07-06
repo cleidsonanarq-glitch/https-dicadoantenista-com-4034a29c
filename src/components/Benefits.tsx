@@ -1,26 +1,36 @@
-import { Wrench, Settings2, Tv, MessageCircle } from "lucide-react";
+import { Wrench, Settings2, Headphones, MessageCircle, Sparkles, ListChecks } from "lucide-react";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const benefits = [
   {
     icon: Wrench,
-    title: "Instalação guiada",
-    desc: "Te orientamos passo a passo na instalação do IBO Player no seu aparelho, do início ao fim.",
+    title: "Instalação assistida",
+    desc: "Te guiamos na instalação do IBO Player no seu aparelho, sem que você precise entender de tecnologia.",
   },
   {
     icon: Settings2,
-    title: "Configuração personalizada",
-    desc: "Configuração feita de acordo com o seu dispositivo, sem complicação técnica.",
+    title: "Configuração completa",
+    desc: "Ativação da licença e ajustes finais feitos junto com você, do começo ao fim.",
   },
   {
-    icon: Tv,
-    title: "Compatível com Smart TV Samsung, LG, Android e TV Box",
-    desc: "Atendemos os principais aparelhos do mercado com orientação especializada para cada modelo.",
+    icon: Headphones,
+    title: "Suporte especializado",
+    desc: "Atendimento humano com experiência real em Smart TVs, TV Box e Android.",
   },
   {
     icon: MessageCircle,
-    title: "Atendimento direto pelo WhatsApp",
-    desc: "Suporte humano com resposta rápida e acompanhamento durante todo o processo.",
+    title: "Atendimento pelo WhatsApp",
+    desc: "Sem robô e sem espera: você fala direto com um especialista.",
+  },
+  {
+    icon: Sparkles,
+    title: "Processo simples",
+    desc: "Passo a passo descomplicado, no seu ritmo, sem termos técnicos.",
+  },
+  {
+    icon: ListChecks,
+    title: "Orientação durante toda a configuração",
+    desc: "Acompanhamento ativo até o aplicativo funcionar corretamente na sua TV.",
   },
 ];
 
@@ -39,7 +49,7 @@ const Benefits = () => {
           </h2>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {benefits.map((b) => {
             const Icon = b.icon;
             return (
@@ -64,8 +74,11 @@ const Benefits = () => {
           })}
         </div>
 
-        <div className="mt-12 flex justify-center">
-          <WhatsAppButton label="Quero configurar meu IBO Player pelo WhatsApp" source="benefits" />
+        <div className="mt-12 flex flex-col items-center gap-2">
+          <WhatsAppButton label="Falar com um Especialista" source="benefits" />
+          <span className="text-xs uppercase tracking-wider text-muted-foreground">
+            Atendimento humano • Resposta rápida
+          </span>
         </div>
       </div>
     </section>

@@ -1,12 +1,14 @@
 import { lazy, Suspense, useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import TrustBar from "@/components/TrustBar";
 import Problems from "@/components/Problems";
 import Benefits from "@/components/Benefits";
 import LazyOnVisible from "@/components/LazyOnVisible";
 
 // Below-the-fold sections — split into separate chunks, mounted on scroll.
 const HowItWorks = lazy(() => import("@/components/HowItWorks"));
+const Compatibility = lazy(() => import("@/components/Compatibility"));
 const Testimonials = lazy(() => import("@/components/Testimonials"));
 const FAQ = lazy(() => import("@/components/FAQ"));
 const FinalCTA = lazy(() => import("@/components/FinalCTA"));
@@ -43,10 +45,14 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <TrustBar />
         <Problems />
         <Benefits />
         <LazyOnVisible minHeight={600}>
           <HowItWorks />
+        </LazyOnVisible>
+        <LazyOnVisible minHeight={500}>
+          <Compatibility />
         </LazyOnVisible>
         <LazyOnVisible minHeight={600}>
           <Testimonials />
