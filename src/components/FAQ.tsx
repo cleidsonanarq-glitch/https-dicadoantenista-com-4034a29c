@@ -8,36 +8,44 @@ import { HelpCircle } from "lucide-react";
 
 const faqs = [
   {
-    q: "Como funciona a ativação do IBO Player?",
-    a: "Você fala com nosso especialista pelo WhatsApp, informa seu dispositivo e nós orientamos, passo a passo, a instalação e a ativação da licença até o aplicativo abrir corretamente.",
+    q: "Como instalar o IBO Player na Smart TV?",
+    a: "Nós te orientamos, pelo WhatsApp, na instalação do IBO Player em Smart TVs Samsung, LG, Android TV, Google TV, Fire TV Stick e TV Box. Você faz tudo direto na TV, sem precisar levar o aparelho a lugar nenhum.",
   },
   {
-    q: "O atendimento é totalmente remoto?",
-    a: "Sim. Todo o suporte é feito à distância, pelo WhatsApp. Você não precisa sair de casa nem levar seu equipamento a lugar nenhum.",
+    q: "Como configurar o IBO Player na Smart TV Samsung?",
+    a: "Em TVs Samsung com sistema Tizen, orientamos a instalação do aplicativo, o preenchimento da MAC address e a ativação da licença passo a passo, até o IBO Player abrir corretamente com sua lista.",
   },
   {
-    q: "Quanto tempo demora a configuração?",
-    a: "Na maioria dos casos, o processo leva poucos minutos. O tempo pode variar conforme o dispositivo e a sua familiaridade com a TV.",
+    q: "Como configurar o IBO Player na Smart TV LG?",
+    a: "Em TVs LG com sistema webOS, nosso suporte orienta a instalação do aplicativo e a ativação usando a MAC address, além de todos os ajustes necessários para o funcionamento correto do IBO Player.",
   },
   {
-    q: "Quais dispositivos são compatíveis?",
-    a: "Smart TVs Samsung (Tizen) e LG (webOS), Android TV, Google TV, Fire TV Stick e TV Box Android compatíveis com o aplicativo.",
+    q: "Como ativar o IBO Player?",
+    a: "A ativação é feita informando os dados da sua licença dentro do aplicativo. Nossa equipe conduz cada tela pelo WhatsApp para que a ativação seja concluída sem erros.",
   },
   {
-    q: "Como solicito o atendimento?",
-    a: "Basta clicar em qualquer botão do WhatsApp nesta página. Uma pessoa da nossa equipe responde e inicia o suporte com você.",
+    q: "O IBO Player funciona em Android TV e Google TV?",
+    a: "Sim. O IBO Player é totalmente compatível com Android TV e Google TV (Sony, TCL, Philips, Chromecast e outros). Orientamos a instalação e a configuração para o seu modelo.",
   },
   {
-    q: "Preciso levar meu equipamento a algum lugar?",
-    a: "Não. Todo o atendimento é remoto pelo WhatsApp, direto na sua casa, com sua TV ou TV Box.",
+    q: "O IBO Player funciona em TV Box?",
+    a: "Sim, em TV Box Android compatíveis com o aplicativo. Fazemos a verificação de compatibilidade antes de iniciar o suporte, para garantir que o IBO Player rode corretamente no seu aparelho.",
   },
   {
-    q: "O IBO Player funciona na Smart TV Samsung e LG?",
-    a: "Sim. O aplicativo é compatível com Samsung (Tizen) e LG (webOS). Orientamos a instalação no seu modelo específico.",
+    q: "Preciso de suporte técnico especializado?",
+    a: "Sim — e é exatamente isso que oferecemos. Você fala direto com um especialista em IBO Player, sem robô, sem espera, e recebe orientação humana até o aplicativo estar 100% funcional.",
   },
   {
-    q: "A configuração é difícil?",
-    a: "Não. Você não precisa entender de tecnologia — nosso suporte conduz cada etapa de forma simples e tranquila.",
+    q: "Quanto tempo demora a configuração do IBO Player?",
+    a: "Na maioria dos casos, a instalação e a configuração são concluídas em poucos minutos. O tempo pode variar conforme o modelo da TV e o ritmo de quem está sendo atendido.",
+  },
+  {
+    q: "O atendimento é feito pelo WhatsApp?",
+    a: "Sim. Todo o suporte é 100% remoto, pelo WhatsApp. Você não precisa sair de casa nem levar seu equipamento a nenhum lugar — resolvemos junto com você, na sua TV.",
+  },
+  {
+    q: "Quais aparelhos são compatíveis com o IBO Player?",
+    a: "Smart TVs Samsung (Tizen), LG (webOS), Android TV, Google TV, Amazon Fire TV Stick e TV Box Android compatíveis. Em caso de dúvida sobre o seu modelo, confirmamos a compatibilidade pelo WhatsApp antes de iniciar.",
   },
 ];
 
@@ -51,10 +59,10 @@ const FAQ = () => {
             Perguntas frequentes
           </div>
           <h2 className="font-display text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
-            Perguntas <span className="text-gradient-accent">frequentes</span>
+            Perguntas <span className="text-gradient-accent">frequentes</span> sobre o IBO Player
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base text-muted-foreground">
-            Tire suas dúvidas sobre instalação, configuração e suporte do IBO Player.
+            Tire suas dúvidas sobre instalação, configuração, ativação e suporte do IBO Player em Smart TV, TV Box e Android.
           </p>
         </div>
 
