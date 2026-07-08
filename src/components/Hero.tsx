@@ -31,8 +31,22 @@ const Hero = () => {
           </h1>
 
           <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:mt-6 sm:text-xl">
-            Suporte especializado para <span className="font-semibold text-foreground">instalação, configuração e ativação</span> do aplicativo em Smart TV, TV Box e Android.
+            Suporte especializado para <span className="font-semibold text-foreground">instalação, configuração e ativação</span> do IBO Player em Smart TV Samsung, LG, Android TV e TV Box.
           </p>
+
+          <ul className="mx-auto mt-5 grid max-w-md grid-cols-1 gap-2 text-sm text-foreground sm:mt-6 sm:grid-cols-2 sm:text-base lg:mx-0">
+            {[
+              "Atendimento humano no WhatsApp",
+              "Configuração rápida e sem complicação",
+              "Suporte especializado em IBO Player",
+              "Samsung, LG, Android TV e TV Box",
+            ].map((b) => (
+              <li key={b} className="flex items-start gap-2">
+                <span aria-hidden className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">✓</span>
+                <span>{b}</span>
+              </li>
+            ))}
+          </ul>
 
           <p className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-foreground sm:text-base">
             <MonitorSmartphone className="h-4 w-4 text-primary" />

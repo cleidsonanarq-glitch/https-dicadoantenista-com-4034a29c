@@ -2,19 +2,19 @@ import { Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Recebi ajuda para configurar minha Smart TV Samsung. Atendimento rápido e explicado.",
+    quote: "Configurei o IBO Player na minha Samsung em poucos minutos. Atendimento rápido e explicado passo a passo pelo WhatsApp.",
     author: "Carla M.",
-    role: "Cliente Smart TV Samsung",
+    role: "Smart TV Samsung",
   },
   {
-    quote: "Não sabia configurar o aplicativo, o suporte resolveu comigo pelo WhatsApp.",
+    quote: "Já tinha tentado instalar sozinho na LG e não conseguia. O suporte resolveu tudo pelo WhatsApp, sem complicação.",
     author: "Rodrigo S.",
-    role: "Cliente TV Box",
+    role: "Smart TV LG",
   },
   {
-    quote: "Fácil, rápido e sem complicação.",
+    quote: "Ativação do IBO Player no TV Box feita direto comigo. Fácil, rápido e sem precisar sair de casa.",
     author: "Patrícia L.",
-    role: "Cliente Android TV",
+    role: "TV Box Android",
   },
 ];
 
