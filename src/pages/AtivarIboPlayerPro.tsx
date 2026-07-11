@@ -1,5 +1,5 @@
 import AdLandingPage, { type AdLandingConfig } from "@/components/AdLandingPage";
-import { Tv, Smartphone, Monitor, Box, Headphones, MessageCircle, KeyRound, CheckCircle2, Zap, ShieldCheck } from "lucide-react";
+import { Tv, Smartphone, Monitor, Box, Headphones, MessageCircle, Zap } from "lucide-react";
 
 const WA = "Olá! Quero ativar meu IBO Player Pro.";
 
@@ -7,22 +7,31 @@ const config: AdLandingConfig = {
   path: "/ativar-ibo-player-pro",
   title: "Ativar IBO Player Pro | Suporte Rápido pelo WhatsApp",
   description:
-    "Receba suporte para ativar o IBO Player Pro na sua Smart TV, TV Box ou Android. Atendimento rápido pelo WhatsApp.",
+    "Ative e configure o IBO Player Pro ou IBO Pro Play na Smart TV, TV Box ou Android com suporte rápido pelo WhatsApp.",
   eyebrow: "Ativação do IBO Player Pro • Suporte WhatsApp",
   heroPre: "Ativar",
   heroAccent: "IBO Player Pro",
-  heroPost: "com suporte especializado",
+  heroPost: "com suporte rápido pelo WhatsApp",
   heroSubtitle: (
     <>
-      Receba orientação para ativar e configurar o <strong className="text-foreground">IBO Player Pro</strong> em Smart TV Samsung, LG, Android TV e TV Box com atendimento direto pelo WhatsApp.
+      Receba ajuda para ativar e configurar o <strong className="text-foreground">IBO Player Pro</strong> ou{" "}
+      <strong className="text-foreground">IBO Pro Play</strong> na sua Smart TV, TV Box ou Android com atendimento especializado.
     </>
   ),
+  heroTrustLine: "Compatível com Samsung, LG, Android TV e TV Box",
+  heroQuickBenefits: [
+    "Ativação rápida",
+    "Suporte humano",
+    "Orientação passo a passo",
+    "Atendimento pelo WhatsApp",
+    "Ajuda para IBO Player Pro e IBO Pro Play",
+  ],
   heroImageAlt: "Ativação do IBO Player Pro em Smart TV Samsung, LG e Android TV",
   heroBadgeTitle: "Ativação assistida",
   heroBadgeDesc: "Suporte humano • App funcionando",
   ctaLabel: "Ativar Meu IBO Player Pro",
   ctaMessage: WA,
-  ctaMicrocopy: "Atendimento humano • Resposta em minutos",
+  ctaMicrocopy: "Atendimento rápido • Suporte especializado • Configuração sem complicação",
   benefitsEyebrow: "Dispositivos compatíveis",
   benefitsTitlePre: "IBO Player Pro",
   benefitsTitleAccent: "funciona onde você precisa",
@@ -34,6 +43,16 @@ const config: AdLandingConfig = {
     { icon: Headphones, title: "Suporte humano", desc: "Você fala direto com um especialista em IBO Player Pro, sem robô e sem fila." },
     { icon: Zap, title: "Ativação rápida", desc: "A maioria das ativações é concluída em poucos minutos pelo WhatsApp." },
   ],
+  section2: {
+    title: "Precisa ativar o IBO Player Pro?",
+    text: "Se você já tem o aplicativo instalado e precisa ativar, configurar ou tirar dúvidas, nossa equipe pode orientar você pelo WhatsApp de forma simples e rápida.",
+    cards: [
+      { icon: Zap, title: "Ativação assistida", desc: "Receba orientação para ativar seu aplicativo corretamente." },
+      { icon: Box, title: "Configuração guiada", desc: "Ajuda passo a passo para Smart TV, TV Box e Android." },
+      { icon: MessageCircle, title: "Suporte pelo WhatsApp", desc: "Fale com uma pessoa e tire suas dúvidas rapidamente." },
+      { icon: Monitor, title: "Compatibilidade", desc: "Atendimento para Samsung, LG, Android TV e TV Box." },
+    ],
+  },
   seoBlocks: [
     {
       h2Pre: "Como funciona a",
@@ -71,11 +90,12 @@ const config: AdLandingConfig = {
   ],
   faqTitleAccent: "sobre ativação",
   faqs: [
-    { q: "Como ativar o IBO Player Pro?", a: "A ativação é feita dentro do aplicativo, informando os dados da licença. Nosso suporte conduz cada tela pelo WhatsApp até o IBO Player Pro estar ativo e funcionando." },
-    { q: "O IBO Player Pro funciona na Smart TV Samsung?", a: "Sim. Orientamos a ativação do IBO Player Pro em TVs Samsung com sistema Tizen, configurando cada tela necessária." },
+    { q: "Como ativar o IBO Player Pro?", a: "A ativação é feita dentro do aplicativo, informando os dados da licença. Nosso suporte conduz cada tela pelo WhatsApp até o IBO Player Pro ou IBO Pro Play estar ativo e funcionando." },
+    { q: "O que é IBO Pro Play?", a: "IBO Pro Play é uma variação do aplicativo IBO Player Pro. Nosso suporte pode orientar a ativação e configuração tanto do IBO Player Pro quanto do IBO Pro Play, conforme o app instalado no seu aparelho." },
+    { q: "Vocês ajudam na ativação pelo WhatsApp?", a: "Sim. Todo o atendimento é feito pelo WhatsApp, de forma remota, com um especialista que acompanha você até o aplicativo funcionar." },
+    { q: "Funciona em Smart TV Samsung?", a: "Sim. Orientamos a ativação do IBO Player Pro em TVs Samsung com sistema Tizen, configurando cada tela necessária." },
     { q: "Funciona em TV LG?", a: "Sim. Fazemos o suporte para ativação do IBO Player Pro em TVs LG com sistema webOS, passo a passo." },
     { q: "Funciona em TV Box?", a: "Sim. Atendemos TV Box Android compatíveis, verificando o aplicativo e guiando a ativação do IBO Player Pro." },
-    { q: "Vocês ajudam pelo WhatsApp?", a: "Sim. Todo o atendimento é feito pelo WhatsApp, de forma remota, com um especialista que acompanha você até o IBO Player Pro funcionar." },
     { q: "Quanto tempo demora a ativação?", a: "Na maioria dos casos, a ativação é concluída em poucos minutos com nosso suporte pelo WhatsApp. O tempo pode variar conforme o aparelho." },
   ],
   source: "ativar-ibo-player-pro",

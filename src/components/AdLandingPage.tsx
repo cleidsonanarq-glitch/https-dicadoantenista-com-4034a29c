@@ -27,6 +27,8 @@ export interface AdLandingConfig {
   heroPre: string;
   heroPost?: string;
   heroSubtitle: React.ReactNode;
+  heroTrustLine?: string;
+  heroQuickBenefits?: string[];
   heroImageAlt: string;
   heroBadgeTitle: string;
   heroBadgeDesc: string;
@@ -37,6 +39,7 @@ export interface AdLandingConfig {
   benefitsTitlePre: string;
   benefitsTitleAccent: string;
   benefits: { icon: LucideIcon; title: string; desc: string }[];
+  section2?: { title: string; text: string; cards: { icon: LucideIcon; title: string; desc: string }[] };
   seoBlocks: { h2Pre: string; h2Accent: string; paragraphs: string[]; ctaLabel: string; ctaMessage: string; source: string }[];
   faqTitleAccent: string;
   faqs: { q: string; a: string }[];
@@ -132,6 +135,23 @@ const AdLandingPage = ({ config }: { config: AdLandingConfig }) => {
                 {config.heroSubtitle}
               </p>
 
+              {config.heroTrustLine && (
+                <p className="mt-4 text-sm font-semibold text-foreground sm:text-base">
+                  {config.heroTrustLine}
+                </p>
+              )}
+
+              {config.heroQuickBenefits && (
+                <ul className="mt-4 inline-flex flex-col items-center gap-2 lg:items-start">
+                  {config.heroQuickBenefits.map((b) => (
+                    <li key={b} className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <CheckCircle2 className="h-4 w-4 shrink-0 text-primary" />
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+              )}
+
               <div className="mt-7 flex flex-col items-center gap-3 lg:items-start">
                 <WhatsAppButton label={config.ctaLabel} source={`${config.source}-hero`} message={config.ctaMessage} />
                 <span className="text-center text-xs uppercase tracking-wider text-muted-foreground lg:text-left">
@@ -226,6 +246,45 @@ const AdLandingPage = ({ config }: { config: AdLandingConfig }) => {
             </div>
           </div>
         </section>
+
+        {/* SECTION 2 */}
+        {config.section2 && (
+          <section className="relative py-16 sm:py-24">
+            <div className="container">
+              <div className="mx-auto mb-12 max-w-3xl text-center">
+                <h2 className="font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
+                  {config.section2.title}
+                </h2>
+                <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+                  {config.section2.text}
+                </p>
+              </div>
+
+              <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                {config.section2.cards.map((c) => {
+                  const Icon = c.icon;
+                  return (
+                    <div
+                      key={c.title}
+                      className="glass-card group relative overflow-hidden rounded-3xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow"
+                    >
+                      <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary/5 blur-2xl transition-opacity group-hover:opacity-100" />
+                      <div className="relative flex flex-col items-center text-center">
+                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-cta text-primary-foreground shadow-glow">
+                          <Icon className="h-6 w-6" strokeWidth={2.2} />
+                        </div>
+                        <h3 className="mt-4 font-display text-lg font-bold">{c.title}</h3>
+                        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                          {c.desc}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* SEO BLOCKS */}
         <LazyOnVisible minHeight={600}>
