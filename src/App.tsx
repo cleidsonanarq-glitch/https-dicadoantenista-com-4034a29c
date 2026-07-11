@@ -8,6 +8,7 @@ const Funplay = lazy(() => import("./pages/Funplay.tsx"));
 const InstalarIboPlayer = lazy(() => import("./pages/InstalarIboPlayer.tsx"));
 const ConfigurarIboPlayer = lazy(() => import("./pages/ConfigurarIboPlayer.tsx"));
 const AtivarIboPlayer = lazy(() => import("./pages/AtivarIboPlayer.tsx"));
+const AtivarIboPlayerPro = lazy(() => import("./pages/AtivarIboPlayerPro.tsx"));
 const SmartTv = lazy(() => import("./pages/SmartTv.tsx"));
 const Suporte = lazy(() => import("./pages/Suporte.tsx"));
 
