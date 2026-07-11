@@ -27,6 +27,8 @@ export interface AdLandingConfig {
   heroPre: string;
   heroPost?: string;
   heroSubtitle: React.ReactNode;
+  heroTrustLine?: string;
+  heroQuickBenefits?: string[];
   heroImageAlt: string;
   heroBadgeTitle: string;
   heroBadgeDesc: string;
@@ -37,6 +39,7 @@ export interface AdLandingConfig {
   benefitsTitlePre: string;
   benefitsTitleAccent: string;
   benefits: { icon: LucideIcon; title: string; desc: string }[];
+  section2?: { title: string; text: string; cards: { icon: LucideIcon; title: string; desc: string }[] };
   seoBlocks: { h2Pre: string; h2Accent: string; paragraphs: string[]; ctaLabel: string; ctaMessage: string; source: string }[];
   faqTitleAccent: string;
   faqs: { q: string; a: string }[];
