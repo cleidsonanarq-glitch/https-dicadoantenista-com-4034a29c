@@ -247,6 +247,45 @@ const AdLandingPage = ({ config }: { config: AdLandingConfig }) => {
           </div>
         </section>
 
+        {/* SECTION 2 */}
+        {config.section2 && (
+          <section className="relative py-16 sm:py-24">
+            <div className="container">
+              <div className="mx-auto mb-12 max-w-3xl text-center">
+                <h2 className="font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
+                  {config.section2.title}
+                </h2>
+                <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+                  {config.section2.text}
+                </p>
+              </div>
+
+              <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                {config.section2.cards.map((c) => {
+                  const Icon = c.icon;
+                  return (
+                    <div
+                      key={c.title}
+                      className="glass-card group relative overflow-hidden rounded-3xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow"
+                    >
+                      <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary/5 blur-2xl transition-opacity group-hover:opacity-100" />
+                      <div className="relative flex flex-col items-center text-center">
+                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-cta text-primary-foreground shadow-glow">
+                          <Icon className="h-6 w-6" strokeWidth={2.2} />
+                        </div>
+                        <h3 className="mt-4 font-display text-lg font-bold">{c.title}</h3>
+                        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                          {c.desc}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* SEO BLOCKS */}
         <LazyOnVisible minHeight={600}>
           <section className="py-16 sm:py-24">
