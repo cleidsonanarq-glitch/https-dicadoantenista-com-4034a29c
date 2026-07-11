@@ -27,6 +27,7 @@ const App = () => (
       <Route path="/instalar-ibo-player" element={lazyRoute(InstalarIboPlayer)} />
       <Route path="/configurar-ibo-player" element={lazyRoute(ConfigurarIboPlayer)} />
       <Route path="/ativar-ibo-player" element={lazyRoute(AtivarIboPlayer)} />
+      <Route path="/ativar-ibo-player-pro" element={lazyRoute(AtivarIboPlayerPro)} />
       <Route path="/smart-tv" element={lazyRoute(SmartTv)} />
       <Route path="/suporte" element={lazyRoute(Suporte)} />
       <Route path="*" element={lazyRoute(NotFound)} />
