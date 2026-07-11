@@ -135,6 +135,23 @@ const AdLandingPage = ({ config }: { config: AdLandingConfig }) => {
                 {config.heroSubtitle}
               </p>
 
+              {config.heroTrustLine && (
+                <p className="mt-4 text-sm font-semibold text-foreground sm:text-base">
+                  {config.heroTrustLine}
+                </p>
+              )}
+
+              {config.heroQuickBenefits && (
+                <ul className="mt-4 inline-flex flex-col items-center gap-2 lg:items-start">
+                  {config.heroQuickBenefits.map((b) => (
+                    <li key={b} className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <CheckCircle2 className="h-4 w-4 shrink-0 text-primary" />
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+              )}
+
               <div className="mt-7 flex flex-col items-center gap-3 lg:items-start">
                 <WhatsAppButton label={config.ctaLabel} source={`${config.source}-hero`} message={config.ctaMessage} />
                 <span className="text-center text-xs uppercase tracking-wider text-muted-foreground lg:text-left">
