@@ -11,7 +11,7 @@ const config: AdLandingConfig = {
   eyebrow: "Adicionar Lista no IBO Player Pro • Suporte WhatsApp",
   heroPre: "Adicionar Lista no",
   heroAccent: "IBO Player Pro",
-  heroPost: "com suporte especializado",
+  heroPost: "com Suporte Especializado",
   heroSubtitle: (
     <>
       Receba ajuda para adicionar e configurar sua lista no{" "}
