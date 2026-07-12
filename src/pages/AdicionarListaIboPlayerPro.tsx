@@ -1,5 +1,5 @@
 import AdLandingPage, { type AdLandingConfig } from "@/components/AdLandingPage";
-import { Tv, Monitor, Smartphone, Box, Flame, ListPlus, Settings, MessageCircle, Zap, Headphones } from "lucide-react";
+import { Tv, Monitor, Smartphone, Box, Flame, ListPlus, Settings, MessageCircle, Headphones } from "lucide-react";
 
 const WA = "Olá! Quero adicionar minha lista no IBO Player Pro.";
 
