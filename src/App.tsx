@@ -44,8 +44,10 @@ const App = () => (
       <Route path="/download-stream-player" element={lazyRoute(DownloadStreamPlayer)} />
       <Route path="/stream-player-smart-tv" element={lazyRoute(StreamPlayerSmartTv)} />
       <Route path="/suporte-stream-player" element={lazyRoute(SuporteStreamPlayer)} />
+      <Route path="/politica-de-privacidade" element={lazyRoute(PoliticaDePrivacidade)} />
       <Route path="*" element={lazyRoute(NotFound)} />
     </Routes>
+    <CookieConsent />
   </BrowserRouter>
 );
 
