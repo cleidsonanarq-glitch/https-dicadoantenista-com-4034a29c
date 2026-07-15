@@ -1,8 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Index from "./pages/Index.tsx";
+import CookieConsent from "./components/CookieConsent.tsx";
 
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
+const PoliticaDePrivacidade = lazy(() => import("./pages/PoliticaDePrivacidade.tsx"));
 const IboPlayer = lazy(() => import("./pages/IboPlayer.tsx"));
 const Funplay = lazy(() => import("./pages/Funplay.tsx"));
 const InstalarIboPlayer = lazy(() => import("./pages/InstalarIboPlayer.tsx"));
