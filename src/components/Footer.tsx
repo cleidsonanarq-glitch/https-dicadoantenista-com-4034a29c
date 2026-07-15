@@ -49,8 +49,14 @@ const Footer = () => {
             onClick={() => setOpen("privacy")}
             className="text-muted-foreground transition-colors hover:text-primary"
           >
-            Política de Privacidade
+            Política de Privacidade (resumo)
           </button>
+          <a
+            href="/politica-de-privacidade"
+            className="text-muted-foreground transition-colors hover:text-primary"
+          >
+            Política de Privacidade
+          </a>
           <button
             onClick={() => setOpen("terms")}
             className="text-muted-foreground transition-colors hover:text-primary"
