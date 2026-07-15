@@ -1,8 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Index from "./pages/Index.tsx";
+import CookieConsent from "./components/CookieConsent.tsx";
 
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
+const PoliticaDePrivacidade = lazy(() => import("./pages/PoliticaDePrivacidade.tsx"));
 const IboPlayer = lazy(() => import("./pages/IboPlayer.tsx"));
 const Funplay = lazy(() => import("./pages/Funplay.tsx"));
 const InstalarIboPlayer = lazy(() => import("./pages/InstalarIboPlayer.tsx"));
@@ -42,8 +44,10 @@ const App = () => (
       <Route path="/download-stream-player" element={lazyRoute(DownloadStreamPlayer)} />
       <Route path="/stream-player-smart-tv" element={lazyRoute(StreamPlayerSmartTv)} />
       <Route path="/suporte-stream-player" element={lazyRoute(SuporteStreamPlayer)} />
+      <Route path="/politica-de-privacidade" element={lazyRoute(PoliticaDePrivacidade)} />
       <Route path="*" element={lazyRoute(NotFound)} />
     </Routes>
+    <CookieConsent />
   </BrowserRouter>
 );
 
