@@ -14,6 +14,7 @@ const AtivarIboPlayerPro = lazy(() => import("./pages/AtivarIboPlayerPro.tsx"));
 const AdicionarListaIboPlayerPro = lazy(() => import("./pages/AdicionarListaIboPlayerPro.tsx"));
 const SmartTv = lazy(() => import("./pages/SmartTv.tsx"));
 const Suporte = lazy(() => import("./pages/Suporte.tsx"));
+const AtivarIboPlayPro = lazy(() => import("./pages/AtivarIboPlayPro.tsx"));
 const AtivarStreamPlayer = lazy(() => import("./pages/AtivarStreamPlayer.tsx"));
 const ConfigurarStreamPlayer = lazy(() => import("./pages/ConfigurarStreamPlayer.tsx"));
 const DownloadStreamPlayer = lazy(() => import("./pages/DownloadStreamPlayer.tsx"));
@@ -41,6 +42,7 @@ const App = () => (
       <Route path="/adicionar-lista-ibo-player-pro" element={lazyRoute(AdicionarListaIboPlayerPro)} />
       <Route path="/smart-tv" element={lazyRoute(SmartTv)} />
       <Route path="/suporte" element={lazyRoute(Suporte)} />
+      <Route path="/ativar-ibo-play-pro" element={lazyRoute(AtivarIboPlayPro)} />
       <Route path="/ativar-stream-player" element={lazyRoute(AtivarStreamPlayer)} />
       <Route path="/configurar-stream-player" element={lazyRoute(ConfigurarStreamPlayer)} />
       <Route path="/download-stream-player" element={lazyRoute(DownloadStreamPlayer)} />
