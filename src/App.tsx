@@ -19,6 +19,8 @@ const ConfigurarStreamPlayer = lazy(() => import("./pages/ConfigurarStreamPlayer
 const DownloadStreamPlayer = lazy(() => import("./pages/DownloadStreamPlayer.tsx"));
 const StreamPlayerSmartTv = lazy(() => import("./pages/StreamPlayerSmartTv.tsx"));
 const SuporteStreamPlayer = lazy(() => import("./pages/SuporteStreamPlayer.tsx"));
+const AtivarLicencaIboPlayer = lazy(() => import("./pages/AtivarLicencaIboPlayer.tsx"));
+const SuporteIboPlayerSmartTv = lazy(() => import("./pages/SuporteIboPlayerSmartTv.tsx"));
 
 const lazyRoute = (Component: React.LazyExoticComponent<() => JSX.Element>) => (
   <Suspense fallback={null}>
@@ -44,6 +46,8 @@ const App = () => (
       <Route path="/download-stream-player" element={lazyRoute(DownloadStreamPlayer)} />
       <Route path="/stream-player-smart-tv" element={lazyRoute(StreamPlayerSmartTv)} />
       <Route path="/suporte-stream-player" element={lazyRoute(SuporteStreamPlayer)} />
+      <Route path="/ativar-licenca-ibo-player" element={lazyRoute(AtivarLicencaIboPlayer)} />
+      <Route path="/suporte-ibo-player-smart-tv" element={lazyRoute(SuporteIboPlayerSmartTv)} />
       <Route path="/politica-de-privacidade" element={lazyRoute(PoliticaDePrivacidade)} />
       <Route path="*" element={lazyRoute(NotFound)} />
     </Routes>
