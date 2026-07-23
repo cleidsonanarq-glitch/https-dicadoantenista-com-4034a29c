@@ -55,6 +55,11 @@ const App = () => (
       <Route path="/suporte-stream-player" element={lazyRoute(SuporteStreamPlayer)} />
       <Route path="/ativar-licenca-ibo-player" element={lazyRoute(AtivarLicencaIboPlayer)} />
       <Route path="/suporte-ibo-player-smart-tv" element={lazyRoute(SuporteIboPlayerSmartTv)} />
+      <Route path="/iptv-smart-tv-samsung" element={lazyRoute(IptvSmartTvSamsung)} />
+      <Route path="/iptv-smart-tv-lg" element={lazyRoute(IptvSmartTvLg)} />
+      <Route path="/iptv-smarters-samsung" element={lazyRoute(IptvSmartersSamsung)} />
+      <Route path="/iptv-smarters-lg" element={lazyRoute(IptvSmartersLg)} />
+      <Route path="/ativar-iptv-smarters-pro" element={lazyRoute(AtivarIptvSmartersPro)} />
       <Route path="/politica-de-privacidade" element={lazyRoute(PoliticaDePrivacidade)} />
       <Route path="*" element={lazyRoute(NotFound)} />
     </Routes>
