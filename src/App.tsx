@@ -22,6 +22,11 @@ const StreamPlayerSmartTv = lazy(() => import("./pages/StreamPlayerSmartTv.tsx")
 const SuporteStreamPlayer = lazy(() => import("./pages/SuporteStreamPlayer.tsx"));
 const AtivarLicencaIboPlayer = lazy(() => import("./pages/AtivarLicencaIboPlayer.tsx"));
 const SuporteIboPlayerSmartTv = lazy(() => import("./pages/SuporteIboPlayerSmartTv.tsx"));
+const IptvSmartTvSamsung = lazy(() => import("./pages/IptvSmartTvSamsung.tsx"));
+const IptvSmartTvLg = lazy(() => import("./pages/IptvSmartTvLg.tsx"));
+const IptvSmartersSamsung = lazy(() => import("./pages/IptvSmartersSamsung.tsx"));
+const IptvSmartersLg = lazy(() => import("./pages/IptvSmartersLg.tsx"));
+const AtivarIptvSmartersPro = lazy(() => import("./pages/AtivarIptvSmartersPro.tsx"));
 
 const lazyRoute = (Component: React.LazyExoticComponent<() => JSX.Element>) => (
   <Suspense fallback={null}>
