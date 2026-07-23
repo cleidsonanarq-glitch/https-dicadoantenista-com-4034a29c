@@ -22,6 +22,11 @@ const StreamPlayerSmartTv = lazy(() => import("./pages/StreamPlayerSmartTv.tsx")
 const SuporteStreamPlayer = lazy(() => import("./pages/SuporteStreamPlayer.tsx"));
 const AtivarLicencaIboPlayer = lazy(() => import("./pages/AtivarLicencaIboPlayer.tsx"));
 const SuporteIboPlayerSmartTv = lazy(() => import("./pages/SuporteIboPlayerSmartTv.tsx"));
+const IptvSmartTvSamsung = lazy(() => import("./pages/IptvSmartTvSamsung.tsx"));
+const IptvSmartTvLg = lazy(() => import("./pages/IptvSmartTvLg.tsx"));
+const IptvSmartersSamsung = lazy(() => import("./pages/IptvSmartersSamsung.tsx"));
+const IptvSmartersLg = lazy(() => import("./pages/IptvSmartersLg.tsx"));
+const AtivarIptvSmartersPro = lazy(() => import("./pages/AtivarIptvSmartersPro.tsx"));
 
 const lazyRoute = (Component: React.LazyExoticComponent<() => JSX.Element>) => (
   <Suspense fallback={null}>
@@ -50,6 +55,11 @@ const App = () => (
       <Route path="/suporte-stream-player" element={lazyRoute(SuporteStreamPlayer)} />
       <Route path="/ativar-licenca-ibo-player" element={lazyRoute(AtivarLicencaIboPlayer)} />
       <Route path="/suporte-ibo-player-smart-tv" element={lazyRoute(SuporteIboPlayerSmartTv)} />
+      <Route path="/iptv-smart-tv-samsung" element={lazyRoute(IptvSmartTvSamsung)} />
+      <Route path="/iptv-smart-tv-lg" element={lazyRoute(IptvSmartTvLg)} />
+      <Route path="/iptv-smarters-samsung" element={lazyRoute(IptvSmartersSamsung)} />
+      <Route path="/iptv-smarters-lg" element={lazyRoute(IptvSmartersLg)} />
+      <Route path="/ativar-iptv-smarters-pro" element={lazyRoute(AtivarIptvSmartersPro)} />
       <Route path="/politica-de-privacidade" element={lazyRoute(PoliticaDePrivacidade)} />
       <Route path="*" element={lazyRoute(NotFound)} />
     </Routes>
