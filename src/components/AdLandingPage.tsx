@@ -32,6 +32,7 @@ export interface AdLandingConfig {
   heroImageAlt: string;
   heroBadgeTitle: string;
   heroBadgeDesc: string;
+  heroPriceCard?: { label: string; price: string; lines: string[] };
   ctaLabel: string;
   ctaMessage: string;
   ctaMicrocopy: string;
@@ -39,12 +40,19 @@ export interface AdLandingConfig {
   benefitsTitlePre: string;
   benefitsTitleAccent: string;
   benefits: { icon: LucideIcon; title: string; desc: string }[];
+  steps?: { title: string; items: { title: string; desc: string }[] };
+  compatibility?: { title: string; text: string; devices: string[] };
   section2?: { title: string; text: string; cards: { icon: LucideIcon; title: string; desc: string }[] };
   seoBlocks: { h2Pre: string; h2Accent: string; paragraphs: string[]; ctaLabel: string; ctaMessage: string; source: string }[];
   faqTitleAccent: string;
   faqs: { q: string; a: string }[];
+  internalLinks?: { title: string; links: { href: string; label: string; desc: string }[] };
+  disclaimer?: string;
+  breadcrumbName?: string;
+  guarantee?: { title: string; text: string };
   source: string;
 }
+
 
 const AdLandingPage = ({ config }: { config: AdLandingConfig }) => {
   const [showWidgets, setShowWidgets] = useState(false);
