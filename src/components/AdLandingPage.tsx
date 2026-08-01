@@ -293,6 +293,59 @@ const AdLandingPage = ({ config }: { config: AdLandingConfig }) => {
           </div>
         </section>
 
+        {/* COMO FUNCIONA */}
+        {config.steps && (
+          <section className="relative py-16 sm:py-24">
+            <div className="container max-w-4xl">
+              <h2 className="text-center font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
+                {config.steps.title}
+              </h2>
+              <ol className="mt-10 space-y-4">
+                {config.steps.items.map((s, i) => (
+                  <li key={s.title} className="glass-card flex items-start gap-4 rounded-2xl p-5 sm:p-6">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-cta font-display text-base font-bold text-primary-foreground shadow-glow">
+                      {i + 1}
+                    </span>
+                    <div>
+                      <h3 className="font-display text-lg font-bold">{s.title}</h3>
+                      <p className="mt-1 text-sm leading-relaxed text-muted-foreground sm:text-base">{s.desc}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+              <div className="mt-10 flex flex-col items-center gap-2">
+                <WhatsAppButton label={config.ctaLabel} source={`${config.source}-steps`} message={config.ctaMessage} />
+                <span className="text-xs uppercase tracking-wider text-muted-foreground">
+                  {config.ctaMicrocopy}
+                </span>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* COMPATIBILIDADE */}
+        {config.compatibility && (
+          <section className="relative py-16 sm:py-20">
+            <div className="container max-w-4xl text-center">
+              <h2 className="font-display text-3xl font-bold sm:text-4xl">{config.compatibility.title}</h2>
+              <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+                {config.compatibility.text}
+              </p>
+              <ul className="mt-8 flex flex-wrap justify-center gap-3">
+                {config.compatibility.devices.map((d) => (
+                  <li
+                    key={d}
+                    className="glass-card flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-foreground"
+                  >
+                    <Tv className="h-4 w-4 text-primary" />
+                    {d}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
+
         {/* SECTION 2 */}
         {config.section2 && (
           <section className="relative py-16 sm:py-24">
