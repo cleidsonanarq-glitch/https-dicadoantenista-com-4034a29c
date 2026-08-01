@@ -418,9 +418,41 @@ const AdLandingPage = ({ config }: { config: AdLandingConfig }) => {
           </section>
         </LazyOnVisible>
 
+        {config.internalLinks && (
+          <section className="py-14">
+            <div className="container max-w-5xl">
+              <h2 className="text-center font-display text-2xl font-bold sm:text-3xl">
+                {config.internalLinks.title}
+              </h2>
+              <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {config.internalLinks.links.map((l) => (
+                  <a
+                    key={l.href}
+                    href={l.href}
+                    className="glass-card block rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40"
+                  >
+                    <span className="font-display text-base font-bold text-foreground">{l.label}</span>
+                    <span className="mt-1 block text-sm leading-relaxed text-muted-foreground">{l.desc}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         <LazyOnVisible minHeight={400}>
           <FinalCTA />
         </LazyOnVisible>
+
+        {config.disclaimer && (
+          <section className="pb-10">
+            <div className="container max-w-4xl">
+              <p className="rounded-2xl border border-border/60 bg-secondary/30 p-5 text-xs leading-relaxed text-muted-foreground">
+                {config.disclaimer}
+              </p>
+            </div>
+          </section>
+        )}
       </main>
       <LazyOnVisible minHeight={200}>
         <Footer />
