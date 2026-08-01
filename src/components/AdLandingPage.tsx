@@ -75,19 +75,56 @@ const AdLandingPage = ({ config }: { config: AdLandingConfig }) => {
     const prevCanonical = canonical.href;
     canonical.href = `${window.location.origin}${config.path}`;
 
-    const faqLd = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: config.faqs.map((f) => ({
-        "@type": "Question",
-        name: f.q,
-        acceptedAnswer: { "@type": "Answer", text: f.a },
-      })),
+    const url = `${window.location.origin}${config.path}`;
+
+    const metaTags: HTMLMetaElement[] = [];
+    const addMeta = (attr: "property" | "name", key: string, value: string) => {
+      const el = document.createElement("meta");
+      el.setAttribute(attr, key);
+      el.setAttribute("content", value);
+      document.head.appendChild(el);
+      metaTags.push(el);
     };
+    addMeta("property", "og:title", config.title);
+    addMeta("property", "og:description", config.description);
+    addMeta("property", "og:url", url);
+    addMeta("property", "og:type", "website");
+    addMeta("name", "twitter:card", "summary_large_image");
+    addMeta("name", "twitter:title", config.title);
+    addMeta("name", "twitter:description", config.description);
+
+    const graph: unknown[] = [
+      {
+        "@type": "FAQPage",
+        mainEntity: config.faqs.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      },
+      {
+        "@type": "WebPage",
+        name: config.title,
+        description: config.description,
+        url,
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Início", item: window.location.origin },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: config.breadcrumbName ?? config.title,
+            item: url,
+          },
+        ],
+      },
+    ];
     const script = document.createElement("script");
     script.type = "application/ld+json";
-    script.id = "adlanding-faq-jsonld";
-    script.text = JSON.stringify(faqLd);
+    script.id = "adlanding-jsonld";
+    script.text = JSON.stringify({ "@context": "https://schema.org", "@graph": graph });
     document.head.appendChild(script);
 
     return () => {
@@ -98,6 +135,7 @@ const AdLandingPage = ({ config }: { config: AdLandingConfig }) => {
         else canonical.href = prevCanonical;
       }
       script.remove();
+      metaTags.forEach((m) => m.remove());
     };
   }, [config]);
 
