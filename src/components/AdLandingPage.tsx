@@ -366,11 +366,11 @@ const AdLandingPage = ({ config }: { config: AdLandingConfig }) => {
                 </div>
                 <div>
                   <h2 className="font-display text-xl font-bold sm:text-2xl">
-                    Garantia de atendimento até funcionar
+                    {config.guarantee?.title ?? "Garantia de atendimento até funcionar"}
                   </h2>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                    Nosso suporte acompanha você até o IBO Player estar 100% funcional na sua TV.
-                    Se algo travar, seguimos com você no WhatsApp até resolver — sem robô, sem espera e sem custo surpresa.
+                    {config.guarantee?.text ??
+                      "Nosso suporte acompanha você até o IBO Player estar 100% funcional na sua TV. Se algo travar, seguimos com você no WhatsApp até resolver — sem robô, sem espera e sem custo surpresa."}
                   </p>
                 </div>
               </div>
