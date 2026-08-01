@@ -27,6 +27,12 @@ const IptvSmartTvLg = lazy(() => import("./pages/IptvSmartTvLg.tsx"));
 const IptvSmartersSamsung = lazy(() => import("./pages/IptvSmartersSamsung.tsx"));
 const IptvSmartersLg = lazy(() => import("./pages/IptvSmartersLg.tsx"));
 const AtivarIptvSmartersPro = lazy(() => import("./pages/AtivarIptvSmartersPro.tsx"));
+const SmartersPlayer = lazy(() => import("./pages/SmartersPlayer.tsx"));
+const AtivarSmartersPlayer = lazy(() => import("./pages/AtivarSmartersPlayer.tsx"));
+const LicencaSmartersPlayer = lazy(() => import("./pages/LicencaSmartersPlayer.tsx"));
+const ConfigurarSmartersPlayer = lazy(() => import("./pages/ConfigurarSmartersPlayer.tsx"));
+const SmartersPlayerSamsung = lazy(() => import("./pages/SmartersPlayerSamsung.tsx"));
+const SmartersPlayerLg = lazy(() => import("./pages/SmartersPlayerLg.tsx"));
 
 const lazyRoute = (Component: React.LazyExoticComponent<() => JSX.Element>) => (
   <Suspense fallback={null}>
@@ -60,6 +66,12 @@ const App = () => (
       <Route path="/iptv-smarters-samsung" element={lazyRoute(IptvSmartersSamsung)} />
       <Route path="/iptv-smarters-lg" element={lazyRoute(IptvSmartersLg)} />
       <Route path="/ativar-iptv-smarters-pro" element={lazyRoute(AtivarIptvSmartersPro)} />
+      <Route path="/smarters-player" element={lazyRoute(SmartersPlayer)} />
+      <Route path="/ativar-smarters-player" element={lazyRoute(AtivarSmartersPlayer)} />
+      <Route path="/licenca-smarters-player" element={lazyRoute(LicencaSmartersPlayer)} />
+      <Route path="/configurar-smarters-player" element={lazyRoute(ConfigurarSmartersPlayer)} />
+      <Route path="/smarters-player-samsung" element={lazyRoute(SmartersPlayerSamsung)} />
+      <Route path="/smarters-player-lg" element={lazyRoute(SmartersPlayerLg)} />
       <Route path="/politica-de-privacidade" element={lazyRoute(PoliticaDePrivacidade)} />
       <Route path="*" element={lazyRoute(NotFound)} />
     </Routes>

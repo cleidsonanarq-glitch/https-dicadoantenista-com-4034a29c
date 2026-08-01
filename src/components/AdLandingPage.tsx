@@ -32,6 +32,7 @@ export interface AdLandingConfig {
   heroImageAlt: string;
   heroBadgeTitle: string;
   heroBadgeDesc: string;
+  heroPriceCard?: { label: string; price: string; lines: string[] };
   ctaLabel: string;
   ctaMessage: string;
   ctaMicrocopy: string;
@@ -39,12 +40,19 @@ export interface AdLandingConfig {
   benefitsTitlePre: string;
   benefitsTitleAccent: string;
   benefits: { icon: LucideIcon; title: string; desc: string }[];
+  steps?: { title: string; items: { title: string; desc: string }[] };
+  compatibility?: { title: string; text: string; devices: string[] };
   section2?: { title: string; text: string; cards: { icon: LucideIcon; title: string; desc: string }[] };
   seoBlocks: { h2Pre: string; h2Accent: string; paragraphs: string[]; ctaLabel: string; ctaMessage: string; source: string }[];
   faqTitleAccent: string;
   faqs: { q: string; a: string }[];
+  internalLinks?: { title: string; links: { href: string; label: string; desc: string }[] };
+  disclaimer?: string;
+  breadcrumbName?: string;
+  guarantee?: { title: string; text: string };
   source: string;
 }
+
 
 const AdLandingPage = ({ config }: { config: AdLandingConfig }) => {
   const [showWidgets, setShowWidgets] = useState(false);
@@ -67,19 +75,56 @@ const AdLandingPage = ({ config }: { config: AdLandingConfig }) => {
     const prevCanonical = canonical.href;
     canonical.href = `${window.location.origin}${config.path}`;
 
-    const faqLd = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: config.faqs.map((f) => ({
-        "@type": "Question",
-        name: f.q,
-        acceptedAnswer: { "@type": "Answer", text: f.a },
-      })),
+    const url = `${window.location.origin}${config.path}`;
+
+    const metaTags: HTMLMetaElement[] = [];
+    const addMeta = (attr: "property" | "name", key: string, value: string) => {
+      const el = document.createElement("meta");
+      el.setAttribute(attr, key);
+      el.setAttribute("content", value);
+      document.head.appendChild(el);
+      metaTags.push(el);
     };
+    addMeta("property", "og:title", config.title);
+    addMeta("property", "og:description", config.description);
+    addMeta("property", "og:url", url);
+    addMeta("property", "og:type", "website");
+    addMeta("name", "twitter:card", "summary_large_image");
+    addMeta("name", "twitter:title", config.title);
+    addMeta("name", "twitter:description", config.description);
+
+    const graph: unknown[] = [
+      {
+        "@type": "FAQPage",
+        mainEntity: config.faqs.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      },
+      {
+        "@type": "WebPage",
+        name: config.title,
+        description: config.description,
+        url,
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Início", item: window.location.origin },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: config.breadcrumbName ?? config.title,
+            item: url,
+          },
+        ],
+      },
+    ];
     const script = document.createElement("script");
     script.type = "application/ld+json";
-    script.id = "adlanding-faq-jsonld";
-    script.text = JSON.stringify(faqLd);
+    script.id = "adlanding-jsonld";
+    script.text = JSON.stringify({ "@context": "https://schema.org", "@graph": graph });
     document.head.appendChild(script);
 
     return () => {
@@ -90,6 +135,7 @@ const AdLandingPage = ({ config }: { config: AdLandingConfig }) => {
         else canonical.href = prevCanonical;
       }
       script.remove();
+      metaTags.forEach((m) => m.remove());
     };
   }, [config]);
 
@@ -150,6 +196,25 @@ const AdLandingPage = ({ config }: { config: AdLandingConfig }) => {
                     </li>
                   ))}
                 </ul>
+              )}
+
+              {config.heroPriceCard && (
+                <div className="glass-card mt-6 rounded-2xl border-primary/30 p-5 text-left">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                    {config.heroPriceCard.label}
+                  </p>
+                  <p className="mt-2 font-display text-4xl font-extrabold text-foreground sm:text-5xl">
+                    {config.heroPriceCard.price}
+                  </p>
+                  <ul className="mt-3 space-y-1.5">
+                    {config.heroPriceCard.lines.map((l) => (
+                      <li key={l} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                        {l}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               )}
 
               <div className="mt-7 flex flex-col items-center gap-3 lg:items-start">
@@ -247,6 +312,59 @@ const AdLandingPage = ({ config }: { config: AdLandingConfig }) => {
           </div>
         </section>
 
+        {/* COMO FUNCIONA */}
+        {config.steps && (
+          <section className="relative py-16 sm:py-24">
+            <div className="container max-w-4xl">
+              <h2 className="text-center font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
+                {config.steps.title}
+              </h2>
+              <ol className="mt-10 space-y-4">
+                {config.steps.items.map((s, i) => (
+                  <li key={s.title} className="glass-card flex items-start gap-4 rounded-2xl p-5 sm:p-6">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-cta font-display text-base font-bold text-primary-foreground shadow-glow">
+                      {i + 1}
+                    </span>
+                    <div>
+                      <h3 className="font-display text-lg font-bold">{s.title}</h3>
+                      <p className="mt-1 text-sm leading-relaxed text-muted-foreground sm:text-base">{s.desc}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+              <div className="mt-10 flex flex-col items-center gap-2">
+                <WhatsAppButton label={config.ctaLabel} source={`${config.source}-steps`} message={config.ctaMessage} />
+                <span className="text-xs uppercase tracking-wider text-muted-foreground">
+                  {config.ctaMicrocopy}
+                </span>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* COMPATIBILIDADE */}
+        {config.compatibility && (
+          <section className="relative py-16 sm:py-20">
+            <div className="container max-w-4xl text-center">
+              <h2 className="font-display text-3xl font-bold sm:text-4xl">{config.compatibility.title}</h2>
+              <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+                {config.compatibility.text}
+              </p>
+              <ul className="mt-8 flex flex-wrap justify-center gap-3">
+                {config.compatibility.devices.map((d) => (
+                  <li
+                    key={d}
+                    className="glass-card flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-foreground"
+                  >
+                    <Tv className="h-4 w-4 text-primary" />
+                    {d}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
+
         {/* SECTION 2 */}
         {config.section2 && (
           <section className="relative py-16 sm:py-24">
@@ -320,11 +438,11 @@ const AdLandingPage = ({ config }: { config: AdLandingConfig }) => {
                 </div>
                 <div>
                   <h2 className="font-display text-xl font-bold sm:text-2xl">
-                    Garantia de atendimento até funcionar
+                    {config.guarantee?.title ?? "Garantia de atendimento até funcionar"}
                   </h2>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                    Nosso suporte acompanha você até o IBO Player estar 100% funcional na sua TV.
-                    Se algo travar, seguimos com você no WhatsApp até resolver — sem robô, sem espera e sem custo surpresa.
+                    {config.guarantee?.text ??
+                      "Nosso suporte acompanha você até o IBO Player estar 100% funcional na sua TV. Se algo travar, seguimos com você no WhatsApp até resolver — sem robô, sem espera e sem custo surpresa."}
                   </p>
                 </div>
               </div>
@@ -372,9 +490,41 @@ const AdLandingPage = ({ config }: { config: AdLandingConfig }) => {
           </section>
         </LazyOnVisible>
 
+        {config.internalLinks && (
+          <section className="py-14">
+            <div className="container max-w-5xl">
+              <h2 className="text-center font-display text-2xl font-bold sm:text-3xl">
+                {config.internalLinks.title}
+              </h2>
+              <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {config.internalLinks.links.map((l) => (
+                  <a
+                    key={l.href}
+                    href={l.href}
+                    className="glass-card block rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40"
+                  >
+                    <span className="font-display text-base font-bold text-foreground">{l.label}</span>
+                    <span className="mt-1 block text-sm leading-relaxed text-muted-foreground">{l.desc}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         <LazyOnVisible minHeight={400}>
           <FinalCTA />
         </LazyOnVisible>
+
+        {config.disclaimer && (
+          <section className="pb-10">
+            <div className="container max-w-4xl">
+              <p className="rounded-2xl border border-border/60 bg-secondary/30 p-5 text-xs leading-relaxed text-muted-foreground">
+                {config.disclaimer}
+              </p>
+            </div>
+          </section>
+        )}
       </main>
       <LazyOnVisible minHeight={200}>
         <Footer />
