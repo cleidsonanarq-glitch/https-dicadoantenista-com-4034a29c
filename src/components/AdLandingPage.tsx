@@ -198,6 +198,25 @@ const AdLandingPage = ({ config }: { config: AdLandingConfig }) => {
                 </ul>
               )}
 
+              {config.heroPriceCard && (
+                <div className="glass-card mt-6 rounded-2xl border-primary/30 p-5 text-left">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                    {config.heroPriceCard.label}
+                  </p>
+                  <p className="mt-2 font-display text-4xl font-extrabold text-foreground sm:text-5xl">
+                    {config.heroPriceCard.price}
+                  </p>
+                  <ul className="mt-3 space-y-1.5">
+                    {config.heroPriceCard.lines.map((l) => (
+                      <li key={l} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                        {l}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
               <div className="mt-7 flex flex-col items-center gap-3 lg:items-start">
                 <WhatsAppButton label={config.ctaLabel} source={`${config.source}-hero`} message={config.ctaMessage} />
                 <span className="text-center text-xs uppercase tracking-wider text-muted-foreground lg:text-left">
