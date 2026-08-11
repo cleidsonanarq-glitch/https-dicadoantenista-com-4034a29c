@@ -39,6 +39,11 @@ const AplicativoTvSamsung = lazy(() => import("./pages/AplicativoTvSamsung.tsx")
 const SamsungAppsSmartTv = lazy(() => import("./pages/SamsungAppsSmartTv.tsx"));
 const InstalarAplicativoTvSamsung = lazy(() => import("./pages/InstalarAplicativoTvSamsung.tsx"));
 const ConfigurarAplicativoTvSamsung = lazy(() => import("./pages/ConfigurarAplicativoTvSamsung.tsx"));
+const AplicativoParaSmartTv = lazy(() => import("./pages/AplicativoParaSmartTv.tsx"));
+const AppParaAssistirTvNaSmartTv = lazy(() => import("./pages/AppParaAssistirTvNaSmartTv.tsx"));
+const AplicativoDeTvParaSmartTv = lazy(() => import("./pages/AplicativoDeTvParaSmartTv.tsx"));
+const PlayerParaSmartTv = lazy(() => import("./pages/PlayerParaSmartTv.tsx"));
+const ComprarAtivacaoAplicativoSmartTv = lazy(() => import("./pages/ComprarAtivacaoAplicativoSmartTv.tsx"));
 
 const lazyRoute = (Component: React.LazyExoticComponent<() => JSX.Element>) => (
   <Suspense fallback={null}>
@@ -84,6 +89,11 @@ const App = () => (
       <Route path="/samsung-apps-smart-tv" element={lazyRoute(SamsungAppsSmartTv)} />
       <Route path="/instalar-aplicativo-tv-samsung" element={lazyRoute(InstalarAplicativoTvSamsung)} />
       <Route path="/configurar-aplicativo-tv-samsung" element={lazyRoute(ConfigurarAplicativoTvSamsung)} />
+      <Route path="/aplicativo-para-smart-tv" element={lazyRoute(AplicativoParaSmartTv)} />
+      <Route path="/app-para-assistir-tv-na-smart-tv" element={lazyRoute(AppParaAssistirTvNaSmartTv)} />
+      <Route path="/aplicativo-de-tv-para-smart-tv" element={lazyRoute(AplicativoDeTvParaSmartTv)} />
+      <Route path="/player-para-smart-tv" element={lazyRoute(PlayerParaSmartTv)} />
+      <Route path="/comprar-ativacao-aplicativo-smart-tv" element={lazyRoute(ComprarAtivacaoAplicativoSmartTv)} />
       <Route path="/politica-de-privacidade" element={lazyRoute(PoliticaDePrivacidade)} />
       <Route path="*" element={lazyRoute(NotFound)} />
     </Routes>
