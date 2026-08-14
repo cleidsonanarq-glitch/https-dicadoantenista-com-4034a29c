@@ -2,34 +2,47 @@ import AdLandingPage, { type AdLandingConfig } from "@/components/AdLandingPage"
 import { KeyRound, Tv, Settings, Download, MessageCircle, Headphones } from "lucide-react";
 import { smartTvLinks, SMARTTV_DISCLAIMER } from "./smartTvAppLinks";
 
-const WA = "Olá! Quero ativar um aplicativo na minha Smart TV.";
+const WA = "Olá! Quero comprar uma ativação para Smart TV.";
 
 const config: AdLandingConfig = {
   path: "/comprar-ativacao-aplicativo-smart-tv",
-  title: "Comprar Ativação de Aplicativo Smart TV | Atendimento no WhatsApp",
+  title: "Comprar Ativação de Aplicativo Smart TV | R$ 19,99/mês",
   description:
-    "Quer comprar ativação de aplicativo Smart TV? Atendimento rápido para ativar aplicativos compatíveis, com verificação de compatibilidade e orientação na configuração.",
+    "Comprar ativação de aplicativo Smart TV por R$ 19,99/mês: ativação rápida, compatibilidade verificada com a sua TV e suporte pelo WhatsApp durante a configuração.",
   eyebrow: "Ativação assistida • Aplicativos para Smart TV",
   heroPre: "Comprar ativação de",
   heroAccent: "aplicativo Smart TV",
+  heroPost: "por R$ 19,99/mês",
   heroSubtitle: (
     <>
-      Ative seu <strong className="text-foreground">aplicativo compatível com Smart TV</strong> com atendimento rápido e
-      orientação durante toda a configuração.
+      Ative seu <strong className="text-foreground">aplicativo compatível com Smart TV</strong> com ativação rápida,
+      compatibilidade verificada antes e suporte pelo WhatsApp durante toda a configuração.
     </>
   ),
   heroTrustLine: "Compatibilidade verificada antes da ativação — sem surpresa depois.",
   heroQuickBenefits: [
-    "Verificação do modelo da TV e do aplicativo",
-    "Ativação conduzida no atendimento",
-    "Configuração orientada até funcionar",
+    "R$ 19,99/mês",
+    "Ativação rápida",
+    "Suporte pelo WhatsApp",
+    "Compatibilidade com Smart TV",
+    "Experiência estável",
   ],
   heroImageAlt: "Smart TV com tela de ativação de aplicativo em destaque",
   heroBadgeTitle: "Ativação assistida",
   heroBadgeDesc: "Atendimento e orientação por WhatsApp",
-  ctaLabel: "Quero Ativar Meu Aplicativo",
+  heroPriceCard: {
+    label: "Plano mensal",
+    price: "R$ 19,99/mês",
+    lines: [
+      "Ativação rápida do aplicativo",
+      "Compatibilidade com Smart TV verificada antes",
+      "Configuração orientada passo a passo",
+      "Suporte pelo WhatsApp",
+    ],
+  },
+  ctaLabel: "Quero Ativar Agora",
   ctaMessage: WA,
-  ctaMicrocopy: "Ou fale no WhatsApp para tirar dúvidas antes de ativar",
+  ctaMicrocopy: "R$ 19,99/mês • Ou fale no WhatsApp para tirar dúvidas antes",
   benefitsEyebrow: "O que está incluído",
   benefitsTitlePre: "Ativação com",
   benefitsTitleAccent: "suporte de verdade",

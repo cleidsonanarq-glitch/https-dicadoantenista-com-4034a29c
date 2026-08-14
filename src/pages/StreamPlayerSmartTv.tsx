@@ -1,37 +1,47 @@
 import AdLandingPage, { type AdLandingConfig } from "@/components/AdLandingPage";
 import { Tv, MonitorPlay, Cast, Radio, Smartphone, Box } from "lucide-react";
 
-const WA = "Olá! Quero saber se o Stream Player funciona na minha Smart TV.";
+const WA = "Olá! Quero ativar um stream player na Smart TV.";
 
 const config: AdLandingConfig = {
   path: "/stream-player-smart-tv",
-  title: "Stream Player na Smart TV • Samsung, LG e Android TV | Suporte WhatsApp",
+  title: "Stream Player para Smart TV | Ativação por R$ 19,99/mês",
   description:
-    "Stream Player compatível com várias TVs: Samsung, LG e Android TV. Verificação de compatibilidade e suporte humano pelo WhatsApp.",
-  eyebrow: "Stream Player • Compatibilidade Smart TV",
-  heroPre: "Stream Player na",
+    "Stream Player para Smart TV: ativação rápida, configuração orientada, compatibilidade verificada (Samsung, LG, Android TV) e suporte pelo WhatsApp. R$ 19,99/mês.",
+  eyebrow: "Stream Player • Smart TV",
+  heroPre: "Stream Player para",
   heroAccent: "Smart TV",
-  heroPost: "Samsung, LG e Android TV",
+  heroPost: "ativação e configuração",
   heroSubtitle: (
     <>
-      Verificamos a compatibilidade do <strong className="text-foreground">Stream Player</strong> com o seu modelo de Smart TV
-      e conduzimos toda a instalação e configuração pelo WhatsApp.
+      Ative e configure o <strong className="text-foreground">Stream Player na sua Smart TV</strong> com compatibilidade
+      verificada antes e suporte pelo WhatsApp. Plano mensal de R$ 19,99.
     </>
   ),
-  heroTrustLine: "Compatível com várias TVs • Samsung, LG e Android TV.",
+  heroTrustLine: "Compatibilidade verificada • Samsung, LG, Android TV e Google TV.",
   heroQuickBenefits: [
-    "Compatível com várias TVs",
-    "Samsung, LG e Android TV",
-    "Verificação prévia de compatibilidade",
-    "Instalação e configuração assistida",
-    "Suporte humano pelo WhatsApp",
+    "R$ 19,99/mês",
+    "Ativação rápida",
+    "Compatibilidade com Smart TV",
+    "Suporte pelo WhatsApp",
+    "Experiência estável",
   ],
   heroImageAlt: "Stream Player rodando em Smart TV Samsung, LG e Android TV",
   heroBadgeTitle: "Compatível",
   heroBadgeDesc: "Samsung • LG • Android TV",
-  ctaLabel: "Verificar minha Smart TV",
+  heroPriceCard: {
+    label: "Plano mensal",
+    price: "R$ 19,99/mês",
+    lines: [
+      "Ativação rápida do stream player",
+      "Configuração orientada na sua Smart TV",
+      "Compatibilidade verificada antes",
+      "Suporte pelo WhatsApp",
+    ],
+  },
+  ctaLabel: "Ativar Meu Aplicativo",
   ctaMessage: WA,
-  ctaMicrocopy: "Compatibilidade confirmada antes • Suporte humano",
+  ctaMicrocopy: "R$ 19,99/mês • Compatibilidade confirmada antes",
   benefitsEyebrow: "Compatibilidade ampla",
   benefitsTitlePre: "Dispositivos que rodam",
   benefitsTitleAccent: "Stream Player",

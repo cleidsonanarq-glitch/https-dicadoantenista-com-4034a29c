@@ -2,34 +2,47 @@ import AdLandingPage, { type AdLandingConfig } from "@/components/AdLandingPage"
 import { Tv, AlertTriangle, Download, Settings, KeyRound, Headphones } from "lucide-react";
 import { smartTvLinks, SMARTTV_DISCLAIMER } from "./smartTvAppLinks";
 
-const WA = "Olá! Preciso de ajuda com um app para assistir TV na Smart TV.";
+const WA = "Olá! Quero saber sobre app para assistir TV na Smart TV.";
 
 const config: AdLandingConfig = {
   path: "/app-para-assistir-tv-na-smart-tv",
-  title: "App para Assistir TV na Smart TV: Instalar, Configurar e Ativar",
+  title: "App para Assistir TV na Smart TV | Ativação por R$ 19,99/mês",
   description:
-    "Ajuda para instalar, configurar e ativar um app para assistir TV na Smart TV. Suporte técnico independente pelo WhatsApp, com verificação de compatibilidade.",
-  eyebrow: "Suporte técnico • App na Smart TV",
+    "Procura um app para assistir TV na Smart TV? Encontre uma opção compatível com o seu aparelho, com ativação rápida, configuração orientada e suporte no WhatsApp. R$ 19,99/mês.",
+  eyebrow: "App para assistir TV • Smart TV",
   heroPre: "App para assistir TV na",
   heroAccent: "Smart TV",
+  heroPost: "compatível com o seu aparelho",
   heroSubtitle: (
     <>
-      Encontre orientação para instalar, configurar e ativar
-      <strong className="text-foreground"> aplicativos compatíveis</strong> com a sua Smart TV.
+      Encontre uma opção compatível com a sua Smart TV e tenha suporte para instalar, configurar e ativar
+      <strong className="text-foreground"> aplicativos compatíveis</strong>. Plano mensal de R$ 19,99.
     </>
   ),
   heroTrustLine: "Suporte humano por WhatsApp, do primeiro passo até o app configurado.",
   heroQuickBenefits: [
-    "Diagnóstico do que está impedindo o app de funcionar",
-    "Instalação e configuração acompanhadas",
-    "Ativação quando o aplicativo exigir",
+    "R$ 19,99/mês",
+    "Ativação rápida",
+    "Compatibilidade com Smart TV verificada",
+    "Suporte pelo WhatsApp",
+    "Experiência estável",
   ],
   heroImageAlt: "Smart TV moderna exibindo a lista de aplicativos instalados",
   heroBadgeTitle: "Atendimento online",
   heroBadgeDesc: "Instalação • Configuração • Ativação",
+  heroPriceCard: {
+    label: "Plano mensal",
+    price: "R$ 19,99/mês",
+    lines: [
+      "Ativação rápida",
+      "Configuração orientada no seu modelo de TV",
+      "Suporte pelo WhatsApp",
+      "Experiência estável",
+    ],
+  },
   ctaLabel: "Falar no WhatsApp",
   ctaMessage: WA,
-  ctaMicrocopy: "Explique o problema em uma mensagem • Resposta pelo WhatsApp",
+  ctaMicrocopy: "R$ 19,99/mês • Resposta pelo WhatsApp",
   benefitsEyebrow: "Onde ajudamos",
   benefitsTitlePre: "Suporte para o seu",
   benefitsTitleAccent: "app na Smart TV",
@@ -42,8 +55,8 @@ const config: AdLandingConfig = {
     { icon: Headphones, title: "Acompanhamento até o fim", desc: "Você não fica sozinho no meio do processo: seguimos no atendimento até concluir a configuração." },
   ],
   section2: {
-    title: "Seu aplicativo não está funcionando?",
-    text: "A maior parte dos problemas com app para assistir TV na Smart TV tem uma causa simples: instalação incompleta, configuração digitada com erro, aplicativo que precisa de ativação ou modelo de TV que não suporta aquele app. No atendimento identificamos qual é o seu caso e indicamos o que fazer — sem promessa de conteúdo, apenas o serviço técnico.",
+    title: "Encontre o aplicativo certo para sua Smart TV",
+    text: "Existem vários aplicativos para assistir TV na Smart TV e a compatibilidade varia conforme o modelo da TV, o sistema operacional (Tizen, webOS, Android TV, Google TV) e o aplicativo utilizado. No atendimento verificamos essas três informações e indicamos uma opção compatível com o seu aparelho, além de orientar a instalação, a configuração e a ativação. O serviço é técnico: não fornecemos canais, novelas, filmes ou qualquer conteúdo.",
     cards: [
       { icon: AlertTriangle, title: "Descrever o sintoma", desc: "Tela preta, erro ao abrir, app não aparece na loja, pedido de ativação." },
       { icon: Tv, title: "Confirmar o aparelho", desc: "Marca, modelo e sistema da Smart TV para checar a compatibilidade." },

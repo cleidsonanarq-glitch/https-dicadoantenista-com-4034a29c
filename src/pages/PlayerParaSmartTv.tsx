@@ -2,34 +2,48 @@ import AdLandingPage, { type AdLandingConfig } from "@/components/AdLandingPage"
 import { MonitorPlay, Tv, Settings, Download, KeyRound, Headphones } from "lucide-react";
 import { smartTvLinks, SMARTTV_DISCLAIMER } from "./smartTvAppLinks";
 
-const WA = "Olá! Quero configurar um player na minha Smart TV.";
+const WA = "Olá! Quero configurar um player na Smart TV.";
 
 const config: AdLandingConfig = {
   path: "/player-para-smart-tv",
-  title: "Player para Smart TV: Instale e Configure com Suporte no WhatsApp",
+  title: "Player para Smart TV | Configuração e Ativação por R$ 19,99/mês",
   description:
-    "Precisa de ajuda para configurar um player para Smart TV? Orientação para instalação, configuração e ativação de aplicativos compatíveis pelo WhatsApp.",
+    "Player para Smart TV com configuração orientada, ativação rápida, compatibilidade verificada e suporte pelo WhatsApp. Plano mensal de R$ 19,99.",
   eyebrow: "Suporte técnico • Players para Smart TV",
-  heroPre: "Player para Smart TV:",
-  heroAccent: "instale e configure",
+  heroPre: "Player para",
+  heroAccent: "Smart TV",
+  heroPost: "configuração e ativação orientadas",
   heroSubtitle: (
     <>
-      Precisa de ajuda para configurar um player na sua Smart TV? Receba orientação para
-      instalação e ativação de <strong className="text-foreground">aplicativos compatíveis</strong>.
+      Configure e ative um <strong className="text-foreground">player compatível com a sua Smart TV</strong> com
+      verificação de compatibilidade e suporte pelo WhatsApp. Plano mensal de R$ 19,99.
     </>
   ),
   heroTrustLine: "Processo simples: você informa a TV e o app, nós orientamos a configuração.",
   heroQuickBenefits: [
-    "Compatibilidade checada antes de iniciar",
-    "Configuração guiada em poucos minutos",
-    "Suporte humano durante todo o processo",
+    "R$ 19,99/mês",
+    "Ativação rápida",
+    "Configuração orientada",
+    "Compatibilidade com Smart TV",
+    "Suporte pelo WhatsApp",
+    "Experiência estável",
   ],
   heroImageAlt: "Smart TV exibindo a tela inicial de um player de aplicativos",
   heroBadgeTitle: "Configuração guiada",
   heroBadgeDesc: "Você acompanha pelo controle da TV",
+  heroPriceCard: {
+    label: "Plano mensal",
+    price: "R$ 19,99/mês",
+    lines: [
+      "Ativação rápida",
+      "Configuração orientada do player",
+      "Compatibilidade verificada com a sua TV",
+      "Suporte pelo WhatsApp",
+    ],
+  },
   ctaLabel: "Falar no WhatsApp",
   ctaMessage: WA,
-  ctaMicrocopy: "Atendimento direto • Sem complicação técnica",
+  ctaMicrocopy: "R$ 19,99/mês • Atendimento direto, sem complicação técnica",
   benefitsEyebrow: "O que você recebe",
   benefitsTitlePre: "Suporte para o seu",
   benefitsTitleAccent: "player na Smart TV",
@@ -42,7 +56,7 @@ const config: AdLandingConfig = {
     { icon: Headphones, title: "Suporte durante o processo", desc: "Você é acompanhado pelo WhatsApp até a configuração ser concluída." },
   ],
   steps: {
-    title: "Configuração sem complicação",
+    title: "Configure seu player na Smart TV",
     items: [
       { title: "Informe o modelo da sua Smart TV", desc: "Marca, modelo e, se possível, o sistema do aparelho." },
       { title: "Informe qual aplicativo utiliza", desc: "Diga qual player você quer instalar ou já tem instalado na TV." },
