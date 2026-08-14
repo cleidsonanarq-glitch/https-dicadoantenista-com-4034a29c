@@ -55,8 +55,8 @@ const config: AdLandingConfig = {
     { icon: Headphones, title: "Acompanhamento até o fim", desc: "Você não fica sozinho no meio do processo: seguimos no atendimento até concluir a configuração." },
   ],
   section2: {
-    title: "Seu aplicativo não está funcionando?",
-    text: "A maior parte dos problemas com app para assistir TV na Smart TV tem uma causa simples: instalação incompleta, configuração digitada com erro, aplicativo que precisa de ativação ou modelo de TV que não suporta aquele app. No atendimento identificamos qual é o seu caso e indicamos o que fazer — sem promessa de conteúdo, apenas o serviço técnico.",
+    title: "Encontre o aplicativo certo para sua Smart TV",
+    text: "Existem vários aplicativos para assistir TV na Smart TV e a compatibilidade varia conforme o modelo da TV, o sistema operacional (Tizen, webOS, Android TV, Google TV) e o aplicativo utilizado. No atendimento verificamos essas três informações e indicamos uma opção compatível com o seu aparelho, além de orientar a instalação, a configuração e a ativação. O serviço é técnico: não fornecemos canais, novelas, filmes ou qualquer conteúdo.",
     cards: [
       { icon: AlertTriangle, title: "Descrever o sintoma", desc: "Tela preta, erro ao abrir, app não aparece na loja, pedido de ativação." },
       { icon: Tv, title: "Confirmar o aparelho", desc: "Marca, modelo e sistema da Smart TV para checar a compatibilidade." },
