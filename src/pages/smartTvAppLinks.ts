@@ -33,6 +33,11 @@ const SMARTTV_PAGES = [
     label: "Comprar ativação de aplicativo Smart TV",
     desc: "Atendimento para ativar o aplicativo compatível com a sua TV.",
   },
+  {
+    href: "/app-iptv-smartv-samsung",
+    label: "App para Smart TV Samsung",
+    desc: "Compatibilidade, ativação e configuração em TVs Samsung.",
+  },
 ];
 
 export function smartTvLinks(currentPath: string) {
