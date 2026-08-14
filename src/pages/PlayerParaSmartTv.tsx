@@ -56,7 +56,7 @@ const config: AdLandingConfig = {
     { icon: Headphones, title: "Suporte durante o processo", desc: "Você é acompanhado pelo WhatsApp até a configuração ser concluída." },
   ],
   steps: {
-    title: "Configuração sem complicação",
+    title: "Configure seu player na Smart TV",
     items: [
       { title: "Informe o modelo da sua Smart TV", desc: "Marca, modelo e, se possível, o sistema do aparelho." },
       { title: "Informe qual aplicativo utiliza", desc: "Diga qual player você quer instalar ou já tem instalado na TV." },
