@@ -2,34 +2,47 @@ import AdLandingPage, { type AdLandingConfig } from "@/components/AdLandingPage"
 import { Tv, AlertTriangle, Download, Settings, KeyRound, Headphones } from "lucide-react";
 import { smartTvLinks, SMARTTV_DISCLAIMER } from "./smartTvAppLinks";
 
-const WA = "Olá! Preciso de ajuda com um app para assistir TV na Smart TV.";
+const WA = "Olá! Quero saber sobre app para assistir TV na Smart TV.";
 
 const config: AdLandingConfig = {
   path: "/app-para-assistir-tv-na-smart-tv",
-  title: "App para Assistir TV na Smart TV: Instalar, Configurar e Ativar",
+  title: "App para Assistir TV na Smart TV | Ativação por R$ 19,99/mês",
   description:
-    "Ajuda para instalar, configurar e ativar um app para assistir TV na Smart TV. Suporte técnico independente pelo WhatsApp, com verificação de compatibilidade.",
-  eyebrow: "Suporte técnico • App na Smart TV",
+    "Procura um app para assistir TV na Smart TV? Encontre uma opção compatível com o seu aparelho, com ativação rápida, configuração orientada e suporte no WhatsApp. R$ 19,99/mês.",
+  eyebrow: "App para assistir TV • Smart TV",
   heroPre: "App para assistir TV na",
   heroAccent: "Smart TV",
+  heroPost: "compatível com o seu aparelho",
   heroSubtitle: (
     <>
-      Encontre orientação para instalar, configurar e ativar
-      <strong className="text-foreground"> aplicativos compatíveis</strong> com a sua Smart TV.
+      Encontre uma opção compatível com a sua Smart TV e tenha suporte para instalar, configurar e ativar
+      <strong className="text-foreground"> aplicativos compatíveis</strong>. Plano mensal de R$ 19,99.
     </>
   ),
   heroTrustLine: "Suporte humano por WhatsApp, do primeiro passo até o app configurado.",
   heroQuickBenefits: [
-    "Diagnóstico do que está impedindo o app de funcionar",
-    "Instalação e configuração acompanhadas",
-    "Ativação quando o aplicativo exigir",
+    "R$ 19,99/mês",
+    "Ativação rápida",
+    "Compatibilidade com Smart TV verificada",
+    "Suporte pelo WhatsApp",
+    "Experiência estável",
   ],
   heroImageAlt: "Smart TV moderna exibindo a lista de aplicativos instalados",
   heroBadgeTitle: "Atendimento online",
   heroBadgeDesc: "Instalação • Configuração • Ativação",
+  heroPriceCard: {
+    label: "Plano mensal",
+    price: "R$ 19,99/mês",
+    lines: [
+      "Ativação rápida",
+      "Configuração orientada no seu modelo de TV",
+      "Suporte pelo WhatsApp",
+      "Experiência estável",
+    ],
+  },
   ctaLabel: "Falar no WhatsApp",
   ctaMessage: WA,
-  ctaMicrocopy: "Explique o problema em uma mensagem • Resposta pelo WhatsApp",
+  ctaMicrocopy: "R$ 19,99/mês • Resposta pelo WhatsApp",
   benefitsEyebrow: "Onde ajudamos",
   benefitsTitlePre: "Suporte para o seu",
   benefitsTitleAccent: "app na Smart TV",
