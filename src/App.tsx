@@ -44,6 +44,7 @@ const AppParaAssistirTvNaSmartTv = lazy(() => import("./pages/AppParaAssistirTvN
 const AplicativoDeTvParaSmartTv = lazy(() => import("./pages/AplicativoDeTvParaSmartTv.tsx"));
 const PlayerParaSmartTv = lazy(() => import("./pages/PlayerParaSmartTv.tsx"));
 const ComprarAtivacaoAplicativoSmartTv = lazy(() => import("./pages/ComprarAtivacaoAplicativoSmartTv.tsx"));
+const AppIptvSmartvSamsung = lazy(() => import("./pages/AppIptvSmartvSamsung.tsx"));
 
 const lazyRoute = (Component: React.LazyExoticComponent<() => JSX.Element>) => (
   <Suspense fallback={null}>
