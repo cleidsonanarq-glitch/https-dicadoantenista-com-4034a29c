@@ -95,6 +95,7 @@ const App = () => (
       <Route path="/aplicativo-de-tv-para-smart-tv" element={lazyRoute(AplicativoDeTvParaSmartTv)} />
       <Route path="/player-para-smart-tv" element={lazyRoute(PlayerParaSmartTv)} />
       <Route path="/comprar-ativacao-aplicativo-smart-tv" element={lazyRoute(ComprarAtivacaoAplicativoSmartTv)} />
+      <Route path="/app-iptv-smartv-samsung" element={lazyRoute(AppIptvSmartvSamsung)} />
       <Route path="/politica-de-privacidade" element={lazyRoute(PoliticaDePrivacidade)} />
       <Route path="*" element={lazyRoute(NotFound)} />
     </Routes>
