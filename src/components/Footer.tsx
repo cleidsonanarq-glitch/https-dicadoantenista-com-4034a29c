@@ -76,6 +76,15 @@ const Footer = () => {
         </p>
       </div>
 
+      <div className="container mt-8">
+        <p className="mx-auto max-w-4xl rounded-2xl border border-border/60 bg-secondary/40 p-4 text-center text-xs leading-relaxed text-muted-foreground">
+          <strong className="text-foreground">Aviso:</strong> Prestação independente de serviços de suporte e consultoria técnica. Este site não possui afiliação, vínculo comercial ou representação de marcas de televisores ou desenvolvedores de aplicativos. Não fornecemos serviços de IPTV, listas de reprodução, acesso a canais por assinatura ou streaming de conteúdo protegido por direitos autorais.
+        </p>
+        <p className="mt-4 text-center text-xs text-muted-foreground">
+          Dica do Antenista • Consultoria e Suporte Técnico em Softwares e TV
+        </p>
+      </div>
+
       <Dialog open={open === "privacy"} onOpenChange={(v) => !v && close()}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
