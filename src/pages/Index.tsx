@@ -246,7 +246,6 @@ const Index = () => {
         </section>
 
         {/* SUPORTE TÉCNICO */}
-        <LazyOnVisible minHeight={500}>
           <section id="suporte-tecnico" className="relative scroll-mt-24 py-16 sm:py-24">
             <div className="container max-w-4xl text-center">
               <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-cta text-primary-foreground shadow-glow">
@@ -277,10 +276,8 @@ const Index = () => {
               </div>
             </div>
           </section>
-        </LazyOnVisible>
 
         {/* FAQ */}
-        <LazyOnVisible minHeight={500}>
           <section id="faq-ajuda" className="relative scroll-mt-24 py-16 sm:py-24">
             <div className="container max-w-3xl">
               <div className="text-center">
@@ -309,10 +306,8 @@ const Index = () => {
               </div>
             </div>
           </section>
-        </LazyOnVisible>
 
         {/* ATENDIMENTO / CTA FINAL */}
-        <LazyOnVisible minHeight={400}>
           <section id="atendimento" className="relative scroll-mt-24 overflow-hidden py-20 sm:py-28">
             <div aria-hidden className="pointer-events-none absolute -top-24 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-primary/15 blur-3xl" />
             <div className="container relative max-w-3xl text-center">
@@ -331,7 +326,6 @@ const Index = () => {
               </div>
             </div>
           </section>
-        </LazyOnVisible>
       </main>
 
       <LazyOnVisible minHeight={200}>
