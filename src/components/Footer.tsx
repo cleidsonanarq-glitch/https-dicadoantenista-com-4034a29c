@@ -22,7 +22,7 @@ const Footer = () => {
         <div className="flex max-w-sm flex-col items-center gap-3 md:items-start">
           <img
             src={logoUrl}
-            alt="Dica do Antenista - Suporte e configuração de IBO Player para Smart TV, TV Box e Android"
+            alt="Dica do Antenista - Assistência técnica para conectividade em Smart TVs e Android"
             width="160"
             height="50"
             loading="lazy"
@@ -31,7 +31,7 @@ const Footer = () => {
           />
           <p className="text-sm font-semibold text-foreground">Dica do Antenista</p>
           <p className="text-xs leading-relaxed text-muted-foreground">
-            Serviço de suporte e configuração de aplicativos para Smart TVs e dispositivos compatíveis.
+            Assistência técnica para conectividade e configuração de redes em Smart TVs e dispositivos Android.
           </p>
           <p className="text-xs text-muted-foreground">
             Responsável: <span className="text-foreground">Cleidson Ferreira Teixeira</span>
@@ -78,10 +78,10 @@ const Footer = () => {
 
       <div className="container mt-8">
         <p className="mx-auto max-w-4xl rounded-2xl border border-border/60 bg-secondary/40 p-4 text-center text-xs leading-relaxed text-muted-foreground">
-          <strong className="text-foreground">Aviso:</strong> Prestação independente de serviços de suporte e consultoria técnica. Este site não possui afiliação, vínculo comercial ou representação de marcas de televisores ou desenvolvedores de aplicativos. Não fornecemos serviços de IPTV, listas de reprodução, acesso a canais por assinatura ou streaming de conteúdo protegido por direitos autorais.
+          <strong className="text-foreground">Aviso:</strong> Prestação independente de serviços de assistência e consultoria técnica. Este site não possui afiliação, vínculo comercial ou representação de fabricantes de televisores, dispositivos ou sistemas operacionais. Não fornecemos conteúdo audiovisual nem serviços de terceiros.
         </p>
         <p className="mt-4 text-center text-xs text-muted-foreground">
-          Dica do Antenista • Consultoria e Suporte Técnico em Softwares e TV
+          Dica do Antenista • Assistência Técnica para Conectividade e Redes
         </p>
       </div>
 
@@ -102,8 +102,8 @@ const Footer = () => {
           <DialogHeader>
             <DialogTitle>Termos de Uso</DialogTitle>
             <DialogDescription className="pt-2 text-sm leading-relaxed text-muted-foreground">
-              Serviço destinado à orientação técnica para instalação e
-              configuração de aplicativos em Smart TVs e dispositivos compatíveis.
+              Serviço destinado à orientação técnica para conectividade e
+              configuração de redes em Smart TVs e dispositivos compatíveis.
             </DialogDescription>
           </DialogHeader>
         </DialogContent>
