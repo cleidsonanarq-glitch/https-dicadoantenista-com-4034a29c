@@ -1,11 +1,9 @@
 import { lazy, Suspense, useEffect, useState } from "react";
 import {
-  Zap,
-  Tv,
-  MonitorSmartphone,
-  ShieldCheck,
-  Languages,
-  FolderKanban,
+  Settings,
+  Wifi,
+  Headphones,
+  Network,
   Wrench,
   HelpCircle,
 } from "lucide-react";
@@ -23,49 +21,49 @@ const Footer = lazy(() => import("@/components/Footer"));
 const FloatingWhatsApp = lazy(() => import("@/components/FloatingWhatsApp"));
 
 const HERO_BENEFITS = [
-  "Orientação para Smart TVs e aparelhos homologados",
-  "Passo a passo simplificado para instalar e configurar reprodutores",
-  "Ajuda com lentidão, tela preta e erros de conexão",
-  "Suporte técnico humanizado em tempo real",
+  "Configuração de redes Wi-Fi em Smart TVs e dispositivos Android",
+  "Ajustes de conexão, DNS e comunicação do equipamento",
+  "Diagnóstico de lentidão, desconexões e falhas de acesso",
+  "Assistência técnica humanizada em tempo real",
 ];
 
 const INSTALL_CARDS = [
   {
-    icon: ShieldCheck,
-    title: "Instalação Segura",
-    desc: "Localize os aplicativos oficiais direto das lojas de apps autorizadas.",
+    icon: Settings,
+    title: "Configuração Segura",
+    desc: "Ajuste as funções essenciais do equipamento com orientação técnica passo a passo.",
   },
   {
-    icon: Languages,
-    title: "Ajuste de Idioma e Interface",
-    desc: "Deixe o aplicativo organizado, com menus e legendas configurados.",
+    icon: Wifi,
+    title: "Ajustes de Rede Wi-Fi",
+    desc: "Revise conexão, DNS e comunicação para melhorar o acesso à internet no aparelho.",
   },
   {
-    icon: FolderKanban,
-    title: "Organização de Conteúdo",
-    desc: "Aprenda a manusear pastas, categorias e favoritos dentro do reprodutor.",
+    icon: Headphones,
+    title: "Diagnóstico Técnico",
+    desc: "Identifique falhas de conectividade e receba instruções adequadas ao seu dispositivo.",
   },
 ];
 
 const TECH_PROBLEMS = [
-  "Tela preta ou travamento ao iniciar o aplicativo",
+  "Wi-Fi conectado, mas sem acesso à internet",
   "Erros de rede, DNS ou tempo limite de carregamento",
-  "Falha na sincronização de dados e menus desorganizados",
-  "Incompatibilidade de resolução ou proporção de tela",
+  "Quedas frequentes ou sinal instável no equipamento",
+  "Dificuldade de comunicação entre roteador e dispositivo",
 ];
 
 const FAQS = [
   {
-    q: "Vocês vendem canais de TV fechada ou filmes?",
-    a: "Não. Não comercializamos, hospedamos nem distribuímos nenhum sinal de canal de TV, filmes ou conteúdos protegidos. Nosso serviço é estritamente de suporte técnico e consultoria para configuração de softwares reprodutores de mídia de terceiros.",
+    q: "Quais problemas de conectividade vocês atendem?",
+    a: "Ajudamos com configuração de Wi-Fi, DNS, acesso à internet, instabilidade de sinal e comunicação entre o roteador e dispositivos compatíveis.",
   },
   {
     q: "Como recebo o atendimento técnico?",
     a: "O suporte é realizado diretamente com um técnico via WhatsApp, com instruções passo a passo em texto, áudio ou imagens para você aplicar diretamente no seu aparelho.",
   },
   {
-    q: "Serve para qualquer modelo de TV?",
-    a: "Atendemos Smart TVs com sistemas Android TV, Google TV, Tizen, webOS, Fire OS e aparelhos compatíveis homologados.",
+    q: "O atendimento serve para qualquer modelo de Smart TV?",
+    a: "Atendemos Smart TVs Samsung, LG, Android TV, Google TV e dispositivos Android compatíveis. A orientação considera o modelo e o sistema de cada aparelho.",
   },
   {
     q: "O suporte é imediato?",
@@ -96,11 +94,11 @@ const Index = () => {
   }, []);
 
   useEffect(() => {
-    document.title = "Suporte e Configuração de Aplicativos para Smart TV | Dica do Antenista";
+    document.title = "Assistência Técnica para Conectividade e Configuração de Redes em Smart TVs Samsung, LG e Android";
     const desc = document.querySelector('meta[name="description"]');
     desc?.setAttribute(
       "content",
-      "Ajuda especializada para instalar e configurar aplicativos e reprodutores de mídia em Smart TVs e dispositivos Android. Atendimento rápido via WhatsApp."
+      "Assistência técnica para Wi-Fi, DNS e configuração de redes em Smart TVs Samsung, LG e Android. Atendimento especializado pelo WhatsApp."
     );
   }, []);
 
@@ -115,21 +113,21 @@ const Index = () => {
 
           <div className="container relative max-w-4xl text-center">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-secondary/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-              <Zap className="h-3.5 w-3.5 text-accent" />
-              Suporte Especializado para Smart TV e Reprodutores de Mídia
+              <Settings className="h-3.5 w-3.5 text-accent" />
+              Assistência Técnica para Smart TVs e Dispositivos Android
             </div>
 
             <h1 className="font-display text-[2rem] font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
-              Ajuda Especializada para{" "}
+              Assistência Técnica para Conectividade e{" "}
               <span className="relative inline-block">
-                <span className="text-gradient-accent inline-block">Instalar e Configurar</span>
+                <span className="text-gradient-accent inline-block">Configuração de Redes</span>
                 <span className="absolute -bottom-1 left-0 h-1 w-full rounded-full bg-gradient-accent opacity-60" />
               </span>{" "}
-              seu Aplicativo na TV
+              em Smart TVs Samsung, LG e Android
             </h1>
 
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:mt-6 sm:text-xl">
-              Orientação técnica passo a passo para configurar reprodutores multimídia e players em Smart TVs e aparelhos Android compatíveis. Atendimento rápido e sem complicações via WhatsApp.
+              Orientação especializada para configurar Wi-Fi, DNS e conexões de rede em Smart TVs Samsung, LG e dispositivos Android. Atendimento rápido e sem complicações pelo WhatsApp.
             </p>
 
             <ul className="mx-auto mt-6 grid max-w-2xl grid-cols-1 gap-2 text-left text-sm text-foreground sm:grid-cols-2 sm:text-base">
@@ -144,7 +142,7 @@ const Index = () => {
             <div className="mt-8 flex flex-col items-center gap-3">
               <WhatsAppButton
                 label="Falar com Suporte no WhatsApp"
-                message="Olá, preciso de ajuda para instalar e configurar um aplicativo na minha TV."
+                message="Olá, preciso de assistência técnica para configurar a conectividade da minha Smart TV."
                 source="hero"
               />
               <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
@@ -160,20 +158,20 @@ const Index = () => {
         <section id="smart-tv" className="relative scroll-mt-24 py-16 sm:py-24">
           <div className="container grid items-center gap-8 lg:grid-cols-[auto_1fr] lg:gap-12">
             <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-cta text-primary-foreground shadow-glow lg:mx-0">
-              <Tv className="h-10 w-10" strokeWidth={2} />
+              <Wifi className="h-10 w-10" strokeWidth={2} />
             </div>
             <div className="text-center lg:text-left">
               <h2 className="font-display text-3xl font-bold sm:text-4xl">
-                Configuração de Aplicativos em <span className="text-gradient-primary">Smart TV</span>
+                Configuração de Rede em <span className="text-gradient-primary">Smart TV</span>
               </h2>
               <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg lg:max-w-none">
-                Auxiliamos na busca, instalação e configuração dos principais reprodutores de mídia nas lojas oficiais da sua Smart TV (sistemas Tizen, webOS e Android TV). Evite dores de cabeça e configure seu app com assistência técnica especializada.
+                Auxiliamos nos ajustes de Wi-Fi, DNS e acesso à internet em Smart TVs Samsung, LG e Android. A configuração considera o sistema e o modelo do equipamento para oferecer uma orientação técnica adequada.
               </p>
               <div className="mt-6 flex justify-center lg:justify-start">
                 <WhatsAppButton
                   variant="ghost"
-                  label="Configurar na Minha Smart TV"
-                  message="Olá, quero configurar um aplicativo na minha Smart TV."
+                  label="Configurar Rede da Minha Smart TV"
+                  message="Olá, quero ajuda para configurar a rede da minha Smart TV."
                   source="smart-tv"
                 />
               </div>
@@ -186,20 +184,20 @@ const Index = () => {
           <div className="pointer-events-none absolute inset-x-0 top-1/3 h-64 bg-gradient-to-b from-primary/5 to-transparent" />
           <div className="container relative grid items-center gap-8 lg:grid-cols-[auto_1fr] lg:gap-12">
             <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-cta text-primary-foreground shadow-glow lg:mx-0">
-              <MonitorSmartphone className="h-10 w-10" strokeWidth={2} />
+              <Network className="h-10 w-10" strokeWidth={2} />
             </div>
             <div className="text-center lg:text-left">
               <h2 className="font-display text-3xl font-bold sm:text-4xl">
-                Suporte para <span className="text-gradient-primary">Dispositivos Android</span> e Reprodutores
+                Conectividade para <span className="text-gradient-primary">Dispositivos Android</span>
               </h2>
               <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg lg:max-w-none">
-                Tem um dispositivo ou dongle Android compatível e não sabe como colocar o aplicativo para funcionar? Nossa equipe te orienta na escolha e configuração correta de players leves e estáveis para o seu aparelho.
+                Seu dispositivo Android não conecta ou apresenta instabilidade? Nossa equipe orienta os ajustes de Wi-Fi, DNS e comunicação com o roteador de acordo com as características do aparelho.
               </p>
               <div className="mt-6 flex justify-center lg:justify-start">
                 <WhatsAppButton
                   variant="ghost"
-                  label="Suporte para Dispositivo Android"
-                  message="Olá, preciso de suporte para configurar um aplicativo no meu dispositivo Android."
+                  label="Suporte para Conectividade Android"
+                  message="Olá, preciso de suporte para configurar a conexão do meu dispositivo Android."
                   source="dispositivos-android"
                 />
               </div>
@@ -213,7 +211,7 @@ const Index = () => {
             <div className="mx-auto mb-12 max-w-3xl text-center">
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Passo a passo</span>
               <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
-                Guia de <span className="text-gradient-primary">Instalação e Ajustes Finos</span>
+                 Guia de <span className="text-gradient-primary">Configuração de Rede</span>
               </h2>
             </div>
 
@@ -237,8 +235,8 @@ const Index = () => {
 
             <div className="mt-10 flex justify-center">
               <WhatsAppButton
-                label="Quero Ajuda na Instalação"
-                message="Olá, quero ajuda para instalar um aplicativo na minha TV."
+                label="Quero Ajuda na Configuração"
+                message="Olá, quero ajuda para configurar a rede do meu equipamento."
                 source="instalacao-players"
               />
             </div>
@@ -252,10 +250,10 @@ const Index = () => {
                 <Wrench className="h-8 w-8" strokeWidth={2.2} />
               </div>
               <h2 className="font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
-                Seu Aplicativo Apresentou <span className="text-gradient-accent">Falhas ou Travamentos?</span>
+                 Sua Conexão Apresenta <span className="text-gradient-accent">Falhas ou Instabilidade?</span>
               </h2>
               <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-                Problemas comuns que ajudamos a resolver via suporte remoto:
+                 Problemas comuns que ajudamos a diagnosticar por assistência remota:
               </p>
 
               <ul className="mx-auto mt-8 grid max-w-2xl grid-cols-1 gap-3 text-left sm:grid-cols-2">
@@ -269,8 +267,8 @@ const Index = () => {
 
               <div className="mt-10 flex justify-center">
                 <WhatsAppButton
-                  label="Resolver Travamentos no WhatsApp"
-                  message="Olá, meu aplicativo está travando ou com erro e preciso de suporte técnico."
+                  label="Resolver Problemas de Conexão"
+                  message="Olá, minha conexão está instável e preciso de assistência técnica."
                   source="suporte-tecnico"
                 />
               </div>
@@ -312,15 +310,15 @@ const Index = () => {
             <div aria-hidden className="pointer-events-none absolute -top-24 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-primary/15 blur-3xl" />
             <div className="container relative max-w-3xl text-center">
               <h2 className="font-display text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
-                Pronto para <span className="text-gradient-accent">Configurar seu Aplicativo</span> na TV?
+                 Precisa de Ajuda com a <span className="text-gradient-accent">Conectividade</span> da sua Smart TV?
               </h2>
               <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-                Fale com um especialista agora mesmo e configure seu reprodutor sem perder tempo.
+                 Fale com um especialista e receba orientação para configurar a rede do seu equipamento.
               </p>
               <div className="mt-8 flex justify-center">
                 <WhatsAppButton
                   label="Chamar no WhatsApp Agora"
-                  message="Olá, quero configurar meu aplicativo na TV agora."
+                  message="Olá, quero assistência para configurar a conectividade da minha Smart TV."
                   source="atendimento"
                 />
               </div>
