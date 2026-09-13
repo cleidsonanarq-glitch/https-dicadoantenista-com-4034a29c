@@ -3,7 +3,7 @@ import logoUrl from "@/assets/logo-dica-antenista.png";
 const NAV_LINKS = [
   { label: "Smart TV", href: "/#smart-tv" },
   { label: "Dispositivos", href: "/#dispositivos-android" },
-  { label: "Instalação", href: "/#instalacao-players" },
+  { label: "Configuração", href: "/#configuracao-redes" },
   { label: "Suporte", href: "/#suporte-tecnico" },
   { label: "Dúvidas", href: "/#faq-ajuda" },
 ];

@@ -206,7 +206,7 @@ const Index = () => {
         </section>
 
         {/* INSTALAÇÃO */}
-        <section id="instalacao-players" className="relative scroll-mt-24 py-16 sm:py-24">
+        <section id="configuracao-redes" className="relative scroll-mt-24 py-16 sm:py-24">
           <div className="container">
             <div className="mx-auto mb-12 max-w-3xl text-center">
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Passo a passo</span>
@@ -237,7 +237,7 @@ const Index = () => {
               <WhatsAppButton
                 label="Quero Ajuda na Configuração"
                 message="Olá, quero ajuda para configurar a rede do meu equipamento."
-                source="instalacao-players"
+                source="configuracao-redes"
               />
             </div>
           </div>
