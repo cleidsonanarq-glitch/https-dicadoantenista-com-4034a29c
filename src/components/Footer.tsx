@@ -22,7 +22,7 @@ const Footer = () => {
         <div className="flex max-w-sm flex-col items-center gap-3 md:items-start">
           <img
             src={logoUrl}
-            alt="Dica do Antenista - Assistência técnica para conectividade em Smart TVs e Android"
+            alt="Dica do Antenista - Consultoria para Smart TVs e conectividade residencial"
             width="160"
             height="50"
             loading="lazy"
@@ -31,7 +31,7 @@ const Footer = () => {
           />
           <p className="text-sm font-semibold text-foreground">Dica do Antenista</p>
           <p className="text-xs leading-relaxed text-muted-foreground">
-            Assistência técnica para conectividade e configuração de redes em Smart TVs e dispositivos Android.
+            Consultoria e orientação especializada para conectividade residencial, redes Wi-Fi e configuração de aparelhos de TV.
           </p>
           <p className="text-xs text-muted-foreground">
             Responsável: <span className="text-foreground">Cleidson Ferreira Teixeira</span>
@@ -78,10 +78,10 @@ const Footer = () => {
 
       <div className="container mt-8">
         <p className="mx-auto max-w-4xl rounded-2xl border border-border/60 bg-secondary/40 p-4 text-center text-xs leading-relaxed text-muted-foreground">
-          <strong className="text-foreground">Aviso:</strong> Prestação independente de serviços de assistência e consultoria técnica. Este site não possui afiliação, vínculo comercial ou representação de fabricantes de televisores, dispositivos ou sistemas operacionais. Não fornecemos conteúdo audiovisual nem serviços de terceiros.
+          <strong className="text-foreground">Aviso Legal:</strong> Somos um serviço independente de consultoria e suporte para conectividade doméstica. Não possuímos vínculo, afiliação, representação ou autorização oficial com fabricantes de televisores, desenvolvedores de sistemas operacionais ou provedores de mídia. Marcas e nomes citados pertencem a seus respectivos proprietários e são usados exclusivamente para fins descritivos.
         </p>
         <p className="mt-4 text-center text-xs text-muted-foreground">
-          Dica do Antenista • Assistência Técnica para Conectividade e Redes
+          Dica do Antenista • Consultoria e Suporte para Conectividade Residencial
         </p>
       </div>
 
@@ -102,8 +102,8 @@ const Footer = () => {
           <DialogHeader>
             <DialogTitle>Termos de Uso</DialogTitle>
             <DialogDescription className="pt-2 text-sm leading-relaxed text-muted-foreground">
-              Serviço destinado à orientação técnica para conectividade e
-              configuração de redes em Smart TVs e dispositivos compatíveis.
+              Serviço destinado à orientação e consultoria para conectividade
+              residencial e configuração de aparelhos de TV conectados.
             </DialogDescription>
           </DialogHeader>
         </DialogContent>
@@ -114,7 +114,7 @@ const Footer = () => {
           <DialogHeader>
             <DialogTitle>Fale com a gente</DialogTitle>
             <DialogDescription className="pt-2">
-              Atendimento humano e rápido pelos nossos canais oficiais.
+              Atendimento humano e rápido pelos nossos meios oficiais.
             </DialogDescription>
           </DialogHeader>
           <ul className="mt-2 space-y-3 text-sm">

@@ -2,9 +2,9 @@ import logoUrl from "@/assets/logo-dica-antenista.png";
 
 const NAV_LINKS = [
   { label: "Smart TV", href: "/#smart-tv" },
-  { label: "Dispositivos", href: "/#dispositivos-android" },
-  { label: "Configuração", href: "/#configuracao-redes" },
-  { label: "Suporte", href: "/#suporte-tecnico" },
+  { label: "Aparelhos", href: "/#dispositivos" },
+  { label: "Serviços", href: "/#servicos" },
+  { label: "Como Funciona", href: "/#como-funciona" },
   { label: "Dúvidas", href: "/#faq-ajuda" },
 ];
 
@@ -15,7 +15,7 @@ const Header = () => {
         <a href="/" className="flex items-center gap-2 shrink-0" aria-label="Dica do Antenista - Página inicial">
           <img
             src={logoUrl}
-            alt="Dica do Antenista - Assistência técnica para conectividade e redes"
+            alt="Dica do Antenista - Consultoria para Smart TVs e conectividade"
             width="180"
             height="56"
             fetchPriority="high"
@@ -24,7 +24,7 @@ const Header = () => {
           />
           <span className="hidden md:block leading-tight">
             <span className="block text-sm font-bold text-foreground">Dica do Antenista</span>
-            <span className="block text-[11px] font-medium text-muted-foreground">Suporte & Configuração</span>
+            <span className="block text-[11px] font-medium text-muted-foreground">Consultoria & Suporte</span>
           </span>
         </a>
 
