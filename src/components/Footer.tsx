@@ -114,7 +114,7 @@ const Footer = () => {
           <DialogHeader>
             <DialogTitle>Fale com a gente</DialogTitle>
             <DialogDescription className="pt-2">
-              Atendimento humano e rápido pelos nossos canais oficiais.
+              Atendimento humano e rápido pelos nossos meios oficiais.
             </DialogDescription>
           </DialogHeader>
           <ul className="mt-2 space-y-3 text-sm">
