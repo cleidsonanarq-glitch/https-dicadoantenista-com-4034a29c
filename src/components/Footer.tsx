@@ -102,8 +102,8 @@ const Footer = () => {
           <DialogHeader>
             <DialogTitle>Termos de Uso</DialogTitle>
             <DialogDescription className="pt-2 text-sm leading-relaxed text-muted-foreground">
-              Serviço destinado à orientação técnica para conectividade e
-              configuração de redes em Smart TVs e dispositivos compatíveis.
+              Serviço destinado à orientação e consultoria para conectividade
+              residencial e configuração de aparelhos de TV conectados.
             </DialogDescription>
           </DialogHeader>
         </DialogContent>
