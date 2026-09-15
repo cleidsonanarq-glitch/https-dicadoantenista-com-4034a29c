@@ -22,7 +22,7 @@ const Footer = () => {
         <div className="flex max-w-sm flex-col items-center gap-3 md:items-start">
           <img
             src={logoUrl}
-            alt="Dica do Antenista - Assistência técnica para conectividade em Smart TVs e Android"
+            alt="Dica do Antenista - Consultoria para Smart TVs e conectividade residencial"
             width="160"
             height="50"
             loading="lazy"
@@ -31,7 +31,7 @@ const Footer = () => {
           />
           <p className="text-sm font-semibold text-foreground">Dica do Antenista</p>
           <p className="text-xs leading-relaxed text-muted-foreground">
-            Assistência técnica para conectividade e configuração de redes em Smart TVs e dispositivos Android.
+            Consultoria e orientação especializada para conectividade residencial, redes Wi-Fi e configuração de aparelhos de TV.
           </p>
           <p className="text-xs text-muted-foreground">
             Responsável: <span className="text-foreground">Cleidson Ferreira Teixeira</span>
