@@ -1,10 +1,10 @@
 import { lazy, Suspense, useEffect, useState } from "react";
 import {
-  Settings,
   Wifi,
-  Headphones,
-  Network,
-  Wrench,
+  Plug,
+  Navigation,
+  MessageCircle,
+  Settings,
   HelpCircle,
 } from "lucide-react";
 import Header from "@/components/Header";
@@ -21,53 +21,64 @@ const Footer = lazy(() => import("@/components/Footer"));
 const FloatingWhatsApp = lazy(() => import("@/components/FloatingWhatsApp"));
 
 const HERO_BENEFITS = [
-  "Configuração de redes Wi-Fi em Smart TVs e dispositivos Android",
-  "Ajustes de conexão, DNS e comunicação do equipamento",
-  "Diagnóstico de lentidão, desconexões e falhas de acesso",
-  "Assistência técnica humanizada em tempo real",
+  "Orientação para os principais modelos de Smart TV",
+  "Passo a passo simples para aparelhos de televisão conectados",
+  "Ajuda com redes Wi-Fi, conexão de internet e ajustes gerais",
+  "Atendimento humanizado em tempo real pelo WhatsApp",
 ];
 
-const INSTALL_CARDS = [
-  {
-    icon: Settings,
-    title: "Configuração Segura",
-    desc: "Ajuste as funções essenciais do equipamento com orientação técnica passo a passo.",
-  },
+const SERVICE_CARDS = [
   {
     icon: Wifi,
-    title: "Ajustes de Rede Wi-Fi",
-    desc: "Revise conexão, DNS e comunicação para melhorar o acesso à internet no aparelho.",
+    title: "Otimização de Rede e Sinal",
+    desc: "Orientação para estabilizar sua conexão Wi-Fi ou cabo de rede, reduzindo travamentos na reprodução de mídia.",
   },
   {
-    icon: Headphones,
-    title: "Diagnóstico Técnico",
-    desc: "Identifique falhas de conectividade e receba instruções adequadas ao seu dispositivo.",
+    icon: Plug,
+    title: "Ajustes e Conexões do Aparelho",
+    desc: "Passo a passo para organizar os menus, entradas HDMI, áudio e configurações gerais da sua TV.",
+  },
+  {
+    icon: Navigation,
+    title: "Orientação de Uso e Navegação",
+    desc: "Suporte para aprender a navegar pela interface da TV e organizar seus aplicativos de entretenimento favoritos.",
   },
 ];
 
-const TECH_PROBLEMS = [
-  "Wi-Fi conectado, mas sem acesso à internet",
-  "Erros de rede, DNS ou tempo limite de carregamento",
-  "Quedas frequentes ou sinal instável no equipamento",
-  "Dificuldade de comunicação entre roteador e dispositivo",
+const HOW_IT_WORKS = [
+  {
+    icon: MessageCircle,
+    title: "1. Inicie a conversa",
+    desc: "Você clica e inicia uma conversa no WhatsApp.",
+  },
+  {
+    icon: HelpCircle,
+    title: "2. Explique sua dúvida",
+    desc: "Explica a sua dúvida sobre a configuração da sua TV.",
+  },
+  {
+    icon: Settings,
+    title: "3. Receba a orientação",
+    desc: "Nosso consultor guia você com instruções passo a passo em tempo real.",
+  },
 ];
 
 const FAQS = [
   {
-    q: "Quais problemas de conectividade vocês atendem?",
-    a: "Ajudamos com configuração de Wi-Fi, DNS, acesso à internet, instabilidade de sinal e comunicação entre o roteador e dispositivos compatíveis.",
+    q: "Como funciona a consultoria?",
+    a: "Você fala com um consultor pelo WhatsApp e recebe orientação prática, em passo a passo por texto, áudio ou imagens, para ajustar a conexão e as configurações do seu aparelho de TV.",
   },
   {
-    q: "Como recebo o atendimento técnico?",
-    a: "O suporte é realizado diretamente com um técnico via WhatsApp, com instruções passo a passo em texto, áudio ou imagens para você aplicar diretamente no seu aparelho.",
+    q: "Vocês atendem qualquer modelo de Smart TV?",
+    a: "Trabalhamos com os principais modelos de Smart TV e sistemas de TV modernos. A orientação considera as características de cada aparelho conectado.",
   },
   {
-    q: "O atendimento serve para qualquer modelo de Smart TV?",
-    a: "Atendemos Smart TVs Samsung, LG, Android TV, Google TV e dispositivos Android compatíveis. A orientação considera o modelo e o sistema de cada aparelho.",
+    q: "Vocês vendem algum serviço ou assinatura?",
+    a: "Não. Somos um serviço independente de consultoria e suporte para conectividade doméstica. Não comercializamos assinaturas nem qualquer tipo de conteúdo.",
   },
   {
-    q: "O suporte é imediato?",
-    a: "Sim, nossos especialistas respondem rapidamente pelo WhatsApp para guiar sua configuração.",
+    q: "O atendimento é rápido?",
+    a: "Sim, nossos consultores respondem rapidamente pelo WhatsApp para guiar sua configuração sem complicação.",
   },
 ];
 
@@ -94,11 +105,11 @@ const Index = () => {
   }, []);
 
   useEffect(() => {
-    document.title = "Assistência Técnica para Conectividade e Configuração de Redes em Smart TVs Samsung, LG e Android";
+    document.title = "Consultoria e Orientação Especializada para Smart TVs | Dica do Antenista";
     const desc = document.querySelector('meta[name="description"]');
     desc?.setAttribute(
       "content",
-      "Assistência técnica para Wi-Fi, DNS e configuração de redes em Smart TVs Samsung, LG e Android. Atendimento especializado pelo WhatsApp."
+      "Auxílio prático em conectividade residencial, redes Wi-Fi e configuração de aparelhos de TV. Fale com um especialista no WhatsApp."
     );
   }, []);
 
@@ -114,20 +125,20 @@ const Index = () => {
           <div className="container relative max-w-4xl text-center">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-secondary/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               <Settings className="h-3.5 w-3.5 text-accent" />
-              Assistência Técnica para Smart TVs e Dispositivos Android
+              Consultoria para Smart TVs e Aparelhos Conectados
             </div>
 
             <h1 className="font-display text-[2rem] font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
-              Assistência Técnica para Conectividade e{" "}
+              Consultoria e Orientação{" "}
               <span className="relative inline-block">
-                <span className="text-gradient-accent inline-block">Configuração de Redes</span>
+                <span className="text-gradient-accent inline-block">Especializada</span>
                 <span className="absolute -bottom-1 left-0 h-1 w-full rounded-full bg-gradient-accent opacity-60" />
               </span>{" "}
-              em Smart TVs Samsung, LG e Android
+              para Smart TVs
             </h1>
 
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:mt-6 sm:text-xl">
-              Orientação especializada para configurar Wi-Fi, DNS e conexões de rede em Smart TVs Samsung, LG e dispositivos Android. Atendimento rápido e sem complicações pelo WhatsApp.
+              Auxílio prático em conectividade residencial, redes Wi-Fi e configuração de aparelhos de TV para você aproveitar o melhor da sua tela.
             </p>
 
             <ul className="mx-auto mt-6 grid max-w-2xl grid-cols-1 gap-2 text-left text-sm text-foreground sm:grid-cols-2 sm:text-base">
@@ -141,8 +152,8 @@ const Index = () => {
 
             <div className="mt-8 flex flex-col items-center gap-3">
               <WhatsAppButton
-                label="Falar com Suporte no WhatsApp"
-                message="Olá, preciso de assistência técnica para configurar a conectividade da minha Smart TV."
+                label="Falar com um Especialista no WhatsApp"
+                message="Olá! Quero falar com um especialista sobre a configuração da minha Smart TV."
                 source="hero"
               />
               <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
@@ -162,16 +173,16 @@ const Index = () => {
             </div>
             <div className="text-center lg:text-left">
               <h2 className="font-display text-3xl font-bold sm:text-4xl">
-                Configuração de Rede em <span className="text-gradient-primary">Smart TV</span>
+                Conectividade Residencial em <span className="text-gradient-primary">Smart TV</span>
               </h2>
               <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg lg:max-w-none">
-                Auxiliamos nos ajustes de Wi-Fi, DNS e acesso à internet em Smart TVs Samsung, LG e Android. A configuração considera o sistema e o modelo do equipamento para oferecer uma orientação técnica adequada.
+                Orientamos os ajustes de redes Wi-Fi e acesso à internet nos principais modelos de Smart TV. A orientação considera o sistema e as características de cada aparelho de televisão conectado.
               </p>
               <div className="mt-6 flex justify-center lg:justify-start">
                 <WhatsAppButton
                   variant="ghost"
-                  label="Configurar Rede da Minha Smart TV"
-                  message="Olá, quero ajuda para configurar a rede da minha Smart TV."
+                  label="Ajustar a Conexão da Minha Smart TV"
+                  message="Olá! Quero orientação para ajustar a conectividade da minha Smart TV."
                   source="smart-tv"
                 />
               </div>
@@ -179,44 +190,44 @@ const Index = () => {
           </div>
         </section>
 
-        {/* DISPOSITIVOS ANDROID */}
-        <section id="dispositivos-android" className="relative scroll-mt-24 py-16 sm:py-24">
+        {/* APARELHOS CONECTADOS */}
+        <section id="dispositivos" className="relative scroll-mt-24 py-16 sm:py-24">
           <div className="pointer-events-none absolute inset-x-0 top-1/3 h-64 bg-gradient-to-b from-primary/5 to-transparent" />
           <div className="container relative grid items-center gap-8 lg:grid-cols-[auto_1fr] lg:gap-12">
             <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-cta text-primary-foreground shadow-glow lg:mx-0">
-              <Network className="h-10 w-10" strokeWidth={2} />
+              <Plug className="h-10 w-10" strokeWidth={2} />
             </div>
             <div className="text-center lg:text-left">
               <h2 className="font-display text-3xl font-bold sm:text-4xl">
-                Conectividade para <span className="text-gradient-primary">Dispositivos Android</span>
+                Ajustes para <span className="text-gradient-primary">Aparelhos Conectados</span>
               </h2>
               <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg lg:max-w-none">
-                Seu dispositivo Android não conecta ou apresenta instabilidade? Nossa equipe orienta os ajustes de Wi-Fi, DNS e comunicação com o roteador de acordo com as características do aparelho.
+                Seu aparelho de TV não conecta ou apresenta instabilidade? Nossa equipe orienta os ajustes de Wi-Fi, conexão e configurações gerais de acordo com o equipamento.
               </p>
               <div className="mt-6 flex justify-center lg:justify-start">
                 <WhatsAppButton
                   variant="ghost"
-                  label="Suporte para Conectividade Android"
-                  message="Olá, preciso de suporte para configurar a conexão do meu dispositivo Android."
-                  source="dispositivos-android"
+                  label="Orientação para Meu Aparelho"
+                  message="Olá! Preciso de orientação para configurar meu aparelho de TV conectado."
+                  source="dispositivos"
                 />
               </div>
             </div>
           </div>
         </section>
 
-        {/* INSTALAÇÃO */}
-        <section id="configuracao-redes" className="relative scroll-mt-24 py-16 sm:py-24">
+        {/* SERVIÇOS */}
+        <section id="servicos" className="relative scroll-mt-24 py-16 sm:py-24">
           <div className="container">
             <div className="mx-auto mb-12 max-w-3xl text-center">
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Passo a passo</span>
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Serviços oferecidos</span>
               <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
-                 Guia de <span className="text-gradient-primary">Configuração de Rede</span>
+                Como podemos <span className="text-gradient-primary">ajudar você</span>
               </h2>
             </div>
 
             <div className="grid gap-5 md:grid-cols-3">
-              {INSTALL_CARDS.map((c) => {
+              {SERVICE_CARDS.map((c) => {
                 const Icon = c.icon;
                 return (
                   <div
@@ -235,95 +246,98 @@ const Index = () => {
 
             <div className="mt-10 flex justify-center">
               <WhatsAppButton
-                label="Quero Ajuda na Configuração"
-                message="Olá, quero ajuda para configurar a rede do meu equipamento."
-                source="configuracao-redes"
+                label="Falar com um Especialista"
+                message="Olá! Quero orientação sobre os serviços de consultoria para minha Smart TV."
+                source="servicos"
               />
             </div>
           </div>
         </section>
 
-        {/* SUPORTE TÉCNICO */}
-          <section id="suporte-tecnico" className="relative scroll-mt-24 py-16 sm:py-24">
-            <div className="container max-w-4xl text-center">
-              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-cta text-primary-foreground shadow-glow">
-                <Wrench className="h-8 w-8" strokeWidth={2.2} />
-              </div>
-              <h2 className="font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
-                 Sua Conexão Apresenta <span className="text-gradient-accent">Falhas ou Instabilidade?</span>
+        {/* COMO FUNCIONA */}
+        <section id="como-funciona" className="relative scroll-mt-24 py-16 sm:py-24">
+          <div className="container">
+            <div className="mx-auto mb-12 max-w-3xl text-center">
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Simples e rápido</span>
+              <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
+                Como <span className="text-gradient-accent">funciona</span>
               </h2>
-              <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-                 Problemas comuns que ajudamos a diagnosticar por assistência remota:
-              </p>
-
-              <ul className="mx-auto mt-8 grid max-w-2xl grid-cols-1 gap-3 text-left sm:grid-cols-2">
-                {TECH_PROBLEMS.map((p) => (
-                  <li key={p} className="glass-card flex items-start gap-3 rounded-2xl p-4">
-                    <span aria-hidden className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">✓</span>
-                    <span className="text-sm text-foreground sm:text-base">{p}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-10 flex justify-center">
-                <WhatsAppButton
-                  label="Resolver Problemas de Conexão"
-                  message="Olá, minha conexão está instável e preciso de assistência técnica."
-                  source="suporte-tecnico"
-                />
-              </div>
             </div>
-          </section>
+
+            <div className="grid gap-5 md:grid-cols-3">
+              {HOW_IT_WORKS.map((s) => {
+                const Icon = s.icon;
+                return (
+                  <div key={s.title} className="glass-card rounded-3xl p-7 text-center">
+                    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-cta text-primary-foreground shadow-glow">
+                      <Icon className="h-7 w-7" strokeWidth={2.2} />
+                    </div>
+                    <h3 className="mt-5 font-display text-xl font-bold">{s.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">{s.desc}</p>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="mt-10 flex justify-center">
+              <WhatsAppButton
+                label="Falar com um Especialista no WhatsApp"
+                message="Olá! Quero iniciar uma conversa com um consultor sobre minha TV."
+                source="como-funciona"
+              />
+            </div>
+          </div>
+        </section>
 
         {/* FAQ */}
-          <section id="faq-ajuda" className="relative scroll-mt-24 py-16 sm:py-24">
-            <div className="container max-w-3xl">
-              <div className="text-center">
-                <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-secondary/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground backdrop-blur">
-                  <HelpCircle className="h-3.5 w-3.5 text-accent" />
-                  Perguntas frequentes
-                </div>
-                <h2 className="font-display text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
-                  Perguntas <span className="text-gradient-accent">Frequentes</span>
-                </h2>
+        <section id="faq-ajuda" className="relative scroll-mt-24 py-16 sm:py-24">
+          <div className="container max-w-3xl">
+            <div className="text-center">
+              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-secondary/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground backdrop-blur">
+                <HelpCircle className="h-3.5 w-3.5 text-accent" />
+                Perguntas frequentes
               </div>
-
-              <div className="mt-10 rounded-3xl border border-border/70 bg-gradient-card p-2 shadow-card-soft sm:p-4">
-                <Accordion type="single" collapsible className="w-full">
-                  {FAQS.map((item, i) => (
-                    <AccordionItem key={i} value={`item-${i}`} className="border-b border-border/60 last:border-b-0">
-                      <AccordionTrigger className="px-4 text-left text-base font-semibold hover:no-underline sm:text-lg">
-                        {item.q}
-                      </AccordionTrigger>
-                      <AccordionContent className="px-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                        {item.a}
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-              </div>
+              <h2 className="font-display text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
+                Perguntas <span className="text-gradient-accent">Frequentes</span>
+              </h2>
             </div>
-          </section>
+
+            <div className="mt-10 rounded-3xl border border-border/70 bg-gradient-card p-2 shadow-card-soft sm:p-4">
+              <Accordion type="single" collapsible className="w-full">
+                {FAQS.map((item, i) => (
+                  <AccordionItem key={i} value={`item-${i}`} className="border-b border-border/60 last:border-b-0">
+                    <AccordionTrigger className="px-4 text-left text-base font-semibold hover:no-underline sm:text-lg">
+                      {item.q}
+                    </AccordionTrigger>
+                    <AccordionContent className="px-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                      {item.a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
+        </section>
 
         {/* ATENDIMENTO / CTA FINAL */}
-          <section id="atendimento" className="relative scroll-mt-24 overflow-hidden py-20 sm:py-28">
-            <div aria-hidden className="pointer-events-none absolute -top-24 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-primary/15 blur-3xl" />
-            <div className="container relative max-w-3xl text-center">
-              <h2 className="font-display text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
-                 Precisa de Ajuda com a <span className="text-gradient-accent">Conectividade</span> da sua Smart TV?
-              </h2>
-              <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-                 Fale com um especialista e receba orientação para configurar a rede do seu equipamento.
-              </p>
-              <div className="mt-8 flex justify-center">
-                <WhatsAppButton
-                  label="Chamar no WhatsApp Agora"
-                  message="Olá, quero assistência para configurar a conectividade da minha Smart TV."
-                  source="atendimento"
-                />
-              </div>
+        <section id="atendimento" className="relative scroll-mt-24 overflow-hidden py-20 sm:py-28">
+          <div aria-hidden className="pointer-events-none absolute -top-24 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-primary/15 blur-3xl" />
+          <div className="container relative max-w-3xl text-center">
+            <h2 className="font-display text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
+              Pronto para aproveitar o <span className="text-gradient-accent">melhor da sua TV</span>?
+            </h2>
+            <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+              Fale com um especialista agora mesmo e receba orientação prática para sua Smart TV.
+            </p>
+            <div className="mt-8 flex justify-center">
+              <WhatsAppButton
+                label="Falar com um Especialista no WhatsApp"
+                message="Olá! Quero falar com um especialista sobre a configuração da minha Smart TV."
+                source="atendimento"
+              />
             </div>
-          </section>
+          </div>
+        </section>
       </main>
 
       <LazyOnVisible minHeight={200}>
