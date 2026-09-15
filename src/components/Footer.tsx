@@ -78,10 +78,10 @@ const Footer = () => {
 
       <div className="container mt-8">
         <p className="mx-auto max-w-4xl rounded-2xl border border-border/60 bg-secondary/40 p-4 text-center text-xs leading-relaxed text-muted-foreground">
-          <strong className="text-foreground">Aviso:</strong> Prestação independente de serviços de assistência e consultoria técnica. Este site não possui afiliação, vínculo comercial ou representação de fabricantes de televisores, dispositivos ou sistemas operacionais. Não fornecemos conteúdo audiovisual nem serviços de terceiros.
+          <strong className="text-foreground">Aviso Legal:</strong> Somos um serviço independente de consultoria e suporte para conectividade doméstica. Não possuímos vínculo, afiliação, representação ou autorização oficial com fabricantes de televisores, desenvolvedores de sistemas operacionais ou provedores de mídia. Marcas e nomes citados pertencem a seus respectivos proprietários e são usados exclusivamente para fins descritivos.
         </p>
         <p className="mt-4 text-center text-xs text-muted-foreground">
-          Dica do Antenista • Assistência Técnica para Conectividade e Redes
+          Dica do Antenista • Consultoria e Suporte para Conectividade Residencial
         </p>
       </div>
 
